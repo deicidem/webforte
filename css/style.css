@@ -1104,7 +1104,7 @@ section {
     max-width: 50%;
   }
   .about_wrapper {
-    background: url("../img/about/bg-repeat.png");
+    background: url("../img/about/bg-repeat.png") center repeat-x;
   }
 }
 
