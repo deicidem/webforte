@@ -1,5 +1,6 @@
 $gradient: linear-gradient(to right, #f68b1f 0%, #f74c00 100%)
 $gradient-active: linear-gradient(to right, #f74c00 0%, #f68b1f 100%)
+$active: #f68b1f
 body
   font-family: "Montserrat",  sans-serif
 img
@@ -15,6 +16,7 @@ img
 .logo_text
   display: none
 .button
+  box-sizing: border-box
   padding: 19px 33px
   border: none
   background: $gradient
@@ -28,30 +30,59 @@ img
   &:hover
     cursor: pointer
     background: $gradient-active
+  &-o
+    transition: all 0.5s
+    background: none
+    border: 1px solid $active
+    box-shadow: none
+    color: $active
+    
+    &:hover
+      transform: translateY(-2px)
+      background: none
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25)
+
 .circle-wrapper 
   position: relative
-
+section
+  padding-top: 62px
+  padding-bottom: 50px
+.section-title
+  margin: 0
+  margin-bottom: 57px
+  text-align: center
+  font-size: 35px
+  font-weight: 900
 @media (min-width: 460px)
+  section
+    .container
+      max-width: 410px
   .logo_text
     display: inline-block
   .logo_notext
     display: none
 @media (min-width: 576px)
-  .container
+  .container, section .container
     max-width: 540px
     padding-right: 15px
     padding-left: 15px
   
 
 @media (min-width: 768px)
-  .container 
+  .container, section .container 
     max-width: 710px
+  section
+    padding-top: 70px
+    padding-bottom: 60px
   
 
 @media (min-width: 992px)
-  .container 
+  .container, section .container 
     max-width: 960px
 
 @media (min-width: 1200px)
-  .container
+  .container, section .container
     max-width: 1170px
+  section
+    padding-top: 95px
+    padding-bottom: 65px

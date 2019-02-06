@@ -1,0 +1,63 @@
+.about
+  text-align: center
+  background: #fff
+  padding-top: 62px
+  padding-bottom: 50px
+  &_wrapper
+    overflow: hidden
+    padding: 0
+  &-img
+    margin-bottom: 30px
+  &-button
+    font-size: 14px
+  &-text
+    p
+      margin: 0
+      margin-bottom: 40px
+      position: relative
+      font-size: 18px
+      &::after
+        content: ''
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        bottom: -20px
+        height: 1px
+        width: 124px
+        background: linear-gradient(to right, rgba(#e4e4e4, 0) 0%, #e4e4e4 50%, rgba(#e4e4e4, 0) 100%)
+      &:last-child:after
+        width: 0
+  &-subtitle
+    font-size: 18px
+@media (min-width: 460px)
+  .about-button
+    font-size: 20px
+@media (min-width: 1200px)
+  .about
+    box-shadow: 0 0 30px  rgba(0, 0, 0, 0.10)
+    p
+      font-size: 20px
+    &-content
+      padding-left: 60px
+      text-align: left
+      display: flex
+      justify-content: space-between
+      align-items: center
+      flex-direction: row-reverse
+      margin-bottom: 70px
+    &-text
+      p
+        &::after
+          width: 460px
+          left: 0
+          transform: translateX(0)
+          background: linear-gradient(to right, #e4e4e4 0%,  rgba(#e4e4e4, 0) 100%)
+        &:last-child
+          margin-bottom: 0
+    &-subtitle
+      margin-left: auto
+      margin-right: auto
+      max-width: 50%  
+    &_wrapper
+      background: url("../img/about/bg-repeat.png")
+    

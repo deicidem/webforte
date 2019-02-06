@@ -1,0 +1,55 @@
+.services
+  background: #26282b
+  color: #fff
+  text-align: center
+  &-blocks
+    display: flex
+    flex-direction: column
+    align-items: center
+  &-block
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-bottom: 90px
+    &__img
+      display: flex
+      align-items: center
+      justify-content: center
+      border-radius: 50%
+      width: 297px
+      height: 297px
+      background-color: rgba(#fff,0.1)
+      margin-bottom: 40px
+      position: relative
+      &_discount
+        position: absolute
+        width: 124px
+        top: -3px
+        right: -3px
+    &__title
+      transition: all 0.5s
+      color: #ffffff
+      font-size: 23px
+      text-decoration: none
+      margin-bottom: 50px
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        width: 100%
+        height: 2px
+        bottom: -1px
+        left: 0
+        background: #fff
+      &:hover
+        transform: translate(2px, -2px)
+@media (min-width: 1200px)
+  .services
+    background: #26282b url("../img/services/background.png") center no-repeat
+    background-size: cover
+    &-blocks
+      flex-direction: row
+      justify-content: space-around
+    &-block
+      margin-bottom: 0
+
