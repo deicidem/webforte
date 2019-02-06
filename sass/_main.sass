@@ -1,0 +1,402 @@
+.header
+  overflow: hidden
+  &-main
+    margin-top: 60px
+    padding-top: 12px
+    padding-bottom: 28px
+    &__hero
+      position: relative
+      padding: 35px 27px 23px 
+      box-shadow: 0 0 46px rgba(0, 0, 0, 0.3)
+      border-radius: 15px
+      &_blue
+        background-image: linear-gradient(to right, #c8f1ff 0%, #44c8f5 100%)
+        border: 1px solid #205ebd
+        margin-bottom: 291px
+        z-index: 2
+          
+        .hero-form__input
+          border: 1px solid #205ebd
+          background-color: #d0ebff
+        li
+          &::before
+            background: url("../img/hero-blue/checked.png") center no-repeat
+      &_green
+        background-image: linear-gradient(to right, #d0fed3 0%, #8effc3 100%)
+        border: 1px solid #01a759
+        .hero-form__input
+          border: 1px solid #01a056
+          background-color: #daffdd
+        .hero-subtitle
+          font-size: 22px
+          font-weight: 700
+        li
+          &::before
+            background: url("../img/hero-green/checked.png") center no-repeat 
+      .hero
+        &-rocket
+          width: 150px
+          position: absolute
+          right: 17px
+          top: -18px
+        &-discount
+          width: 96px
+          position: absolute
+          right: -5px
+          top: -30px
+        &-gift
+          width: 183px
+          position: absolute
+          top: -36px
+          right: -8px
+        &-helicopter
+          width: 200px
+          position: absolute
+          bottom: -104px
+          right: -8px
+        &-ship
+          position: absolute
+          bottom: -173px
+          left: -70px
+          width: 312px
+        &-men
+          z-index: 5
+          width: 170px
+          position: absolute
+          top: -185px
+          left: 12px
+        &-title
+          max-width: 70%
+          margin: 0
+          font-size: 23px
+          font-weight: 800
+          margin-bottom: 26px
+        &-list
+          list-style: none
+          margin: 0 0 15px 0
+          padding: 0
+          &_bold
+            color: #01985d
+            font-weight: 900
+            position: absolute
+            bottom: 0
+            right: 0
+          li
+            padding-right: 60px
+            padding-left: 30px
+            position: relative
+            margin-bottom: 12px
+            font-size: 20px
+            &::before
+              content: ''
+              position: absolute
+              width: 18px
+              height: 18px
+              top: 2px
+              left: 0
+        &-subtitle
+          text-align: center
+          font-size: 16px
+          margin-bottom: 15px
+        &-form
+          text-align: center
+          &__input
+            width: 80%
+            margin-bottom: 13px
+            padding: 14px 
+            font-size: 18px
+            border-radius: 50px
+          &__button
+            margin: 20px 0 
+        &-agreement
+          margin: auto
+          max-width: 80%
+          display: block
+          color: #000
+          text-align: center
+          font-size: 12px
+  &-social
+    margin-top: 37px
+    &_wrapper
+      display: flex
+      align-items: center
+      justify-content: center
+    &_item
+      margin-right: 10px
+      width: 25px
+      height: 25px
+    &_title
+      margin-right: 10px
+      font-size: 13px
+      font-weight: 700  
+  &-title
+    position: relative
+    z-index: 1
+    margin-top: 0
+    margin-bottom: 10px
+    display: block
+    font-size: 28px
+    font-weight: 700
+    text-transform: uppercase
+    color: #fff
+    &_first
+      font-size: 40px
+    &_left
+      padding: 7px 10px 2px
+      background: $gradient
+    &_right
+      display: inline-block
+      text-align: right
+      padding: 0px 10px 0
+      margin-right: auto
+      background: $gradient
+      &_wrapper
+        text-align: right
+        
+.circle
+  position: absolute
+  background-color: #c6f0ff
+  width: 300px
+  height: 300px
+  border-radius: 50%
+  right: 11px
+  top: -434px
+  z-index: 0
+@media (min-width: 370px)
+  .header
+    .hero
+      &-list
+        li
+          padding-right: 100px
+@media (min-width: 460px)
+  .header
+    &-title
+      font-size: 43px
+      &_first
+        font-size: 52px
+    &-main
+      &__hero
+        padding: 35px 38px 23px 
+    .hero
+      &-title
+        font-size: 27px
+      &-rocket
+        position: absolute
+        right: 12px
+        top: -18px
+      &-discount
+        position: absolute
+        right: -13px
+        top: -30px
+      &-gift
+        position: absolute
+        top: -36px
+        right: -8px
+      &-helicopter
+        width: 200px
+        position: absolute
+        bottom: -104px
+        right: -13px
+      &-ship
+        position: absolute
+        bottom: -173px
+        left: 17px
+        width: 312px
+      &-men
+        z-index: 5
+        width: 236px
+        position: absolute
+        top: -258px
+        left: 12px
+      &-subtitle
+        margin-bottom: 33px
+        font-size: 20px
+      &-form
+        &__input
+          width: 100%
+          margin-left: -10px
+          padding: 14px 0 14px 19px
+        &__button
+          margin: 26px 0
+      &-list
+        margin-bottom: 30px
+        li
+          margin-bottom: 17px
+          font-size: 20px
+          padding-right: 100px
+    &-social
+      &_item
+        margin-right: 30px
+        width: 30px
+        height: 30px
+      &_title
+        margin-right: 23px
+@media (min-width: 540px)
+  .header
+    &-title
+      font-size: 52px
+      &_first
+        font-size: 60px
+  .header-main__hero
+    .hero-list
+      li
+        padding-right: 120px
+
+@media (min-width: 768px)
+  .header
+    &-main
+      margin-top: 84px
+      &__hero
+        &_blue
+          margin-bottom: 388px
+    &-title
+      font-size: 71px
+      &_first
+        font-size: 89px
+    .hero
+      &-title
+        max-width: 65%
+      &-rocket
+        right: 100px
+        width: 171px
+      &-discount
+        width: 133px
+      &-helicopter
+        right: 13px
+        bottom: -165px
+        width: 300px
+      &-ship
+        width: 464px
+        bottom: -260px
+        left: 30px
+      &-men
+        width: 329px
+        top: -360px
+        left: 25px
+      &-gift
+        top: -87px
+        right: 12px
+        width: 211px
+      &-form
+        &__inputs
+          display: flex
+          justify-content: space-between
+          align-items: center
+        &__input
+          margin-left: 0
+          flex-basis: 46%
+  .circle
+    width: 459px
+    height: 459px
+    top: -630px
+    right: 40px
+@media (min-width: 992px)
+  .header
+    &-title
+      font-size: 94px
+      max-width: 960px
+      margin-left: auto
+      margin-right: auto
+      &_first
+        font-size: 115px
+@media (min-width: 1200px)
+  .header
+    background: url("../img/header/background.jpg") center no-repeat
+    background-size: cover
+    &-social
+      border-top-left-radius: 10px
+      border-top-right-radius: 10px
+      margin-top: 0 
+      position: absolute
+      bottom: 0
+      z-index: 5
+      background-color: rgba(#fff, 0.6)
+      padding: 10px 15px
+      &_title
+        margin-left: 0
+        margin-right: 13px
+      &_item
+        margin-right: 5px
+      &_wrapper
+        justify-content: flex-start
+    &-title
+      max-width: 1170px
+      margin-bottom: 27px
+      &_left
+        padding-left: 80px
+        padding-right: 70px
+      &_right
+        padding-left: 80px
+        padding-right: 70px
+    &-main
+      position: relative
+      &__hero
+        width: 63%
+        &_blue
+          margin-bottom: 25px
+          .hero-subtitle
+            margin-left: 80px
+        &_green
+          margin-left: auto
+          .hero-list
+            max-width: 73%
+    .hero
+      &-rocket
+        z-index: -1
+        width: 191px
+        right: 165px
+        top: -39px
+      &-discount
+        width: 214px
+        right: -50px
+        top: -60px
+      &-helicopter
+        width: 309px
+        right: -325px
+        top: -31px
+      &-ship
+        z-index: -1
+        width: 483px
+        right: -322px
+        top: 82px
+        left: auto
+      &-gift
+        width: 268px
+        right: -25px
+        top: -40px
+      &-men
+        top: auto
+        bottom: -35px
+        width: 367px
+        left: -350px
+      &-title
+        font-size: 30px
+        margin-bottom: 5px
+      &-list
+        margin-bottom: 0
+        li
+          margin-bottom: 7px
+      &-subtitle
+        text-align: left
+        margin-bottom: 17px
+      &-form
+        margin-bottom: 13px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        &__input
+          margin: 0
+          margin-right: 20px
+          padding-top: 17px
+          padding-bottom: 17px
+        &__button
+          margin: 0
+      &-agreement
+        text-align: left
+        max-width: 100%
+  .circle
+    width: 577px
+    height: 577px
+    top: -490px
+    right: 148px
+    z-index: 0
