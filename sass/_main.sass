@@ -14,7 +14,6 @@
         border: 1px solid #205ebd
         margin-bottom: 291px
         z-index: 2
-          
         .hero-form__input
           border: 1px solid #205ebd
           background-color: #d0ebff
@@ -28,7 +27,6 @@
           border: 1px solid #01a056
           background-color: #daffdd
         .hero-subtitle
-          font-size: 22px
           font-weight: 700
         li
           &::before
@@ -57,7 +55,7 @@
         &-ship
           position: absolute
           bottom: -173px
-          left: -70px
+          left: -110px
           width: 312px
         &-men
           z-index: 5
@@ -76,17 +74,25 @@
           margin: 0 0 15px 0
           padding: 0
           &_bold
+            position: absolute
             color: #01985d
             font-weight: 900
-            position: absolute
-            bottom: 0
             right: 0
+            bottom: 3px
+            z-index: 1
+            text-decoration: underline
           li
+            overflow: hidden
             padding-right: 60px
             padding-left: 30px
             position: relative
             margin-bottom: 12px
             font-size: 20px
+            span:first-child
+              position: relative
+              &::after
+                overflow: hidden
+                content: '.....................................................................................................................................................................'
             &::before
               content: ''
               position: absolute
@@ -95,8 +101,8 @@
               top: 2px
               left: 0
         &-subtitle
+          font-size: 20px
           text-align: center
-          font-size: 16px
           margin-bottom: 15px
         &-form
           text-align: center
@@ -167,7 +173,7 @@
     .hero
       &-list
         li
-          padding-right: 100px
+          padding-right: 120px
 @media (min-width: 460px)
   .header
     &-title
@@ -223,7 +229,7 @@
         li
           margin-bottom: 17px
           font-size: 20px
-          padding-right: 100px
+          padding-right: 120px
     &-social
       &_item
         margin-right: 30px
@@ -240,6 +246,7 @@
   .header-main__hero
     .hero-list
       li
+        
         padding-right: 120px
 
 @media (min-width: 768px)
@@ -265,6 +272,9 @@
         right: 13px
         bottom: -165px
         width: 300px
+      &-list
+        li
+          white-space: nowrap
       &-ship
         width: 464px
         bottom: -260px
@@ -299,6 +309,8 @@
       margin-right: auto
       &_first
         font-size: 115px
+    .hero-ship
+      left: 280px
 @media (min-width: 1200px)
   .header
     background: url("../img/header/background.jpg") center no-repeat
@@ -330,6 +342,7 @@
         padding-right: 70px
     &-main
       position: relative
+      margin-top: 95px
       &__hero
         width: 63%
         &_blue

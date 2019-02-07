@@ -26,39 +26,24 @@
       left: 0
       overflow: hidden
       ul
+        padding: 0
         margin: 0
         transition: all 0.5s
         padding-top: 50px
-        background-color: #fff
-        width: 50%  
+        background-color: #26282b
+        width: 100%  
         height: 100%
         display: block
         li
+          text-align: center
           white-space: nowrap
           margin-bottom: 40px
           font-size: 16px
           margin-left: 30px
           overflow: hidden
-          margin-right: 10px
-          a
-            color: #000000
-            text-decoration: none
-            position: relative
-            &::after
-              transition: all 0.3s ease-in-out
-              content: ''
-              position: absolute
-              bottom: -5px
-              height: 2px
-              background-color: rgba(#2b2a2c, .8)
-              left: 50%
-              width: 0
-              transform: translateX(-50%)
-            &:hover:after
-              width: 100%
           a
             margin-right: 10px
-            color: #000000
+            color: #fff
             text-decoration: none
             position: relative
             &::after
@@ -90,7 +75,7 @@
       width: 60px
       height: 60px
       border: 0 solid #747474
-      background-color: #232426
+      background-color: #26282b
       position: absolute
       &::before, &::after, span
         transition: all 0.5s
@@ -121,11 +106,9 @@
   .header
     &-menu
       &__nav
-        ul
-          width: 35%
-          li
-            font-size: 22px
-            margin-left: 50px
+        li
+          font-size: 22px
+          margin-left: 50px
       &__wrapper
         flex-direction: row
       &__phone
@@ -208,6 +191,7 @@
             overflow: initial
             margin: 0
             a
+              color: #000
               font-size: 15px
           
       &__button
