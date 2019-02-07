@@ -15,4 +15,4 @@ $('.works-slider').slick({
       }
     }
   ]
-})
+});

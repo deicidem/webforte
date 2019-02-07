@@ -1,0 +1,88 @@
+.dots
+  padding: 0
+.info
+  background: #ffffff
+  text-align: center
+  &-blocks
+    display: flex
+    flex-direction: column
+    align-items: center
+  &-more
+    font-size: 14px
+    color: #000
+  &-block
+    padding: 0 30px
+    justify-content: center
+    display: flex
+    flex-direction: column
+    align-items: center
+    height: 210px
+    position: relative
+    margin-bottom: 30px
+    z-index: 1
+    border-radius: 8px
+    &::before
+      z-index: -1
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      bottom: 0
+      right: 0
+      background: url("../img/info/bg.png") right bottom no-repeat
+    &_yellow
+      background-color: #f6891e
+    &_red
+      background-color: #d63933
+    &_blue
+      background-color: #2283c7
+    &_green
+      background-color: #1bb363
+    &__title
+      color: #ffffff
+      font-size: 18px
+      // font-weight: 600
+      // margin-bottom: 35px
+      margin-bottom: 15px
+    &__button
+      font-weight: 600
+      background: #ffffff
+      font-size: 14px
+      color: #000
+      transition: all 0.5s
+      text-transform: none
+      padding: 17px 36px
+      &:hover
+        transform: translateY(-3px)
+        background: #fff
+@media (min-width: 460px)
+  .info-block__title
+    margin-bottom: 35px
+@media (min-width: 576px)
+  .info
+    &-block
+      margin-bottom: 30px
+      width: 496px
+      &__title
+        font-size: 20px
+      &__button
+        font-size: 16px
+    &-more
+      display: block
+      margin-top: 20px
+      font-size: 16px
+@media (min-width: 1200px)
+  .dots
+    background: url("../img/info/background.png") top left no-repeat
+  .info
+    box-shadow: 0 0 30px  rgba(0, 0, 0, 0.10)
+    padding-right: 35px
+    padding-left: 35px
+    &-blocks
+      flex-direction: row
+      justify-content: space-between
+      flex-wrap: wrap
+    &-block
+      flex-basis: 43%
+      margin-bottom: 40px
+      
