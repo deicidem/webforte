@@ -11,8 +11,12 @@
     flex-direction: column
     align-items: center
     margin-bottom: 90px
-    
+    &:hover
+      .services-block__img
+        background-color: rgba(#fff,0.5)
+        cursor: pointer
     &__img
+      transition: all 0.5s
       display: flex
       align-items: center
       justify-content: center
@@ -48,8 +52,6 @@
         bottom: -1px
         left: 0
         background: #fff
-      &:hover
-        transform: translate(2px, -2px)
 @media (min-width: 1200px)
   .services
     background: #26282b url("../img/services/background.png") center no-repeat

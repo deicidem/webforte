@@ -1134,7 +1134,14 @@ section {
   margin-bottom: 90px;
 }
 
+.services-block:hover .services-block__img {
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
 .services-block__img {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1191,11 +1198,6 @@ section {
   bottom: -1px;
   left: 0;
   background: #fff;
-}
-
-.services-block__title:hover {
-  -webkit-transform: translate(2px, -2px);
-          transform: translate(2px, -2px);
 }
 
 @media (min-width: 1200px) {
