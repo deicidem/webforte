@@ -1,0 +1,36 @@
+.works
+  background: #f6f7f9
+  &-slide
+    padding-bottom: 30px
+  &-slider
+    text-align: center
+    img
+      display: inline-block !important
+      box-shadow: 0 15px 20px rgba(0, 0, 0, 0.25)
+  &-next, &-prev
+    z-index: 5
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    width: 20px
+    height: 35px
+    border: none
+    outline: none
+  &-next
+    background: url("../img/works/arrow-right.png") center no-repeat
+    right: 0
+  &-prev
+    background: url("../img/works/arrow-left.png") center no-repeat
+    left: 0
+@media (min-width: 992px)
+  .works
+    &-next
+      right: 10%
+    &-prev
+      left: 10%
+@media (min-width: 1200px)
+  .works
+    &-next
+      right: -5%
+    &-prev
+      left: -5%
