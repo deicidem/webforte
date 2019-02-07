@@ -5,9 +5,11 @@
     flex-direction: column
     align-items: center
   &-block
+    margin-bottom: 10px
     box-sizing: border-box
     position: relative
-    border: 2px solid $active
+    border-right: 2px solid $active
+    border-left: 2px solid $active
     display: flex
     justify-content: center
     align-items: center
@@ -20,23 +22,172 @@
       font-size: 14px
       font-weight: 500
     &_active
-      border: none
       background: $active
       color: #fff
     &__number
+      display: flex
+      align-items: center
+      justify-content: center
+      font-size: 21px
+      font-weight: 700
+      z-index: 5
+      width: 45px
+      height: 45px  
+      color: #000
+      background: #fff
+      border-radius: 50%
+      box-shadow: 0 15px 12px rgba(0, 0, 0, 0.3)
       position: absolute
       top: 0
-      left: 0
+      left: 50%
+      transform: translateX(-50%)
+
+    &__triangle
+      &_t
+        z-index: 0
+        position: absolute
+        top: -1px
+        width: 0; 
+        height: 0;
+        border-left: 140px solid transparent;
+        border-right: 140px solid transparent;
+        border-top: 20px solid #fff;
+      &_b
+        z-index: 1
+        position: absolute
+        bottom: 0
+        width: 100% 
+        &::after, &::before
+          z-index: -1
+          content: ""
+          height: 2px;
+          width: 50.2%
+          position: absolute
+          bottom: -10px
+          background: $active
+        &::before
+          left: 0
+          transform: skew(0deg, 8deg)
+        &::after
+          right: 0
+          transform: skew(0deg, -8deg)
     &::after, &::before
       content: ""
-      height: 1%;
+      height: 2px;
       width: 50%
       position: absolute
-      top: 12px;
-      background: #fff
+      top: 10px;
+      background: $active
     &::before
       left: 0
-      transform: skew(0deg, 10deg)
+      transform: skew(0deg, 8deg)
     &::after
       right: 0
-      transform: skew(0deg, -10deg)
+      transform: skew(0deg, -8deg)
+    &_active
+      .stages-block__triangle_b
+        &::after, &::before
+          height: 20px
+          background: $active
+@media (min-width: 768px)
+  .stages
+    &-block
+      margin-bottom: 20px
+      width: 418px
+      &::before, &::after
+        top: 15px
+      &_title
+        font-size: 16px
+      &__triangle
+        &_t
+          border-left: 209px solid transparent;
+          border-right: 209px solid transparent;
+          border-top: 25px solid #fff
+        &_b
+          &::after, &::before
+            bottom: -15px
+      &_active
+        .stages-block__triangle_b
+          &::after, &::before
+            height: 30px
+@media (min-width: 1200px)
+  .stages
+    padding-bottom: 183px
+    background: #fff
+    padding-top: 90px
+    &-wrapper
+      .container
+        max-width: 1250px
+      padding: 0
+      background: url("../img/stages/bg.png") center no-repeat
+    &-blocks
+      justify-content: center
+      flex-direction: row
+    &-block
+      height: 109px
+      margin-right: 10px
+      margin-bottom: 0
+      border: none
+      border-top: 2px solid $active
+      border-bottom: 2px solid $active
+      padding-top: 19px
+      padding-bottom: 18px
+      width: 289px
+      &__title
+        font-size: 16px
+        font-weight: 600
+        max-width: 113px
+        text-align: left
+      &__number
+        top: 50%
+        transform: translateY(-50%)
+        left: -22px
+        &_first
+          left: -12px
+      &::before, &::after
+        height: 51%
+        width: 2px
+        z-index: 1
+        top: auto
+        left: 5px
+      &::before
+        top: -1px
+        transform: skew(8deg, 0deg)
+      &::after
+        bottom: -1px
+        transform: skew(-8deg, 0deg)
+
+      &__triangle
+        &_t 
+          top: auto
+          left: -2px
+          border-top: 70px solid transparent;
+          border-bottom: 70px solid transparent;
+          border-left: 20px solid #fff;
+        &_b
+          z-index: 1
+          bottom: auto
+          right: 0
+          height: 100%
+          &::before, &::after
+            height: 50.2%
+            width: 2px
+            top: auto
+            left: auto
+            right: -4px
+          &::before
+            top: -1px
+            transform: skew(8deg, 0deg)
+          &::after
+            bottom: 0
+            transform: skew(-8deg, 0deg)
+      &_active
+        .stages-block__triangle_t
+          z-index: 5
+        .stages-block__triangle_b
+          z-index: 5
+          &::after, &::before
+            z-index: 5
+            height: 50%
+            width: 20px
+            background: $active
