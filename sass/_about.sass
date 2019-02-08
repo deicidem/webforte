@@ -32,8 +32,30 @@
 @media (min-width: 460px)
   .about-button
     font-size: 20px
+@media (min-width: 992px)
+  .about
+    box-shadow: 0 0 30px  rgba(0, 0, 0, 0.10)
+  .about_wrapper
+    display: flex
+    align-items: stretch
+    .container
+      max-width: 740px
+@media (min-width: 1100px)
+  .about
+    &-image
+      background: url("../img/about/bg-repeat.png") top repeat-y
+      background-size: contain
+      flex-basis: 18%
+  .about_wrapper
+    display: flex
+    align-items: stretch
 @media (min-width: 1200px)
   .about
+    &_wrapper
+      .container
+        flex-basis: 64%
+        margin: 0
+        max-width: 100%
     box-shadow: 0 0 30px  rgba(0, 0, 0, 0.10)
     p
       font-size: 20px
@@ -59,5 +81,6 @@
       margin-right: auto
       max-width: 50%  
     &_wrapper
-      background: url("../img/about/bg-repeat.png") center left  repeat-x
+      background-size: 13%
+
     

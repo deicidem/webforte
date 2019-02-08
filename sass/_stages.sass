@@ -5,24 +5,21 @@
     flex-direction: column
     align-items: center
   &-block
-    margin-bottom: 10px
     box-sizing: border-box
     position: relative
-    border-right: 2px solid $active
-    border-left: 2px solid $active
+    background: url("../img/stages/bg-o.png") center no-repeat
     display: flex
     justify-content: center
     align-items: center
     width: 280px
-    padding-top: 67px
-    padding-bottom: 28px
+    height: 167px
     &__img
       margin-right: 13px
     &__title
       font-size: 14px
       font-weight: 500
     &_active
-      background: $active
+      background: url("../img/stages/bg-fill.png") center no-repeat
       color: #fff
     &__number
       display: flex
@@ -41,75 +38,17 @@
       top: 0
       left: 50%
       transform: translateX(-50%)
-
-    &__triangle
-      &_t
-        z-index: 0
-        position: absolute
-        top: -1px
-        width: 0; 
-        height: 0;
-        border-left: 140px solid transparent;
-        border-right: 140px solid transparent;
-        border-top: 20px solid #fff;
-      &_b
-        z-index: 1
-        position: absolute
-        bottom: 0
-        width: 100% 
-        &::after, &::before
-          z-index: -1
-          content: ""
-          height: 2px;
-          width: 50.2%
-          position: absolute
-          bottom: -10px
-          background: $active
-        &::before
-          left: 0
-          transform: skew(0deg, 8deg)
-        &::after
-          right: 0
-          transform: skew(0deg, -8deg)
-    &::after, &::before
-      content: ""
-      height: 2px;
-      width: 50%
-      position: absolute
-      top: 10px;
-      background: $active
-    &::before
-      left: 0
-      transform: skew(0deg, 8deg)
-    &::after
-      right: 0
-      transform: skew(0deg, -8deg)
-    &_active
-      .stages-block__triangle_b
-        &::after, &::before
-          height: 20px
-          background: $active
 @media (min-width: 768px)
   .stages
     &-block
-      margin-bottom: 20px
       width: 418px
-      &::before, &::after
-        top: 15px
+      height: 183px
+      background: url("../img/stages/bg-o_md.png") center no-repeat
       &_title
         font-size: 16px
-      &__triangle
-        &_t
-          border-left: 209px solid transparent;
-          border-right: 209px solid transparent;
-          border-top: 25px solid #fff
-        &_b
-          &::after, &::before
-            bottom: -15px
       &_active
-        .stages-block__triangle_b
-          &::after, &::before
-            height: 30px
+        background: url("../img/stages/bg-fill_md.png") center no-repeat
+
 @media (min-width: 1200px)
   .stages
     box-shadow: 0 0 30px  rgba(0, 0, 0, 0.10)
@@ -123,12 +62,10 @@
       justify-content: center
       flex-direction: row
     &-block
+      background: url("../img/stages/bg-o_lg.png") center no-repeat
       height: 109px
       margin-right: 10px
       margin-bottom: 0
-      border: none
-      border-top: 2px solid $active
-      border-bottom: 2px solid $active
       padding-top: 19px
       padding-bottom: 18px
       width: 289px
@@ -143,50 +80,5 @@
         left: -22px
         &_first
           left: -12px
-      &::before, &::after
-        height: 51%
-        width: 2px
-        z-index: 1
-        top: auto
-        left: 5px
-      &::before
-        top: -1px
-        transform: skew(8deg, 0deg)
-      &::after
-        bottom: -1px
-        transform: skew(-8deg, 0deg)
-
-      &__triangle
-        &_t 
-          top: auto
-          left: -2px
-          border-top: 70px solid transparent;
-          border-bottom: 70px solid transparent;
-          border-left: 20px solid #fff;
-        &_b
-          z-index: 1
-          bottom: auto
-          right: 0
-          height: 100%
-          &::before, &::after
-            height: 50.2%
-            width: 2px
-            top: auto
-            left: auto
-            right: -4px
-          &::before
-            top: -1px
-            transform: skew(8deg, 0deg)
-          &::after
-            bottom: 0
-            transform: skew(-8deg, 0deg)
       &_active
-        .stages-block__triangle_t
-          z-index: 5
-        .stages-block__triangle_b
-          z-index: 5
-          &::after, &::before
-            z-index: 5
-            height: 50%
-            width: 20px
-            background: $active
+        background: url("../img/stages/bg-fill_lg.png") center no-repeat
