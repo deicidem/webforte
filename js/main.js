@@ -4,19 +4,15 @@ $('document').ready(() => {
     $('.header-menu__nav').toggleClass('header-menu__nav_active');
     if (document.body.style.overflow == "hidden") {
       $("html,body").css("overflow","auto");
-      
-      $("body").removeClass("fixed");
       $(document).bind('touchmove', true);
     } else {
       setTimeout(() => {
         $(document).bind('touchmove', false);
-        $("body").addClass("fixed");
         $("html,body").css("overflow","hidden");
       }, 500);
     }
   });
   $('.header-menu__nav a').on('click', () => {
-    $("body").removeClass("fixed");
     $('.header-menu__button').removeClass('cross');
     $('.header-menu__nav').removeClass('header-menu__nav_active');
     $("html,body").css("overflow","auto");
