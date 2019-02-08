@@ -3,15 +3,21 @@ $('document').ready(() => {
     $('.header-menu__button').toggleClass('cross');
     $('.header-menu__nav').toggleClass('header-menu__nav_active');
     if (document.body.style.overflow == "hidden") {
-      document.body.style.overflow = "auto";
+      $("html,body").css("overflow","auto");
+      
+      $("body").removeClass("fixed");
     } else {
-      document.body.style.overflow = "hidden";
+      setTimeout(() => {
+        $("body").addClass("fixed");
+        $("html,body").css("overflow","hidden");
+      }, 500);
     }
   });
   $('.header-menu__nav a').on('click', () => {
+    $("body").removeClass("fixed");
     $('.header-menu__button').removeClass('cross');
     $('.header-menu__nav').removeClass('header-menu__nav_active');
-    document.body.style.overflow = "auto";
+    $("html,body").css("overflow","auto");
   });
   $('.works-slider').slick({
     mobileFirst: true,

@@ -6,6 +6,11 @@ body {
   font-family: "Montserrat",  sans-serif;
 }
 
+.fixed {
+  position: fixed;
+  width: 100%;
+}
+
 .to-top {
   z-index: 10;
   position: fixed;
