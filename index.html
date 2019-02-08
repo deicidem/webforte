@@ -16,14 +16,15 @@
 </head>
 
 <body>
+  <button class="to-top"></button>
   <!-- Header -->
   <header class="header">
     <div class="header-menu">
       <div class="container">
         <div class="header-menu__wrapper">
           <div class="header-menu__logo">
-            <img src="img/header/logo.png" alt="Webforte.ru" class="logo_text">
-            <img src="img/header/logo_notext.png" alt="Webforte.ru" class="logo_notext">
+            <a href="#"><img src="img/header/logo.png" alt="Webforte.ru" class="logo_text">
+              <img src="img/header/logo_notext.png" alt="Webforte.ru" class="logo_notext"></a>
           </div>
           <!-- /.header-menu__logo -->
           <div class="header-menu__button">
@@ -31,11 +32,11 @@
           </div>
           <nav class="header-menu__nav">
             <ul class="header-menu__nav_list">
-              <li><a href="#" class="header-menu__nav_item">О компании</a></li>
-              <li><a href="#" class="header-menu__nav_item">Услуги</a></li>
-              <li><a href="#" class="header-menu__nav_item">Работы</a></li>
-              <li><a href="#" class="header-menu__nav_item">Заказчику</a></li>
-              <li><a href="#" class="header-menu__nav_item">Контакты</a></li>
+              <li><a href="#about" class="header-menu__nav_item">О компании</a></li>
+              <li><a href="#services" class="header-menu__nav_item">Услуги</a></li>
+              <li><a href="#works" class="header-menu__nav_item">Работы</a></li>
+              <li><a href="#info" class="header-menu__nav_item">Заказчику</a></li>
+              <li><a href="#footer" class="header-menu__nav_item">Контакты</a></li>
             </ul>
           </nav>
           <!-- /.header-menu__nav -->
@@ -136,7 +137,7 @@
   <!-- Header -->
 
   <!-- About -->
-  <section class="about_wrapper">
+  <section class="about_wrapper" id="about">
     <div class="about-image">
     </div>
     <div class="container">
@@ -176,7 +177,7 @@
   <!-- About -->
 
   <!-- Services -->
-  <section class="services">
+  <section class="services" id="services">
     <div class="container">
       <h2 class="section-title"> УСЛУГИ</h2>
       <div class="services-blocks">
@@ -217,30 +218,25 @@
         <h2 class="section-title">ЭТАПЫ РАБОТЫ </h2>
         <div class="stages-blocks">
 
-          <div class="stages-block stages-block_active ">
-            <div class="stages-block__triangle_t"></div>
+          <div class="stages-block">
 
             <div class="stages-block__number stages-block__number_first">1</div>
             <div class="stages-block__img">
               <img src="img/stages/img-1.png" alt="Бриф">
             </div>
             <div class="stages-block__title">Бриф</div>
-            <div class="stages-block__triangle_b"></div>
           </div>
 
           <div class="stages-block">
-            <div class="stages-block__triangle_t"></div>
 
             <div class="stages-block__number">2</div>
             <div class="stages-block__img">
               <img src="img/stages/img-2.png" alt="Договор + ТЗ">
             </div>
             <div class="stages-block__title">Договор + ТЗ</div>
-            <div class="stages-block__triangle_b"></div>
           </div>
 
           <div class="stages-block">
-            <div class="stages-block__triangle_t"></div>
 
             <div class="stages-block__number">3</div>
             <div class="stages-block__img">
@@ -249,11 +245,9 @@
             </div>
             <div class="stages-block__title">Исполнение
               заказа</div>
-            <div class="stages-block__triangle_b"></div>
           </div>
 
           <div class="stages-block">
-            <div class="stages-block__triangle_t"></div>
 
             <div class="stages-block__number">4</div>
             <div class="stages-block__img">
@@ -262,7 +256,6 @@
             </div>
             <div class="stages-block__title">Акт оказания
               услуг</div>
-            <div class="stages-block__triangle_b"></div>
           </div>
 
         </div>
@@ -273,7 +266,7 @@
 
 
   <!-- Works -->
-  <section class="works">
+  <section class="works" id="works">
     <div class="container">
       <h2 class="section-title">ПРИМЕРЫ РАБОТ</h2>
       <div class="works-slider">
@@ -304,7 +297,7 @@
   <section class="dots big-section">
     <div class="container">
       <!-- Info -->
-      <section class="info">
+      <section class="info" id="info">
         <h2 class="section-title">ЗАКАЗЧИКУ</h2>
         <div class="info-blocks">
           <div class="info-block info-block_yellow">
@@ -331,7 +324,7 @@
       <!-- Info -->
 
       <!-- Reviews -->
-      <section class="reviews big-section">
+      <section class="reviews big-section" id="reviews">
         <img src="img/reviews/guarantee.png" alt="Гарантия" class="reviews-guarantee">
         <h2 class="section-title">Отзывы</h2>
         <div class="reviews-blocks">
@@ -413,7 +406,7 @@
 
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer" id="footer">
     <div class="container">
       <div class="footer-blocks">
         <nav>
@@ -445,19 +438,19 @@
           </li>
           <li>
             <img src="img/footer/mail.png" alt="Написать">
-            <a href="#" class="footer-block__item">info@webforte.ru</a>
+            <a href="mailto:info@webforte.ru" class="footer-block__item">info@webforte.ru</a>
           </li>
           <div class="footer-social">
-            <a href="" class="footer-social__item">
+            <a href="#" class="footer-social__item">
               <img class="svg" src="img/footer/g-plus.svg" alt="">
             </a>
-            <a href="" class="footer-social__item">
+            <a href="#" class="footer-social__item">
               <img class="svg" src="img/footer/vk.svg" alt="">
             </a>
-            <a href="" class="footer-social__item">
+            <a href="#" class="footer-social__item">
               <img class="svg" src="img/footer/fb.svg" alt="">
             </a>
-            <a href="" class="footer-social__item">
+            <a href="#" class="footer-social__item">
               <img class="svg" src="img/footer/twitter.svg" alt="">
             </a>
           </div>

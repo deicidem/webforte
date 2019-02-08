@@ -13,6 +13,8 @@
     align-items: center
     width: 280px
     height: 167px
+    &:hover
+      cursor: pointer
     &__img
       margin-right: 13px
     &__title
@@ -51,14 +53,19 @@
 
 @media (min-width: 1200px)
   .stages
+    width: 100%
     box-shadow: 0 0 30px  rgba(0, 0, 0, 0.10)
     padding-bottom: 183px
     background: #fff
     padding-top: 90px
     &-wrapper
+      .container
+        max-width: 1250px
+        padding: 0
       padding: 0
       background: url("../img/stages/bg.png") center no-repeat
     &-blocks
+      transform: translateX(10px)
       justify-content: center
       flex-direction: row
     &-block

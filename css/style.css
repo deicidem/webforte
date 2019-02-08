@@ -1,5 +1,23 @@
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Montserrat",  sans-serif;
+}
+
+.to-top {
+  z-index: 10;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  -webkit-box-shadow: 0 0 10px 0 #3c3c3c;
+          box-shadow: 0 0 10px 0 #3c3c3c;
+  background: #fff url("../img/header/to-top.png") center no-repeat;
 }
 
 img {
@@ -170,6 +188,10 @@ section {
           align-items: center;
 }
 
+.header-menu_hidden {
+  top: -86px;
+}
+
 .header-menu__logo {
   margin-right: 17px;
 }
@@ -183,7 +205,7 @@ section {
   transition: all 0.5s ease-in-out;
   position: fixed;
   width: 0;
-  height: 100vh;
+  height: 120vh;
   top: 0;
   left: 0;
   overflow: hidden;
@@ -206,12 +228,10 @@ section {
   white-space: nowrap;
   margin-bottom: 40px;
   font-size: 16px;
-  margin-left: 30px;
   overflow: hidden;
 }
 
 .header-menu__nav ul li a {
-  margin-right: 10px;
   color: #fff;
   text-decoration: none;
   position: relative;
@@ -561,9 +581,18 @@ section {
   color: #01985d;
   font-weight: 900;
   right: 0;
-  bottom: 3px;
+  bottom: 5px;
   z-index: 1;
-  text-decoration: underline;
+}
+
+.header-main__hero .hero-list_bold::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  right: 0;
+  bottom: 0px;
+  background: #01985d;
 }
 
 .header-main__hero .hero-list li {
@@ -1110,6 +1139,8 @@ section {
 
 @media (min-width: 1200px) {
   .about {
+    padding-top: 96px;
+    padding-bottom: 81px;
     -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   }
@@ -1310,6 +1341,10 @@ section {
   height: 167px;
 }
 
+.stages-block:hover {
+  cursor: pointer;
+}
+
 .stages-block__img {
   margin-right: 13px;
 }
@@ -1367,6 +1402,7 @@ section {
 
 @media (min-width: 1200px) {
   .stages {
+    width: 100%;
     -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     padding-bottom: 183px;
@@ -1377,7 +1413,13 @@ section {
     padding: 0;
     background: url("../img/stages/bg.png") center no-repeat;
   }
+  .stages-wrapper .container {
+    max-width: 1250px;
+    padding: 0;
+  }
   .stages-blocks {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;

@@ -1,8 +1,21 @@
 $gradient: linear-gradient(to right, #f68b1f 0%, #f74c00 100%)
 $gradient-active: linear-gradient(to right, #f74c00 0%, #f68b1f 100%)
 $active: #f68b1f
+* 
+  scroll-behavior: smooth
 body
   font-family: "Montserrat",  sans-serif
+.to-top
+  z-index: 10
+  position: fixed
+  bottom: 40px
+  right: 40px
+  width: 50px
+  height: 50px
+  border-radius: 50%
+  border: none
+  box-shadow: 0 0 10px 0 #3c3c3c
+  background: #fff url("../img/header/to-top.png") center no-repeat
 img
   max-width: 100%
   max-height: 100%
