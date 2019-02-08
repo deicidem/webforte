@@ -280,14 +280,20 @@ section {
 }
 
 .header-menu__button {
-  z-index: 10;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 1000;
   right: 0;
   top: 0;
   width: 60px;
   height: 60px;
   border: 0 solid #747474;
   background-color: #26282b;
-  position: absolute;
+  position: fixed;
+}
+
+.header-menu__button_hidden {
+  top: -84px;
 }
 
 .header-menu__button::before, .header-menu__button::after, .header-menu__button span {
