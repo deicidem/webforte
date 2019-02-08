@@ -1,0 +1,89 @@
+.footer
+  background-color: #26282b
+  padding-top: 45px
+  padding-bottom: 38px
+  &-blocks
+    margin: auto
+    max-width: 160px
+    display: flex
+    flex-direction: column
+    align-items: baseline
+    justify-content: flex-start
+  &-block
+    margin: 0
+    padding: 0
+    margin-bottom: 20px
+    list-style: none
+    li
+      margin-bottom: 10px
+    &__item
+      display: inline-block
+      color: #d3d3d3
+      font-size: 14px
+      text-decoration: none
+      vertical-align: middle
+      position: relative
+    a.footer-block__item
+      &::after
+        transition: all 0.3s ease-in-out
+        content: ''
+        position: absolute
+        bottom: -4px
+        height: 2px
+        background-color: rgba(#d3d3d3, .8)
+        left: 50%
+        width: 0
+        transform: translateX(-50%)
+      &:hover:after
+        z-index: 1
+        width: 100%
+    img
+      vertical-align: middle
+  &-social
+    margin-top: 40px
+    display: flex
+    justify-content: space-between
+    &__item
+      width: 30px
+      height: 30px
+      &:hover
+        .svg path
+          fill: $active
+    .svg
+      width: 30px
+      height: 30px
+    .svg path
+      transition: 0.5s
+      fill: #a2a2a2
+  &-logo
+    margin-top: 20px
+    color: #d3d3d3
+    font-size: 15px
+    text-align: center
+@media (min-width: 768px)
+  .footer
+    &-blocks
+      margin: 0 
+      max-width: 100%
+      align-content: space-around
+      flex-wrap: wrap
+      max-height: 180px
+    &-block
+      margin-bottom: 0
+      max-width: 180px
+      li
+        margin-bottom: 5px
+      &__item
+        font-size: 16px
+    &-logo
+      margin-top: 40px
+@media (min-width: 992px)
+  .footer
+    &-blocks
+      flex-direction: row
+      align-items: flex-start
+      justify-content: space-around
+    &-logo
+      margin-top: 10px
+    &-social
+      margin-top: 10px

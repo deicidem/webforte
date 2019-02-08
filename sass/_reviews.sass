@@ -1,0 +1,89 @@
+.reviews
+  background-color: #fff
+  padding-left: 25px
+  padding-right: 25px
+  margin-bottom: 15px
+  position: relative
+  &-guarantee
+    display: none
+  &-block
+    display: flex
+    flex-direction: column
+    padding: 35px
+    border-radius: 50px
+    background-color: #f6f7f9
+    position: relative
+    z-index: 1
+    margin-bottom: 30px
+    transform: translateX(12px)
+    &::before
+      z-index: -1
+      content: ''
+      position: absolute
+      bottom: -5px
+      left: -27px
+      width: 84px
+      height: 50px
+      background: url("../img/reviews/tail.png") center no-repeat
+    &_right
+      transform: translateX(-12px)
+      &::before
+        right: -27px
+        left: auto
+        transform: scaleX(-1);
+        filter: FlipH;
+    &__image
+      text-align: center
+      margin-bottom: 30px
+    &__name
+      font-size: 13px
+      font-weight: 700
+      color: $active
+    &__company
+      font-size: 13px
+      color: $active
+      margin-bottom: 20px
+    &__comment
+      font-size: 18px
+      font-style: italic
+@media (min-width: 768px)
+  .reviews
+    &-block
+      align-items: center
+      flex-direction: row
+      justify-content: space-between
+      &__text
+        flex-basis: 68%
+      &__image
+        margin: 0
+        flex-basis: 20%
+      &_right
+        flex-direction: row-reverse
+      &__name
+        font-size: 15px
+      &__company
+        font-size: 15px
+      &__comment
+        font-size: 20px
+@media (min-width: 992px)
+  .reviews
+    &-guarantee
+      display: block
+      position: absolute
+      width: 150px
+      top: 30px
+      right: 30px
+    &-block
+      width: 700px
+      &_right
+        margin-left: auto
+@media (min-width: 1200px)
+  .reviews
+    box-shadow: 0 0 30px  rgba(0, 0, 0, 0.10)
+    padding-left: 130px
+    padding-right: 130px
+    &-guarantee
+      width: auto
+      position: absolute
+      top: 50px
+      right: 55px
