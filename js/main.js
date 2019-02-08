@@ -6,8 +6,10 @@ $('document').ready(() => {
       $("html,body").css("overflow","auto");
       
       $("body").removeClass("fixed");
+      $(document).bind('touchmove', true);
     } else {
       setTimeout(() => {
+        $(document).bind('touchmove', false);
         $("body").addClass("fixed");
         $("html,body").css("overflow","hidden");
       }, 500);
