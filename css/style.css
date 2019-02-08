@@ -325,7 +325,6 @@ section {
 @media (min-width: 460px) {
   .header-menu__nav li {
     font-size: 22px;
-    margin-left: 50px;
   }
   .header-menu__wrapper {
     -webkit-box-orient: horizontal;
