@@ -962,20 +962,20 @@ section {
     max-width: 1170px;
     margin-bottom: 27px;
   }
-  .header-title_left {
-    padding-left: 80px;
-    padding-right: 70px;
-  }
-  .header-title_right {
-    padding-left: 80px;
-    padding-right: 70px;
-  }
   .header-main {
+    margin-left: auto;
+    margin-right: auto;
+    width: 79%;
+    max-width: 1250px;
     position: relative;
     margin-top: 95px;
   }
+  .header-main .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .header-main__hero {
-    width: 63%;
+    width: 75%;
   }
   .header-main__hero_blue {
     margin-bottom: 25px;
@@ -984,6 +984,7 @@ section {
     margin-left: 80px;
   }
   .header-main__hero_green {
+    margin-bottom: 40px;
     margin-left: auto;
   }
   .header-main__hero_green .hero-list {
@@ -1001,27 +1002,22 @@ section {
     top: -60px;
   }
   .header .hero-helicopter {
-    width: 309px;
-    right: -325px;
+    width: 250px;
+    right: -250px;
     top: -31px;
   }
   .header .hero-ship {
     z-index: -1;
-    width: 483px;
-    right: -322px;
-    top: 82px;
+    width: 400px;
+    right: -240px;
+    top: 60px;
     left: auto;
-  }
-  .header .hero-gift {
-    width: 268px;
-    right: -25px;
-    top: -40px;
   }
   .header .hero-men {
     top: auto;
-    bottom: -35px;
-    width: 367px;
-    left: -350px;
+    bottom: -75px;
+    width: 250px;
+    left: -210px;
   }
   .header .hero-title {
     font-size: 30px;
@@ -1074,6 +1070,50 @@ section {
     top: -490px;
     right: 148px;
     z-index: 0;
+  }
+}
+
+@media (min-width: 1430px) {
+  .header-main__hero {
+    width: 63%;
+  }
+  .header-main__hero_green {
+    margin-bottom: 0;
+  }
+  .header-main__hero .hero-helicopter {
+    width: 309px;
+    right: -325px;
+    top: -31px;
+  }
+  .header-main__hero .hero-ship {
+    z-index: -1;
+    width: 483px;
+    right: -322px;
+    top: 82px;
+    left: auto;
+  }
+  .header-main__hero .hero-gift {
+    width: 268px;
+    right: -25px;
+    top: -40px;
+  }
+  .header-main__hero .hero-men {
+    top: auto;
+    bottom: -35px;
+    width: 367px;
+    left: -350px;
+  }
+  .header-title {
+    max-width: 1170px;
+    margin-bottom: 27px;
+  }
+  .header-title_left {
+    padding-left: 80px;
+    padding-right: 70px;
+  }
+  .header-title_right {
+    padding-left: 80px;
+    padding-right: 70px;
   }
 }
 
@@ -1243,12 +1283,12 @@ section {
 
 @media (min-width: 1740px) {
   .about_wrapper .container {
-    -ms-flex-preferred-size: 72%;
-        flex-basis: 72%;
+    -ms-flex-preferred-size: 68.6%;
+        flex-basis: 68.6%;
   }
   .about_wrapper .about-image {
-    -ms-flex-preferred-size: 14%;
-        flex-basis: 14%;
+    -ms-flex-preferred-size: 16.25%;
+        flex-basis: 16.25%;
   }
 }
 

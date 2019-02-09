@@ -351,22 +351,24 @@
     &-title
       max-width: 1170px
       margin-bottom: 27px
-      &_left
-        padding-left: 80px
-        padding-right: 70px
-      &_right
-        padding-left: 80px
-        padding-right: 70px
     &-main
+      .container
+        padding-left: 0
+        padding-right: 0
+      margin-left: auto
+      margin-right: auto
+      width: 79%
+      max-width: 1250px
       position: relative
       margin-top: 95px
       &__hero
-        width: 63%
+        width: 75%
         &_blue
           margin-bottom: 25px
           .hero-subtitle
             margin-left: 80px
         &_green
+          margin-bottom: 40px
           margin-left: auto
           .hero-list
             max-width: 73%
@@ -381,24 +383,20 @@
         right: -50px
         top: -60px
       &-helicopter
-        width: 309px
-        right: -325px
+        width: 250px
+        right: -250px
         top: -31px
       &-ship
         z-index: -1
-        width: 483px
-        right: -322px
-        top: 82px
+        width: 400px
+        right: -240px
+        top: 60px
         left: auto
-      &-gift
-        width: 268px
-        right: -25px
-        top: -40px
       &-men
         top: auto
-        bottom: -35px
-        width: 367px
-        left: -350px
+        bottom: -75px
+        width: 250px
+        left: -210px
       &-title
         font-size: 30px
         margin-bottom: 5px
@@ -435,3 +433,40 @@
     top: -490px
     right: 148px
     z-index: 0
+@media (min-width: 1430px)
+  .header
+    &-main
+      &__hero
+        width: 63%
+        &_green
+          margin-bottom: 0  
+        .hero
+          &-helicopter
+            width: 309px
+            right: -325px
+            top: -31px
+          &-ship
+            z-index: -1
+            width: 483px
+            right: -322px
+            top: 82px
+            left: auto
+          &-gift
+            width: 268px
+            right: -25px
+            top: -40px
+          &-men
+            top: auto
+            bottom: -35px
+            width:  367px
+            left: -350px
+    &-title
+      max-width: 1170px
+      margin-bottom: 27px
+      &_left
+        padding-left: 80px
+        padding-right: 70px
+      &_right
+        padding-left: 80px
+        padding-right: 70px
+    
