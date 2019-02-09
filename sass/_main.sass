@@ -77,28 +77,31 @@
             position: absolute
             color: #01985d
             font-weight: 900
+            background: none
+            overflow: hidden
             right: 0
-            bottom: 5px
+            bottom: 0
             z-index: 1
             &::after
               content: ''
               position: absolute
               width: 100%
-              height: 3px
+              height: 2px
               right: 0
-              bottom: 0px
-              background: #01985d
-          li
-            overflow: hidden
-            padding-right: 60px
+              bottom: 6px
+              background: none
+          li  
             padding-left: 30px
             position: relative
             margin-bottom: 12px
             font-size: 20px
-            span:first-child
+            .hero-list_bold_last
               position: relative
+              overflow: hidden
+              max-width: calc(100% - 120px)
+              display: inline-block
+              vertical-align: bottom
               &::after
-                overflow: hidden
                 content: '.....................................................................................................................................................................'
             &::before
               content: ''
@@ -181,7 +184,6 @@
     .hero
       &-list
         li
-          padding-right: 120px
 @media (min-width: 460px)
   .header
     &-title
@@ -238,6 +240,12 @@
           margin-bottom: 17px
           font-size: 20px
           padding-right: 120px
+          span:first-child
+            position: relative
+            overflow: hidden
+            max-width: 100%
+            display: inline-block
+            vertical-align: bottom
     &-social
       &_item
         margin-right: 30px
@@ -282,6 +290,7 @@
         width: 300px
       &-list
         li
+          
           white-space: nowrap
       &-ship
         width: 464px
@@ -396,7 +405,12 @@
       &-list
         margin-bottom: 0
         li
+          padding-right: 0
+          margin-right: 120px
           margin-bottom: 7px
+        &_bold
+          font-size: 23px
+          right: -135px
       &-subtitle
         text-align: left
         margin-bottom: 17px
