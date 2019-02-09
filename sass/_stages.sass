@@ -46,41 +46,53 @@
       width: 418px
       height: 183px
       background: url("../img/stages/bg-o_md.png") center no-repeat
-      &_title
+      &__title
         font-size: 16px
       &_active
         background: url("../img/stages/bg-fill_md.png") center no-repeat
 
 @media (min-width: 1200px)
   .stages
+    border: 1px solid #98b9d0
     width: 100%
     box-shadow: 0 0 30px  rgba(0, 0, 0, 0.10)
     padding-bottom: 183px
     background: #fff
     padding-top: 90px
+
     &-wrapper
       .container
+        width: 82%
         max-width: 1250px
         padding: 0
       padding: 0
       background: url("../img/stages/bg.png") center no-repeat
     &-blocks
-      transform: translateX(10px)
+      padding-right: 10px
+      padding-left: 10px
+      // transform: translateX(10px)
       justify-content: center
       flex-direction: row
     &-block
       background: url("../img/stages/bg-o_lg.png") center no-repeat
       height: 109px
-      margin-right: 10px
+      margin-right: 0
       margin-bottom: 0
       padding-top: 19px
       padding-bottom: 18px
       width: 289px
-      &__title
+      background-size: contain
         font-size: 16px
         font-weight: 600
         max-width: 113px
         text-align: left
+      &__img
+        text-align: right
+        flex-basis: 30%
+      &__title
+        font-weight: 600
+        text-align: left
+        flex-basis: 50%
       &__number
         top: 50%
         transform: translateY(-50%)
@@ -89,3 +101,4 @@
           left: -12px
       &_active
         background: url("../img/stages/bg-fill_lg.png") center no-repeat
+        background-size: contain

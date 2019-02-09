@@ -45,17 +45,19 @@
     &-image
       background: url("../img/about/bg-repeat.png") top repeat-y
       background-size: contain
-      flex-basis: 18%
+      flex-basis: 9%
   .about_wrapper
     display: flex
+    justify-content: center
     align-items: stretch
 @media (min-width: 1200px)
   .about
+    border: 1px solid #98b9d0
     padding-top: 96px
     padding-bottom: 81px
     &_wrapper
       .container
-        flex-basis: 64%
+        flex-basis: 82%
         margin: 0
         max-width: 100%
     box-shadow: 0 0 30px  rgba(0, 0, 0, 0.10)
@@ -70,6 +72,7 @@
       flex-direction: row-reverse
       margin-bottom: 70px
     &-text
+      max-width: 550px
       p
         &::after
           width: 460px
@@ -83,6 +86,15 @@
       margin-right: auto
       max-width: 50%  
     &_wrapper
-      background-size: 13%
-
-    
+@media (min-width: 1300px)
+  .about_wrapper
+    .container
+      flex-basis: 76%
+    .about-image
+      flex-basis: 12%
+@media (min-width: 1550px)
+  .about_wrapper
+    .container
+      flex-basis: 70%
+    .about-image
+      flex-basis: 15%

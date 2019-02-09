@@ -12,14 +12,16 @@ body
 .to-top
   z-index: 10
   position: fixed
-  bottom: 40px
-  right: 40px
+  bottom: 15px
+  right: 15px
   width: 50px
   height: 50px
   border-radius: 50%
   border: none
   box-shadow: 0 0 10px 0 #3c3c3c
-  background: #fff url("../img/header/to-top.png") center no-repeat
+  background: #fff url("../img/header/to-top.png") center 52% no-repeat
+  &:hover
+    cursor: pointer
 img
   max-width: 100%
   max-height: 100%
@@ -53,7 +55,6 @@ img
     border: 1px solid $active
     box-shadow: none
     color: $active
-    
     &:hover
       transform: translateY(-2px)
       background: none
@@ -66,6 +67,7 @@ img
 .circle-wrapper 
   position: relative
 section
+  overflow: hidden
   padding-top: 62px
   padding-bottom: 50px
 .section-title

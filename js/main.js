@@ -127,7 +127,7 @@ function hasScrolled() {
     $('.stages-block').removeClass('stages-block_active');
     $(this).addClass('stages-block_active');
     for (let i = 0; i < $('.stages-block').length; i++) {
-      if ($('.stages-block').eq(i).attr('isClicked') == '1') {
+      if ($('.stages-block').eq(i).hasClass('stages-block_active')) {
         $(this).find('img').attr('src', `img/stages/img-${i+1}-active.png`);
       } else {
         $('.stages-block').eq(i).find('img').attr('src', `img/stages/img-${i+1}.png`);

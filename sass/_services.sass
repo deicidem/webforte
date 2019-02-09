@@ -11,10 +11,10 @@
     flex-direction: column
     align-items: center
     margin-bottom: 90px
-    &:hover
-      .services-block__img
-        background-color: rgba(#fff,0.5)
-        cursor: pointer
+    &__hover
+      &:hover
+        .services-block__img
+          background-color: rgba(#fff,0.5)
     &__img
       transition: all 0.5s
       display: flex
@@ -26,11 +26,17 @@
       background-color: rgba(#fff,0.1)
       margin-bottom: 40px
       position: relative
+      &:hover
+        background-color: rgba(#fff,0.5)
+        cursor: pointer
       &_discount
         position: absolute
         width: 124px
         top: -3px
         right: -3px
+        &:hover~.services-block__img
+            background-color: rgba(#fff,0.5)
+            cursor: pointer
       &_seo
         align-items: flex-start
         justify-content: flex-start
@@ -38,6 +44,7 @@
           margin-left: 94px
           margin-top: 90px
     &__title
+      display: inline-block
       transition: all 0.5s
       color: #ffffff
       font-size: 23px
@@ -54,6 +61,8 @@
         background: #fff
 @media (min-width: 1200px)
   .services
+    .container
+      width: 82%
     background: #26282b url("../img/services/background.png") center no-repeat
     background-size: cover
     &-blocks
