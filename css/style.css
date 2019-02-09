@@ -1787,6 +1787,7 @@ section {
     background: url("../img/info/bg-line.png") center repeat-x;
   }
   .info {
+    max-width: 1250px;
     border: 1px solid #98b9d0;
     margin-bottom: 4px;
     -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
@@ -1950,6 +1951,7 @@ section {
 
 @media (min-width: 1200px) {
   .reviews {
+    max-width: 1250px;
     border: 1px solid #98b9d0;
     -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
