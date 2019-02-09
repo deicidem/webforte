@@ -1193,8 +1193,8 @@ section {
   .about-image {
     background: url("../img/about/bg-repeat.png") top repeat-y;
     background-size: contain;
-    -ms-flex-preferred-size: 9%;
-        flex-basis: 9%;
+    -ms-flex-preferred-size: 8%;
+        flex-basis: 8%;
   }
   .about_wrapper {
     display: -webkit-box;
@@ -1205,9 +1205,13 @@ section {
             align-items: stretch;
   }
   .about {
+    -ms-flex-preferred-size: 82%;
+        flex-basis: 82%;
+    margin: 0 auto;
     border: 1px solid #98b9d0;
     padding-top: 96px;
     padding-bottom: 81px;
+    max-width: 1250px;
     -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   }
@@ -1259,17 +1263,6 @@ section {
   }
 }
 
-@media (min-width: 1300px) {
-  .about_wrapper .container {
-    -ms-flex-preferred-size: 82%;
-        flex-basis: 82%;
-  }
-  .about_wrapper .about-image {
-    -ms-flex-preferred-size: 9%;
-        flex-basis: 9%;
-  }
-}
-
 @media (min-width: 1580px) {
   .about_wrapper .container {
     -ms-flex-preferred-size: 76%;
@@ -1287,8 +1280,8 @@ section {
         flex-basis: 68.6%;
   }
   .about_wrapper .about-image {
-    -ms-flex-preferred-size: 16.25%;
-        flex-basis: 16.25%;
+    -ms-flex-preferred-size: 16.5%;
+        flex-basis: 16.5%;
   }
 }
 
