@@ -173,10 +173,6 @@ section {
   }
 }
 
-.container {
-  border: 2px solid red;
-}
-
 .header {
   position: relative;
   background-color: #f0f1eb;
@@ -1415,6 +1411,10 @@ section {
   .services-block {
     margin-bottom: 0;
   }
+}
+
+.container, .header-title, .about-image, .header-main__hero, .about-text, .about-img, .services-block, .stages-block, .info-block, .reviews-block {
+  border: 2px solid red;
 }
 
 .stages-blocks {
