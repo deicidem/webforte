@@ -173,6 +173,10 @@ section {
   }
 }
 
+.container {
+  border: 2px solid red;
+}
+
 .header {
   position: relative;
   background-color: #f0f1eb;
@@ -1227,6 +1231,7 @@ section {
     max-width: 1200px;
   }
   .about_wrapper .container {
+    width: 100%;
     max-width: 1200px;
     padding: 0;
   }
@@ -1395,6 +1400,8 @@ section {
     background-size: cover;
   }
   .services .container {
+    width: 100%;
+    padding: 0;
     max-width: 1200px;
   }
   .services-blocks {
@@ -1532,7 +1539,9 @@ section {
     padding-bottom: 183px;
     padding-top: 90px;
     background: #fff;
-    max-width: 1200px;
+  }
+  .stages-wrapper .container {
+    width: 100%;
   }
   .stages-wrapper {
     padding: 0;
@@ -1795,6 +1804,7 @@ section {
   .dots .container {
     width: 62.5%;
     max-width: 1200px;
+    padding: 0;
   }
   .dots::before {
     content: '';
@@ -1818,6 +1828,9 @@ section {
 }
 
 @media (min-width: 1500px) {
+  .dots .container {
+    width: 100%;
+  }
   .info {
     border: 1px solid #98b9d0;
     margin-bottom: 4px;
