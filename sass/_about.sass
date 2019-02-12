@@ -36,35 +36,41 @@
   .about_wrapper
     display: flex
     align-items: stretch
+    justify-content: space-between
     .container
       max-width: 740px
 @media (min-width: 1200px)
   .about
+    box-sizing: border-box
+    padding-left: 60px
+    padding-right: 60px
+    margin: 0 auto
     box-shadow: 0 0 30px  rgba(0, 0, 0, 0.10)
+    border: 1px solid #98b9d0
     &-image
       background: url("../img/about/bg-repeat.png") top repeat-y
       background-size: contain
-      flex-basis: 8%
-  .about_wrapper
-    display: flex
-    align-items: stretch
-  .about
-    flex-basis: 82%
-    margin: 0 auto
-    border: 1px solid #98b9d0
-    padding-top: 96px
-    padding-bottom: 81px
-    max-width: 1248px
+      width:  18.75%
     &_wrapper
       .container
-        flex-basis: 82%
-        margin: 0
         max-width: 100%
-    box-shadow: 0 0 30px  rgba(0, 0, 0, 0.10)
+        width: 62.5%
+        padding: 0
+      display: flex
+      align-items: stretch
+@media (min-width: 1500px)
+  .about
+    padding-right: 0
+    padding-top: 96px
+    padding-bottom: 81px
+    max-width: 1200px
+    &_wrapper
+      .container
+        max-width: 1200px
+        padding: 0
     p
       font-size: 20px
     &-content
-      padding-left: 60px
       text-align: left
       display: flex
       justify-content: space-between
@@ -72,8 +78,10 @@
       flex-direction: row-reverse
       margin-bottom: 70px
     &-text
-      max-width: 550px
+      flex-basis: 48%
       p
+        &:first-child
+          white-space: nowrap
         &::after
           width: 460px
           left: 0
@@ -81,20 +89,10 @@
           background: linear-gradient(to right, #e4e4e4 0%,  rgba(#e4e4e4, 0) 100%)
         &:last-child
           margin-bottom: 0
+    &-img
+      transform: translateX(-40px) translateY(20px)
+      margin: 0
     &-subtitle
       margin-left: auto
       margin-right: auto
       max-width: 50%  
-    &_wrapper
-@media (min-width: 1580px)
-  .about_wrapper
-    .container
-      flex-basis: 76%
-    .about-image
-      flex-basis: 12%
-@media (min-width: 1740px)
-  .about_wrapper
-    .container
-      flex-basis: 68.6%
-    .about-image
-      flex-basis: 16.5%

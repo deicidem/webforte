@@ -50,26 +50,36 @@
         font-size: 16px
       &_active
         background: url("../img/stages/bg-fill_md.png") center no-repeat
-
 @media (min-width: 1200px)
   .stages
     border: 1px solid #98b9d0
     width: 100%
     box-shadow: 0 0 30px  rgba(0, 0, 0, 0.10)
-    padding-bottom: 183px
-    background: #fff
-    padding-top: 90px
-
+    background: #ffffff
+    padding-top: 95px
+    padding-bottom: 65px
     &-wrapper
       .container
-        width: 82%
-        max-width: 1248.5px
+        width: 62.5%
+        max-width: 1200px
         padding: 0
+      padding: 0
+      background: url("../img/info/background.png")
+@media (min-width: 1500px)
+  .stages
+    box-sizing: border-box
+    border: 1px solid #98b9d0
+    box-shadow: 0 0 30px  rgba(0, 0, 0, 0.10)
+    padding-bottom: 183px
+    padding-top: 90px
+    background: #fff
+    max-width: 1200px 
+    &-wrapper
       padding: 0
       background: url("../img/stages/bg.png") center no-repeat
     &-blocks
-      padding-right: 10px
-      padding-left: 10px
+      padding-left: 60px
+      padding-right: 60px
       // transform: translateX(10px)
       justify-content: center
       flex-direction: row

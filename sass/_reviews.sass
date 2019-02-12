@@ -80,11 +80,16 @@
         margin-left: auto
 @media (min-width: 1200px)
   .reviews
-    max-width: 1250px
     border: 1px solid #98b9d0
     box-shadow: 0 0 30px  rgba(0, 0, 0, 0.10)
+    &-block
+      width: 500px
+@media (min-width: 1500px)
+  .reviews
     padding-left: 130px
     padding-right: 130px
+    &-block
+      width: 600px
     &-guarantee
       width: auto
       position: absolute

@@ -2,6 +2,7 @@
   overflow: hidden
   padding: 0
 .info
+  overflow: initial
   position: relative
   background: #ffffff
   text-align: center
@@ -76,11 +77,12 @@
         font-size: 16px
 @media (min-width: 1200px)
   .dots
+    .container
+      width: 62.5%
+      max-width: 1200px
     position: relative
     z-index: 1
     background: url("../img/info/background.png") top repeat-x
-    .container
-      width: 82%
     &::before
       content: ''
       width: 100%
@@ -91,19 +93,25 @@
       z-index: -1
       background: url("../img/info/bg-line.png") center repeat-x
   .info
-    max-width: 1250px
+    border: 1px solid #98b9d0
+    margin-bottom: 6px
+    box-shadow: 0 0 30px  rgba(0, 0, 0, 0.10)
+    &::after
+      display: none
+@media (min-width: 1500px)
+  .info
     border: 1px solid #98b9d0
     &::after
       display: none
     margin-bottom: 4px
     box-shadow: 0 0 30px  rgba(0, 0, 0, 0.10)
-    padding-right: 35px
-    padding-left: 35px
+    padding-right: 60px
+    padding-left: 60px
     &-blocks
       flex-direction: row
       justify-content: space-between
       flex-wrap: wrap
     &-block
-      flex-basis: 43%
+      flex-basis: 42%
       margin-bottom: 40px
       
