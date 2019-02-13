@@ -27,7 +27,7 @@ $('document').ready(() => {
     nextArrow: '<button type="button" class="works-next"></button>',
     prevArrow: '<button type="button" class="works-prev"></button>',
     responsive: [{
-      breakpoint: 1200,
+      breakpoint: 1023,
       settings: {
         slidesToShow: 3,
       }

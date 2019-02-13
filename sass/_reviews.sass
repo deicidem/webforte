@@ -78,20 +78,28 @@
       width: 700px
       &_right
         margin-left: auto
-@media (min-width: 1200px)
+@media (min-width: 1024px)
   .reviews
     border: 1px solid #98b9d0
     box-shadow: 0 0 30px  rgba(0, 0, 0, 0.10)
+    &-guarantee
+      width: 10vw
     &-block
-      width: 500px
+      width: 40vw
+      &__name
+        font-size: 1vw
+      &__company
+        margin-bottom: 1vw
+        font-size: 0.9vw
+      &__comment
+        font-size: 1.1vw
+      &__text
+        flex-basis: 75%
 @media (min-width: 1500px)
   .reviews
-    padding-left: 130px
-    padding-right: 130px
-    &-block
-      width: 600px
+    padding-left: 90px
+    padding-right: 90px
     &-guarantee
-      width: auto
       position: absolute
       top: 50px
       right: 55px

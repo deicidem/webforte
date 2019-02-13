@@ -75,7 +75,7 @@
         font-size: 20px
       &__button
         font-size: 16px
-@media (min-width: 1200px)
+@media (min-width: 1024px)
   .dots
     .container
       width: 62.5%
@@ -84,6 +84,7 @@
     position: relative
     z-index: 1
     background: url("../img/info/background.png") top repeat-x
+    background-size: 190vw
     &::before
       content: ''
       width: 100%
@@ -94,12 +95,30 @@
       z-index: -1
       background: url("../img/info/bg-line.png") center repeat-x
   .info
+    padding-right: 60px
+    padding-left: 60px
     border: 1px solid #98b9d0
     margin-bottom: 6px
     box-shadow: 0 0 30px  rgba(0, 0, 0, 0.10)
     &::after
       display: none
-@media (min-width: 1500px)
+    &-blocks
+      flex-direction: row
+      justify-content: space-between
+      flex-wrap: wrap
+    &-block
+      justify-content: space-around
+      height: 10vw
+      &__title
+        margin: 0
+        font-size: 1vw
+      flex-basis: 37%
+      &__button
+        padding-top: 3%
+        padding-bottom: 3%
+  .more
+    font-size: 1vw
+@media (min-width: 1800px)
   .dots
     .container
       width: 100%

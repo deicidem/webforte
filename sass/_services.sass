@@ -26,7 +26,6 @@
       background-color: rgba(#fff,0.1)
       margin-bottom: 40px
       position: relative
-      
       &:hover
         background-color: rgba(#fff,0.5)
         cursor: pointer
@@ -39,11 +38,8 @@
             background-color: rgba(#fff,0.5)
             cursor: pointer
       &_seo
-        align-items: flex-start
-        justify-content: flex-start
         img
-          margin-left: 94px
-          margin-top: 90px
+          transform: translate(5%, 5%)
     &__title
       display: inline-block
       transition: all 0.5s
@@ -60,10 +56,10 @@
         bottom: -1px
         left: 0
         background: #fff
-@media (min-width: 1200px)
+@media (min-width: 1024px)
   .services
     .container
-      width: 100%
+      width: 62.5%
       padding: 0
       max-width: 1200px
     background: #26282b url("../img/services/background.png") center no-repeat
@@ -73,5 +69,22 @@
       justify-content: space-around
     &-block
       margin-bottom: 0
+      &__title
+        margin-bottom: 20%
+        font-size: 1.3vw
+      &__hover
+        width: 100%
+        height: 100%
+      &__img
+        margin-bottom: 20%
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 15vw
+        height: 15vw
+        img
+          margin: 0
+          width: 7vw
+          max-width: 100%
 .container, .header-title, .about-image, .header-main__hero, .about-text, .about-img, .services-block, .stages-block, .info-block, .reviews-block, 
   border: 2px solid red
