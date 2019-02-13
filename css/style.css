@@ -1188,16 +1188,17 @@ section {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .about {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    padding-left: 60px;
-    padding-right: 60px;
     margin: 0 auto;
     -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     border: 1px solid #98b9d0;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    max-width: 1200px;
   }
   .about-image {
     background: url("../img/about/bg-repeat.png") top repeat-y;
@@ -1217,24 +1218,25 @@ section {
     width: 62.5%;
     padding: 0;
   }
-}
-
-@media (min-width: 1500px) {
-  .about {
-    padding-right: 0;
-    padding-top: 96px;
-    padding-bottom: 81px;
-    max-width: 1200px;
-  }
   .about_wrapper .container {
-    width: 100%;
+    width: 62.5%;
     max-width: 1200px;
     padding: 0;
   }
   .about p {
     font-size: 20px;
+    font-size: 1vw;
+  }
+  .about p span {
+    display: block;
+  }
+  .about-button {
+    font-size: 1vw;
+    padding-top: 2%;
+    padding-bottom: 2%;
   }
   .about-content {
+    padding-left: 60px;
     text-align: left;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1259,7 +1261,7 @@ section {
     white-space: nowrap;
   }
   .about-text p::after {
-    width: 460px;
+    width: 70%;
     left: 0;
     -webkit-transform: translateX(0);
             transform: translateX(0);
@@ -1508,7 +1510,7 @@ section {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .stages {
     border: 1px solid #98b9d0;
     width: 100%;
@@ -1517,6 +1519,13 @@ section {
     background: #ffffff;
     padding-top: 95px;
     padding-bottom: 65px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border: 1px solid #98b9d0;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    padding-bottom: 17%;
+    padding-top: 5%;
+    background: #fff;
   }
   .stages-wrapper {
     padding: 0;
@@ -1527,29 +1536,13 @@ section {
     max-width: 1200px;
     padding: 0;
   }
-}
-
-@media (min-width: 1500px) {
-  .stages {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    border: 1px solid #98b9d0;
-    -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-    padding-bottom: 183px;
-    padding-top: 90px;
-    background: #fff;
-  }
-  .stages-wrapper .container {
-    width: 100%;
-  }
   .stages-wrapper {
     padding: 0;
     background: url("../img/stages/bg.png") center no-repeat;
   }
   .stages-blocks {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1567,26 +1560,36 @@ section {
     padding-bottom: 18px;
     width: 289px;
     background-size: contain;
-    background-size-font-size: 16px;
-    background-size-font-weight: 600;
-    background-size-max-width: 113px;
-    background-size-text-align: left;
+    font-weight: 600;
+    text-align: left;
   }
   .stages-block__img {
     text-align: right;
-    -ms-flex-preferred-size: 30%;
-        flex-basis: 30%;
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+  }
+  .stages-block__img img {
+    max-height: 100%;
   }
   .stages-block__title {
+    font-size: 16px;
+    white-space: nowrap;
+    font-size: 1vw;
     font-weight: 600;
     text-align: left;
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+  }
+  .stages-block__title span {
+    display: block;
   }
   .stages-block__number {
+    font-size: 1vw;
     top: 50%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
     left: -22px;
   }
   .stages-block__number_first {
@@ -1595,6 +1598,20 @@ section {
   .stages-block_active {
     background: url("../img/stages/bg-fill_lg.png") center no-repeat;
     background-size: contain;
+  }
+}
+
+@media (min-width: 1500px) {
+  .stages-block__img {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+  }
+  .stages-block__title {
+    font-size: 16px;
+  }
+  .stages-block__number {
+    width: 45px;
+    height: 45px;
   }
 }
 

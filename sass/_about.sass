@@ -39,11 +39,10 @@
     justify-content: space-between
     .container
       max-width: 740px
-@media (min-width: 1200px)
+@media (min-width: 1024px)
   .about
     box-sizing: border-box
-    padding-left: 60px
-    padding-right: 60px
+    
     margin: 0 auto
     box-shadow: 0 0 30px  rgba(0, 0, 0, 0.10)
     border: 1px solid #98b9d0
@@ -58,20 +57,25 @@
         padding: 0
       display: flex
       align-items: stretch
-@media (min-width: 1500px)
-  .about
-    padding-right: 0
-    padding-top: 96px
-    padding-bottom: 81px
+    padding-top: 5%
+    padding-bottom: 5%
     max-width: 1200px
     &_wrapper
       .container
-        width: 100%
+        width: 62.5%
         max-width: 1200px
         padding: 0
     p
       font-size: 20px
+      font-size: 1vw
+      span
+        display: block
+    &-button
+      font-size: 1vw
+      padding-top: 2%
+      padding-bottom: 2%
     &-content
+      padding-left: 60px
       text-align: left
       display: flex
       justify-content: space-between
@@ -84,7 +88,7 @@
         &:first-child
           white-space: nowrap
         &::after
-          width: 460px
+          width: 70%
           left: 0
           transform: translateX(0)
           background: linear-gradient(to right, #e4e4e4 0%,  rgba(#e4e4e4, 0) 100%)
