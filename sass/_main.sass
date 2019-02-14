@@ -330,9 +330,13 @@
         font-size: 115px
     .hero-ship
       left: 280px
-@media (min-width: 1200px)
+@media (min-width: 1024px)
   .header
+    position: relative
     &-social
+      .container
+        width: 100% !important
+        max-width: 100%
       border-top-left-radius: 10px
       border-top-right-radius: 10px
       margin-top: 0 
@@ -340,133 +344,134 @@
       bottom: 0
       z-index: 5
       background-color: rgba(#fff, 0.6)
-      padding: 10px 15px
+      padding: 0.52vw 0.78vw
       &_title
+        font-size: 0.7vw
         margin-left: 0
-        margin-right: 13px
+        margin-right: 0.6vw
       &_item
+        width: 1.56vw
+        height: 1.56vw
+        display: flex
         margin-right: 5px
       &_wrapper
         justify-content: flex-start
     &-title
-      max-width: 1170px
-      margin-bottom: 27px
+      width: 62.5%
+      max-width: 1200px
+      font-size: 5vw
+      margin-bottom: 1.4vw
+      &_left
+        padding-left: 4.5vw
+        padding-right: 3.8vw
+      &_right
+        padding-left: 4.5vw
+        padding-right: 3.8vw
+      &_first
+        font-size: 6.2vw
     &-main
       .container
+        width: 62.5%
+        max-width: 1200px
         padding-left: 0
         padding-right: 0
       margin-left: auto
       margin-right: auto
-      width: 79%
-      max-width: 1250px
-      position: relative
-      margin-top: 95px
+      margin-top: 5.5vw
+      padding: 0
       &__hero
-        width: 75%
+        padding: 1.82vw 1.98vw 1.2vw
+        width: 63%
         &_blue
-          margin-bottom: 25px
+          margin-bottom: 1.3vw
           .hero-subtitle
-            margin-left: 80px
+            margin-left: 4.1vw
         &_green
-          margin-bottom: 40px
+          margin-bottom: 2vw
           margin-left: auto
           .hero-list
             max-width: 73%
     .hero
       &-rocket
         z-index: -1
-        width: 191px
-        right: 165px
-        top: -39px
+        width: 10vw
+        right: 9vw
+        top: -2vw
       &-discount
-        width: 214px
-        right: -50px
-        top: -60px
+        width: 12vw
+        right: -2.8vw
+        top: -3vw
       &-helicopter
-        width: 250px
-        right: -250px
-        top: -31px
+        width: 16.2vw
+        right: -17.5vw
+        top: -1.61vw
       &-ship
         z-index: -1
-        width: 400px
-        right: -240px
-        top: 60px
+        width: 26vw
+        right: -17vw
+        top: 4.2vw
         left: auto
+      &-gift
+        width: 14vw
+        right: -1.3vw
+        top: -2vw
       &-men
         top: auto
-        bottom: -75px
-        width: 250px
-        left: -210px
+        bottom: -3.6vw
+        width: 19vw
+        left: -18.5vw
       &-title
-        font-size: 30px
-        margin-bottom: 5px
+        font-size: 1.5vw
+        margin-bottom: 0.25vw
+        span
+          display: block
       &-list
+        max-width: 75%
         margin-bottom: 0
         li
+          font-size: 1.07vw
           padding-right: 0
-          margin-right: 120px
-          margin-bottom: 7px
+          margin-right: 7vw
+          margin-bottom: 0.36vw
+          padding-left: 1.8vw
+          &::before
+            background-size: contain
+            width: 1vw
+            height: 1vw
         &_bold
-          font-size: 23px
-          right: -135px
+          font-size: 1.23vw
+          right: -7vw
       &-subtitle
         text-align: left
-        margin-bottom: 17px
+        font-size: 1.07vw
+        margin-bottom: 0.88vw
       &-form
-        margin-bottom: 13px
+        margin-bottom: 0.67vw
         display: flex
         align-items: center
         justify-content: space-between
         &__input
           margin: 0
-          margin-right: 20px
-          padding-top: 17px
-          padding-bottom: 17px
+          font-size: 1vw
+          margin-right: 1vw
+          padding-top: 0.88vw
+          padding-bottom: 0.88vw
+          padding-left: 1vw
         &__button
           margin: 0
       &-agreement
         text-align: left
+        font-size: 0.65vw
         max-width: 100%
+
   .circle
-    width: 577px
-    height: 577px
-    top: -490px
-    right: 148px
+    width: 30vw
+    height: 30vw
+    top: -25.5vw
+    right: 7.7vw
     z-index: 0
-@media (min-width: 1430px)
-  .header
-    &-main
-      &__hero
-        width: 63%
-        &_green
-          margin-bottom: 0  
-        .hero
-          &-helicopter
-            width: 309px
-            right: -325px
-            top: -31px
-          &-ship
-            z-index: -1
-            width: 483px
-            right: -322px
-            top: 82px
-            left: auto
-          &-gift
-            width: 268px
-            right: -25px
-            top: -40px
-          &-men
-            top: auto
-            bottom: -35px
-            width:  367px
-            left: -350px
-    &-title
-      max-width: 1170px
-      margin-bottom: 27px
-      &_left
-        padding-left: 80px
-        padding-right: 70px
-      &_right
-        padding-left: 80px
-        padding-right: 70px
+
+@media (min-width: 1800px)
+  .header-title
+    width: 100%    
     
