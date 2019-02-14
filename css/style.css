@@ -1042,7 +1042,7 @@ section {
     margin-left: auto;
     margin-right: auto;
     margin-top: 5.5vw;
-    padding: 0;
+    padding-bottom: 0;
   }
   .header-main .container {
     width: 62.5%;
@@ -1131,7 +1131,7 @@ section {
   .header .hero-subtitle {
     text-align: left;
     font-size: 1.07vw;
-    margin-bottom: 0.88vw;
+    margin-bottom: 1vw;
   }
   .header .hero-form {
     margin-bottom: 0.67vw;
