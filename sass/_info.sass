@@ -95,8 +95,8 @@
       z-index: -1
       background: url("../img/info/bg-line.png") center repeat-x
   .info
-    padding-right: 60px
-    padding-left: 60px
+    padding-right: 3vw
+    padding-left: 3vw
     border: 1px solid #98b9d0
     margin-bottom: 6px
     box-shadow: 0 0 30px  rgba(0, 0, 0, 0.10)
@@ -104,36 +104,27 @@
       display: none
     &-blocks
       flex-direction: row
-      justify-content: space-between
+      justify-content: center
       flex-wrap: wrap
     &-block
       justify-content: space-around
       height: 10vw
+      &_yellow, &_blue
+        margin-right: 30px
       &__title
         margin: 0
-        font-size: 1vw
-      flex-basis: 37%
+        font-size: 1.05vw
+      flex-basis: 36%
       &__button
         padding-top: 3%
         padding-bottom: 3%
   .more
-    font-size: 1vw
+    font-size: 1.05vw
 @media (min-width: 1800px)
   .dots
     .container
       width: 100%
   .info
-    border: 1px solid #98b9d0
-    &::after
-      display: none
-    margin-bottom: 4px
-    box-shadow: 0 0 30px  rgba(0, 0, 0, 0.10)
-    padding-right: 60px
-    padding-left: 60px
-    &-blocks
-      flex-direction: row
-      justify-content: space-between
-      flex-wrap: wrap
     &-block
       flex-basis: 42%
       margin-bottom: 40px

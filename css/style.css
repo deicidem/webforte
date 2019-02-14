@@ -507,9 +507,10 @@ section {
     display: flex;
   }
   .header-menu__nav ul li a {
-    font-size: 1vw;
+    font-size: 1.07vw;
   }
   .header-menu__phone {
+    white-space: nowrap;
     font-size: 1.1vw;
   }
   .header-menu__logo {
@@ -1264,7 +1265,7 @@ section {
   }
   .about p {
     font-size: 20px;
-    font-size: 1vw;
+    font-size: 1.05vw;
   }
   .about p span {
     display: block;
@@ -1273,7 +1274,7 @@ section {
     font-size: 1.1vw;
   }
   .about-content {
-    padding-left: 60px;
+    padding-left: 3vw;
     text-align: left;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1431,12 +1432,15 @@ section {
     max-width: 1200px;
   }
   .services-blocks {
+    padding-right: 3vw;
+    padding-left: 3vw;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .services-block {
     margin-bottom: 0;
@@ -1596,8 +1600,8 @@ section {
     background: url("../img/stages/bg.png") center no-repeat;
   }
   .stages-blocks {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 3vw;
+    padding-right: 3vw;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1629,7 +1633,7 @@ section {
   .stages-block__title {
     font-size: 16px;
     white-space: nowrap;
-    font-size: 1vw;
+    font-size: 1.05vw;
     font-weight: 600;
     text-align: left;
     -ms-flex-preferred-size: 40%;
@@ -1639,7 +1643,7 @@ section {
     display: block;
   }
   .stages-block__number {
-    font-size: 1vw;
+    font-size: 1.05vw;
     top: 50%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
@@ -1891,8 +1895,8 @@ section {
     background: url("../img/info/bg-line.png") center repeat-x;
   }
   .info {
-    padding-right: 60px;
-    padding-left: 60px;
+    padding-right: 3vw;
+    padding-left: 3vw;
     border: 1px solid #98b9d0;
     margin-bottom: 6px;
     -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
@@ -1906,9 +1910,9 @@ section {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
@@ -1916,47 +1920,28 @@ section {
     -ms-flex-pack: distribute;
         justify-content: space-around;
     height: 10vw;
-    -ms-flex-preferred-size: 37%;
-        flex-basis: 37%;
+    -ms-flex-preferred-size: 36%;
+        flex-basis: 36%;
+  }
+  .info-block_yellow, .info-block_blue {
+    margin-right: 30px;
   }
   .info-block__title {
     margin: 0;
-    font-size: 1vw;
+    font-size: 1.05vw;
   }
   .info-block__button {
     padding-top: 3%;
     padding-bottom: 3%;
   }
   .more {
-    font-size: 1vw;
+    font-size: 1.05vw;
   }
 }
 
 @media (min-width: 1800px) {
   .dots .container {
     width: 100%;
-  }
-  .info {
-    border: 1px solid #98b9d0;
-    margin-bottom: 4px;
-    -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-    padding-right: 60px;
-    padding-left: 60px;
-  }
-  .info::after {
-    display: none;
-  }
-  .info-blocks {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
   }
   .info-block {
     -ms-flex-preferred-size: 42%;
@@ -2111,7 +2096,7 @@ section {
     width: 40vw;
   }
   .reviews-block__name {
-    font-size: 1vw;
+    font-size: 1.05vw;
   }
   .reviews-block__company {
     margin-bottom: 1vw;
