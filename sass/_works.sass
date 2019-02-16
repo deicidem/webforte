@@ -37,11 +37,16 @@
     // padding-left: 60px
     &-slider
       padding: 0 60px
+      img
+        box-shadow: 0 0.78125vw 1.04vw rgba(0, 0, 0, 0.25)
+    &-slide
+      padding-bottom: 1.5vw
     .container
       width: 62.5%
       max-width: 1200px
       padding: 0
-
+    &-next, &-prev
+      transform: translateY(calc(-50% - 1vw))
     &-next
       right: 2%
     &-prev
