@@ -94,6 +94,17 @@
       max-width: 1200px
       width: 62.5%
     &-block
+      &s
+        align-items: stretch
+      position: relative
+      &::after
+        position: absolute
+        content: ''
+        height: 6.6vw
+        width: 1px
+        border-right: 1px dotted #393a3d
+        top: 0
+        right: -3.2vw
       &__item
         font-size: 0.95vw
     &-social

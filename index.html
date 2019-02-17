@@ -71,7 +71,7 @@
             <li>Без предоплаты</li>
           </ul>
           <div class="hero-subtitle">
-            Предложение ограничено по сроку
+            Предложение <span>ограничено по сроку</span>
           </div>
           <form action="#" class="hero-form">
             <div class="hero-form__inputs">
@@ -138,6 +138,31 @@
     <!-- /.header-main -->
   </header>
   <!-- Header -->
+
+  <!-- Popup -->
+  <div class="overlay">
+    <div class="popup popup-form">
+      <div class="close popup-form__close">
+          <img src="img/cancel.png">
+      </div>
+      <div class="hide popup-form__hide">
+          <img src="img/hide.png">
+      </div>
+      <h2 class="popup-form__title">Требуется быстрее 
+        <span>или возникли другие проблемы </span>
+        <span>свяжись для получения </span>
+        бесплатной консультации:</h2>
+      <form action="#" class="popup-form__form">
+        <input type="text" class="popup-form__input" placeholder="* Имя">
+        <input type="text" class="popup-form__input" placeholder="* Email">
+        <textarea name="" id="" class="popup-form__input popup-form__textarea" placeholder="* Опиши проблему "></textarea>
+        <button class="button">Отправить</button>
+      </form>
+      <a href="#" class="popup-form__small">Нажимая на «Отправить»  <span>Вы даете согласие на обработку персональных данных</span></a>
+      <div class="popup-form__back">Вернуться</div>
+    </div>
+  </div>
+  <!-- Popup -->
 
   <!-- About -->
   <section class="about_wrapper" id="about">
@@ -413,6 +438,19 @@
   </section>
   <!-- Buttons -->
 
+  
+
+  <!-- Cookie -->
+  <div class="cookie">
+    <div class="container">
+        <p class="cookie-text">Для анализа поведения посетителей и улучшения навигации 
+          на сайте используются  файлы cookie и другие разрешенные 
+          технологии </p>
+        <button class="cookie-button">Согласен</button>
+        <img class="cookie-close" src="img/close-button.png" alt="Закрыть">
+      </div>
+  </div>
+  <!-- Cookie -->
 
   <!-- Footer -->
   <footer class="footer" id="footer">

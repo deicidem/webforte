@@ -33,11 +33,13 @@
             background: url("../img/hero-green/checked.png") center no-repeat 
       .hero
         &-rocket
+          z-index: 1
           width: 150px
           position: absolute
           right: 17px
           top: -18px
         &-discount
+          z-index: 2
           width: 96px
           position: absolute
           right: -5px
@@ -64,12 +66,15 @@
           top: -185px
           left: 12px
         &-title
+          position: relative
+          z-index: 2
           max-width: 70%
           margin: 0
           font-size: 23px
           font-weight: 800
           margin-bottom: 26px
         &-list
+          z-index: 2
           list-style: none
           margin: 0 0 15px 0
           padding: 0
@@ -111,9 +116,12 @@
               top: 2px
               left: 0
         &-subtitle
+          z-index: 2
           font-size: 20px
           text-align: center
           margin-bottom: 15px
+          span
+            display: block
         &-form
           text-align: center
           &__input
@@ -179,11 +187,6 @@
   right: 11px
   top: -434px
   z-index: 0
-@media (min-width: 370px)
-  .header
-    .hero
-      &-list
-        li
 @media (min-width: 460px)
   .header
     &-title
@@ -192,7 +195,7 @@
         font-size: 52px
     &-main
       &__hero
-        padding: 35px 38px 23px 
+        padding: 35px 35px 23px              
     .hero
       &-title
         font-size: 27px
@@ -225,7 +228,7 @@
         top: -258px
         left: 12px
       &-subtitle
-        margin-bottom: 33px
+        margin-bottom: 23px
         font-size: 20px
       &-form
         &__input
@@ -233,9 +236,9 @@
           margin-left: -10px
           padding: 14px 0 14px 19px
         &__button
-          margin: 26px 0
+          margin: 15px 0
       &-list
-        margin-bottom: 30px
+        margin-bottom: 15px
         li
           margin-bottom: 17px
           font-size: 20px
@@ -253,6 +256,11 @@
         height: 30px
       &_title
         margin-right: 23px
+@media (min-width: 490px)
+  .header
+    .hero
+      &-subtitle span
+        display: inline
 @media (min-width: 540px)
   .header
     &-title

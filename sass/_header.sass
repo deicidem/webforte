@@ -14,6 +14,7 @@
     &__wrapper
       display: flex
       align-items: center
+      justify-content: space-between
     &_hidden
       top: -86px
     &__logo
@@ -27,7 +28,7 @@
       height: 120vh
       top: 0
       left: 0
-      overflow: hidden
+      overflow: hidden        
       ul
         padding: 0
         margin: 0
@@ -60,6 +61,8 @@
             &:hover:after
               z-index: 1
               width: 100%
+      &_item_active::after
+        width: 100%
       &_active
         width: 100%
         ul
@@ -69,6 +72,7 @@
       text-decoration: none
       font-size: 16px
       font-weight: 800
+      margin-right: 60px
     &__button
       transition: all 0.5s
       z-index: 1000
@@ -119,6 +123,16 @@
       &__button
         width: 60px
         height: 60px
+@media (min-width: 580px)
+  .header
+    &-menu
+      &__phone
+        margin-right: 20px
+@media (min-width: 660px)
+  .header
+    &-menu
+      &__phone
+        margin-right: 0
 @media (min-width: 768px)
   .header
     &-title
@@ -132,6 +146,7 @@
         margin-right: 68px
       &__phone
         font-size: 25px
+        margin-right: 45px
       &__button
         width: 84px
         height: 84px
@@ -152,7 +167,16 @@
   &::before
     transform: rotate(135deg)
     top: 50% 
-
+@media (min-width: 810px)
+  .header
+    &-menu
+      &__phone
+        margin-right: 30px
+@media (min-width: 870px)
+  .header
+    &-menu
+      &__phone
+        margin-right: 0
 @media (min-width: 992px)
   .header
     
@@ -162,6 +186,7 @@
       &__wrapper
         justify-content: space-between
       &__phone
+        white-space: nowrap
         position: relative
         &::after
           transition: all 0.3s ease-in-out

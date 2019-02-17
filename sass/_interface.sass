@@ -2,16 +2,19 @@ $gradient: linear-gradient(to right, #f68b1f 0%, #f74c00 100%)
 $gradient-active: linear-gradient(to right, #f74c00 0%, #f68b1f 100%)
 $active: #f68b1f
 * 
+  outline: none
   box-sizing: border-box
   scroll-behavior: smooth
   -webkit-overflow-scrolling: touch
+  &:focus, &:active
+    outline: none
 body
   font-family: "Montserrat",  sans-serif
 .fixed
   position: fixed
   width: 100%
 .to-top
-  z-index: 10
+  z-index: 101
   position: fixed
   bottom: 15px
   right: 15px
@@ -114,10 +117,12 @@ section
     align-items: center
     padding-top: 0
     padding-bottom: 0
-    height: 2.9vw
+    height: 2.92vw
     font-size: 1.1vw
     margin: 0 auto
     box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.25)
+  .button-o
+    box-shadow: none
   section
     padding-top: 6%
     padding-bottom: 4%
