@@ -31,7 +31,9 @@
               <img src="img/header/logo_notext.png" alt="Webforte.ru" class="logo_notext"></a>
           </div>
           <!-- /.header-menu__logo -->
-
+          <div class="header-menu__current">
+            ssssss
+          </div>
           <nav class="header-menu__nav">
             <ul class="header-menu__nav_list">
               <li><a href="#about" class="header-menu__nav_item">О компании</a></li>
@@ -116,7 +118,7 @@
             </div>
             <button class="button hero-form__button">Получить </button>
           </form>
-          <a href="#" class="hero-agreement">Нажимая на «Получить»  Вы даете согласие на обработку персональных данных</a>
+          <a href="#" class="hero-agreement">Нажимая на «Получить» Вы даете согласие на обработку персональных данных</a>
         </div>
         <!-- /.header-main__hero -->
         <div class="header-social">
@@ -143,12 +145,9 @@
   <div class="overlay">
     <div class="popup popup-form">
       <div class="close popup-form__close">
-          <img src="img/cancel.png">
+        <img src="img/cancel.png">
       </div>
-      <div class="hide popup-form__hide">
-          <img src="img/hide.png">
-      </div>
-      <h2 class="popup-form__title">Требуется быстрее 
+      <h2 class="popup-form__title">Требуется быстрее
         <span>или возникли другие проблемы </span>
         <span>свяжись для получения </span>
         бесплатной консультации:</h2>
@@ -158,7 +157,8 @@
         <textarea name="" id="" class="popup-form__input popup-form__textarea" placeholder="* Опиши проблему "></textarea>
         <button class="button">Отправить</button>
       </form>
-      <a href="#" class="popup-form__small">Нажимая на «Отправить»  <span>Вы даете согласие на обработку персональных данных</span></a>
+      <a href="#" class="popup-form__small">Нажимая на «Отправить» <span>Вы даете согласие на обработку персональных
+          данных</span></a>
       <div class="popup-form__back">Вернуться</div>
     </div>
   </div>
@@ -250,6 +250,7 @@
     <div class="container">
       <div class="stages">
         <h2 class="section-title">ЭТАПЫ РАБОТЫ </h2>
+        <!-- Stages-blocks -->
         <div class="stages-blocks">
 
           <div class="stages-block">
@@ -292,6 +293,191 @@
               <span>услуг</span></div>
           </div>
 
+        </div>
+        <!-- Stages-blocks -->
+
+        <div class="stages-popups">
+
+          <div class="stages-popup">
+            <div class="stages-popup__number">1</div>
+            <div class="stages-popup__links">
+              <img src="./img/arrow-top.png" alt="Свернуть" class="stages-popup__top">
+              <div>
+                <button class="stages-popup__link stages-popup__link_back">Назад</button>
+                <img src="./img/hide.png" alt="Свернуть" class="stages-popup__hide">
+                <img src="./img/cancel.png" alt="Закрыть" class="stages-popup__close">
+              </div>
+            </div>
+            <div class="stages-popup__content">
+              <div class="stages-popup__descr">
+                <p>Для получения Брифа свяжитесь через отправку формы или по телефону. </p>
+
+                <p>На выбранную Вами услугу будет выслан соответствующий Бриф или скачайте ниже.</p>
+
+                <p>Заполните его и отправьте на адрес info@webforte.ru </p>
+
+                <p>Бриф не является юридически значимым документом, но позволит оперативно оценить степень готовности
+                  проекта к реализации и его ориентировочную стоимость. </p>
+              </div>
+
+              <form action="" class="stages-popup__form">
+                <h4 class="stages-popup__title stages-popup__title_center">
+                  БРИФ
+                </h4>
+                <div class="stages-popup__select_wrapper">
+                  <select class="stages-popup__select" name="" id="" size="1" disabled>
+                    <option value="">Выбрать услугу 1</option>
+                    <option value="">Выбрать услугу 2</option>
+                    <option value="">Выбрать услугу 3</option>
+                    <option value="">Выбрать услугу 4</option>
+                  </select>
+                  <div class="stages-popup__select_nav stages-popup__select_nav_up"></div>
+                  <div class="stages-popup__select_nav stages-popup__select_nav_down"></div>
+                </div>
+
+                <input type="submit" value="Скачать" class="button">
+              </form>
+            </div>
+            <div class="stages-popup__nav">
+              <button class="stages-popup__link stages-popup__link_next">Следующая</button>
+            </div>
+          </div>
+
+          <div class="stages-popup">
+              <div class="stages-popup__number">2</div>
+            <div class="stages-popup__links">
+              <img src="./img/arrow-top.png" alt="Свернуть" class="stages-popup__top">
+              <div>
+                <button class="stages-popup__link stages-popup__link_back">Назад</button>
+                <img src="./img/hide.png" alt="Свернуть" class="stages-popup__hide">
+                <img src="./img/cancel.png" alt="Закрыть" class="stages-popup__close">
+              </div>
+            </div>
+            <div class="stages-popup__content">
+              <div class="stages-popup__title">
+                <div class="stages-popup__descr">
+                    <p>Общие положения </p>
+                </div>
+              </div>
+
+              <div class="stages-popup__descr">
+                <p>На указанный Вами в Брифе электронный адрес будет направлен Договор, соответствующий выбранной
+                  услуге. Договоры полностью отвечают нормам ГК РФ.</p>
+
+                <p>Согласием Заказчика с условиями Договора и фактом заключения Договора является отправление на адрес
+                  info@webforte.ru письма с прикрепленным скриншотом последней страницы Договора с реквизитами,
+                  подписью и печатью Заказчика.</p>
+
+                <p>Если на стадии согласования Договора хотите внести свои изменения в его текст, сообщите об этом.
+                  Если Ваши предложения реально исполнимы и включают интересы обеих сторон, они будут учтены. </p>
+              </div>
+
+              <div class="stages-popup__title">О Договоре на услугу по созданию сайта</div>
+
+              <div class="stages-popup__descr">
+                <p>Основные параметры Договора на создание сайта: гарантия на программный код – 2 года, поэтапная
+                  оплата по факту оказания услуг.</p>
+
+                <p>ТЗ является неотъемлемой частью такого Договора. Разработка ТЗ рассматривается как отдельный этап
+                  услуги по созданию сайта и включается в стоимость общих работ. <br>
+                  Если у Вас есть ТЗ, ранее выполненное другими специалистами, оно может рассматриваться как основа для
+                  составления ТЗ силами ВебФорте. Оплата за разработку ТЗ в этом случае не взимается. </p>
+
+                <p><strong>Договоры на другие услуги (по поддержке и продвижению сайта)</strong> предполагают авансовые
+                  платежи.</p>
+              </div>
+
+              <div class="stages-popup__title">О бонусах </div>
+
+              <div class="stages-popup__descr">
+                <p>Если в период действия акции Вы получили гарантированный бонус в форме э/письма с уникальным
+                  промокодом, то имеете право воспользоваться им по истечении акции, но исключительно в течение срока,
+                  указанного в бонусом письме. </p>
+
+                <p>Предъявление бонуса дает Заказчику право требовать от ВебФорте бесплатного выполнения работ,
+                  перечень которых содержится в бонусном письме.</p>
+
+                <p>Вы имеете право получить несколько одинаковых бонусов и воспользоваться ими как Заказчик или
+                  передать лицам, в чьих интересах действуете, но один бонус будет учтен единожды при заключении одного
+                  Договора.</p>
+
+                <p>Узнать актуальность бонуса Вы можете через сервис Бонусы</p>
+
+                <p>Для получения бонуса сейчас заполните форму:</p>
+              </div>
+
+              
+
+            </div>
+            <div class="stages-popup__hero">
+                <form action="">
+                  <div class="stages-popup__hero_inputs">
+                      <input type="text" class="stages-popup__hero_input" placeholder="* Имя " required>
+                      <input type="text" class="stages-popup__hero_input" placeholder="* E-mail " required>
+                  </div>
+                  <button class="button">Получить</button>
+                </form>
+                <a href="#" class="stages-popup__hero_agreement">Нажимая на «Получить» Вы даете согласие на обработку персональных данных</a>
+              </div>
+            <div class="stages-popup__nav">
+              <button class="stages-popup__link stages-popup__link_prev">Предыдущая</button>
+              |
+              <button class="stages-popup__link stages-popup__link_next">Следующая</button>
+            </div>
+          </div>
+
+          <div class="stages-popup" >
+              <div class="stages-popup__number">3</div>
+              <div class="stages-popup__links">
+                  <img src="./img/arrow-top.png" alt="Свернуть" class="stages-popup__top">
+                  <div>
+                    <button class="stages-popup__link stages-popup__link_back">Назад</button>
+                    <img src="./img/hide.png" alt="Свернуть" class="stages-popup__hide">
+                    <img src="./img/cancel.png" alt="Закрыть" class="stages-popup__close">
+                  </div>
+                </div>
+            <div class="stages-popup__content">
+                <div class="stages-popup__descr"><p>ВебФорте приступает к исполнению заказа  сразу после заключения Договора. При этом стороны руководствуются Договором и ТЗ.</p>
+
+                  <p>Информация об объемах, графике утвержденных услуг  с разбивкой по этапам, а также о способах связи и ответственных за реализацию проекта лицах  содержится в ТЗ. </p>
+                  
+                  <p>При возникновении со стороны Заказчика вопросов, замечаний, рекомендаций ВебФорте оперативно реагирует и учитывает их в  ходе исполнения заказа. </p></div>
+                
+            </div>
+            <div class="stages-popup__nav">
+              <button class="stages-popup__link stages-popup__link_prev">Предыдущая</button>
+              |
+              <button class="stages-popup__link stages-popup__link_next">Следующая</button>
+            </div>
+          </div>
+
+          <div class="stages-popup">
+              <div class="stages-popup__number">4</div>
+              <div class="stages-popup__links">
+                  <img src="./img/arrow-top.png" alt="Свернуть" class="stages-popup__top">
+                  <div>
+                    <button class="stages-popup__link stages-popup__link_back">Назад</button>
+                    <img src="./img/hide.png" alt="Свернуть" class="stages-popup__hide">
+                    <img src="./img/cancel.png" alt="Закрыть" class="stages-popup__close">
+                  </div>
+                </div>
+            <div class="stages-popup__content">
+              <div class="stages-popup__descr">
+                  <p>Промежуточные и заключительный этапы услуги актируются документально. Получение Заказчиком  Акта свидетельствует о выполнении  ВебФорте определенного этапа или оказании услуги по Договору в целом. </p>
+
+                  <p>Полная оплата актированного этапа означает согласие Заказчика на продолжение сотрудничества  в рамках Договора. </p>
+                  
+                  <p>Неоплата  актированного этапа не свидетельствует о ненадлежащем выполнении  ВебФорте обязательств перед Заказчиком. </p>
+                  
+                  <p>После оплаты счетов от ВебФорте Заказчик получает право на получение промежуточных и итоговых результатов деятельности Веб Форте в  требуемых форматах.</p>
+                  
+                  <p>При возникновении у Заказчика претензий после подписания Акта  ВебФорте устранит обнаруженные недочеты бесплатно и в кратчайшие сроки.</p>
+              </div>
+            </div>
+            <div class="stages-popup__nav">
+              <button class="stages-popup__link stages-popup__link_prev">Предыдущая</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -438,17 +624,17 @@
   </section>
   <!-- Buttons -->
 
-  
+
 
   <!-- Cookie -->
   <div class="cookie">
     <div class="container">
-        <p class="cookie-text">Для анализа поведения посетителей и улучшения навигации 
-          на сайте используются  файлы cookie и другие разрешенные 
-          технологии </p>
-        <button class="cookie-button">Согласен</button>
-        <img class="cookie-close" src="img/close-button.png" alt="Закрыть">
-      </div>
+      <p class="cookie-text">Для анализа поведения посетителей и улучшения навигации
+        на сайте используются файлы cookie и другие разрешенные
+        технологии </p>
+      <button class="cookie-button">Согласен</button>
+      <img class="cookie-close" src="img/close-button.png" alt="Закрыть">
+    </div>
   </div>
   <!-- Cookie -->
 
@@ -473,7 +659,7 @@
           <li><a href="#" class="footer-block__item">Бриф</a></li>
           <li><a href="#" class="footer-block__item">Бонусы</a></li>
           <li><a href="#" class="footer-block__item">Политика <br>
-             конфиденциальности</a></li>
+              конфиденциальности</a></li>
         </ul>
         <ul class="footer-block">
           <li><a href="#" class="footer-block__item">Вакансии</a></li>

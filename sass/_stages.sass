@@ -1,4 +1,156 @@
 .stages
+  &-popup
+    display: flex
+    flex-direction: column
+    padding: 30px 40px 40px
+    display: none
+    
+    &__links
+      display: flex
+      justify-content: flex-end
+      align-items: center
+      
+    &__descr
+      font-size: 18px
+      p
+        margin: 30px 0
+    &__number
+      display: none
+    &__hide
+      display: none
+    &__title
+      font-size: 18px
+      font-weight: 700
+      margin: 0
+      margin-bottom: 26px
+      &_center
+        text-align: center
+    &__top
+      display: none
+    &__select
+      appearance: none
+      border: 1px solid #000000
+      border-radius: 50px
+      padding-left: 28px
+      padding-top: 16px
+      padding-bottom: 16px
+      width: 100%
+      &_wrapper
+        margin: auto
+        width: 360px
+        position: relative
+        margin-bottom: 26px
+      &_nav
+        position: absolute
+        top: 50%
+        width: 34px
+        height: 34px
+        transform: translateY(-50%)
+        border: none
+        border-radius: 50%
+        &:hover
+          cursor: pointer
+        &_up
+          right: 52px
+          background: $active url("../img/stages/top.png") center no-repeat
+        &_down
+          right: 14px
+          background: $active url("../img/stages/bott.png") center no-repeat
+    .button
+      display: flex
+      margin: auto
+    &__hero
+      padding-top: 54px
+      padding-bottom: 22px
+      border-radius: 15px
+      margin-bottom: 50px
+      text-align: center
+      background-image: linear-gradient(to right, #d0fed3 0%, #8effc3 100%)
+      border: 1px solid #01a759
+      form
+        display: flex
+        flex-direction: column
+        align-items: center
+      .button
+        margin-top: 20px
+      &_input
+        width: 80%
+        margin-bottom: 13px
+        padding: 14px 
+        font-size: 18px
+        border-radius: 50px
+        border: 1px solid #01a056
+        background-color: #daffdd
+      &_agreement
+        margin: auto
+        margin-top: 25px
+        max-width: 80%
+        display: block
+        color: #000
+        text-align: center
+        font-size: 12px
+
+    &__form
+      margin-bottom: 46px
+    &__link
+      font-size: 14px
+      background: none
+      border: none
+      position: relative
+      &_next
+        position: relative
+        &::before, &::after
+          content: ''
+          width: 8px
+          height: 10px
+          position: absolute
+          right: -8px
+          top: 50%
+          transform: translateY(-50%) scale(-1, 1)
+          background: url('../img/arrow-right.png') center no-repeat
+        &::after
+          right: -13px
+      &_prev
+        position: relative
+        &::before, &::after
+          content: ''
+          width: 8px
+          height: 10px
+          position: absolute
+          left: -8px
+          top: 50%
+          transform: translateY(-50%) 
+          background: url('../img/arrow-right.png') center no-repeat
+        &::after
+          left: -13px
+      &_back
+        margin-right: 30px
+        &::before
+          content: ''
+          width: 8px
+          height: 10px
+          position: absolute
+          left: -10px
+          top: 50%
+          transform: translateY(-50%)
+          background: url('../img/arrow-right.png') center no-repeat 
+    &__nav
+      display: flex
+      justify-content: center
+    &s
+      display: none
+      z-index: 50
+      position: absolute
+      background: #fff
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1)
+      border: 2px solid #f6881d
+      width: 92%
+      left: 50%
+      transform: translateX(-50%) 
+      top: 70%
+  &-wrapper
+    position: relative
+    overflow: initial
   &-blocks
     text-align: center
     display: flex
@@ -42,6 +194,18 @@
       transform: translateX(-50%)
 @media (min-width: 768px)
   .stages
+    &-popup
+      padding: 30px 60px 40px
+      &__title
+        font-size: 20px
+      &__descr
+        font-size: 20px
+      &__hero
+        &_inputs
+          display: flex
+          justify-content: space-between
+        &_input
+          flex-basis: 48%
     &-block
       width: 418px
       height: 183px
@@ -58,6 +222,96 @@
     background: #ffffff
     padding-top: 95px
     padding-bottom: 65px
+    &-popup
+      padding: 1.5625vw 3.125vw 2.08vw
+      // padding-right: 1.04vw
+      &s
+        max-width: 58vw
+      &__form
+        display: flex
+        align-items: baseline
+        justify-content: center
+        margin-bottom: 3.125vw
+      &__hide
+        display: inline-block
+        margin-right: 0.9375vw
+        margin-bottom: 1px
+      &__links
+        margin-bottom: 1.5vw
+      &__top
+        display: inline-block
+      .button
+        margin: 0
+      &__hero
+        padding: 2.13vw 2.4vw 1vw 2.6vw 
+        margin-right: 5.2vw
+        margin-left: 3.125vw
+        form
+          flex-direction: row
+          justify-content: space-between
+        &_input
+          margin: 0
+          font-size: 1vw
+          margin-right: 1vw
+          padding-top: 0.88vw
+          padding-bottom: 0.88vw
+          padding-left: 1vw
+          flex-basis: 46%
+        &_agreement
+          margin-top: 0.68vw
+          text-align: left
+          font-size: 0.65vw
+          max-width: 100%
+      &__select
+        padding-left: 1.46vw
+        padding-top: 0.8vw
+        padding-bottom: 0.8vw
+        font-size: 1vw
+        option
+          font-size: 1vw
+        &_wrapper
+          width: 18.75vw
+          margin: 0 3.125vw
+        &_nav_up, &_nav_down
+          width: 1.7vw
+          height: 1.7vw
+        &_nav_up
+          display: none
+      &__title
+        margin-bottom: 0
+        font-size: 1.04vw
+      &__links
+        justify-content: space-between
+        align-items: flex-end
+        margin-bottom: 3.4vw
+        img
+          max-width: 1.05vw
+      &__link
+        font-size: 0.78125vw
+        &_back
+          margin-right: 2vw
+      &__content
+        padding: 0 5.2vw 0 3.125vw
+      &__descr
+        p
+          margin: 1.5625vw 0
+          font-size: 1.04vw
+      
+      &__number
+        font-size: 1.04vw
+        display: block
+        position: absolute
+        top: 5.625vw
+        left: 2.7vw
+        width: 2.34vw
+        height: 2.34vw
+        background: $active
+        display: flex
+        align-items: center
+        justify-content: center
+        color: #ffffff
+        border-radius: 50%
+        
     &-wrapper
       .container
         width: 62.5%
