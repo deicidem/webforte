@@ -4,7 +4,9 @@
     flex-direction: column
     padding: 30px 40px 40px
     display: none
-    
+    &__close
+      &:hover
+        cursor: pointer
     &__links
       display: flex
       justify-content: flex-end
@@ -35,9 +37,11 @@
       padding-top: 16px
       padding-bottom: 16px
       width: 100%
+      margin-right:
       &_wrapper
+        max-width: 360px
         margin: auto
-        width: 360px
+        width: 100%
         position: relative
         margin-bottom: 26px
       &_nav
@@ -97,6 +101,8 @@
       background: none
       border: none
       position: relative
+      &:hover
+        cursor: pointer
       &_next
         position: relative
         &::before, &::after
@@ -198,6 +204,9 @@
       padding: 30px 60px 40px
       &__title
         font-size: 20px
+      &__select
+        &_wrapper
+          width: 360px
       &__descr
         font-size: 20px
       &__hero

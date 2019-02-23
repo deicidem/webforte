@@ -1,0 +1,208 @@
+.brief
+  display: none
+  border-top: 1px solid #98b9d0
+  position: relative
+  padding-top: 50px
+  padding-bottom: 10px
+  width: 100%
+  position: absolute
+  bottom: 0
+  background: #fff
+  z-index: 6
+  &-close
+    position: absolute
+    top: 20px
+    right: 20px
+    &:hover
+      cursor: pointer
+  &-text
+    width: 100%
+    text-align: center
+    font-size: 18px
+    margin: 30px 0
+  &_wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+  &-services
+    width: 100%
+  &-select
+    appearance: none
+    border: 1px solid #000000
+    border-radius: 50px
+    padding-left: 28px
+    padding-top: 16px
+    padding-bottom: 16px
+    width: 100%
+    &_w
+      width: 100%
+      max-width: 360px
+      display: flex
+      align-items: center
+      flex-direction: column
+      margin-bottom: 10px
+    &_wrapper
+      width: 100%
+      position: relative
+      margin-bottom: 22px
+    &_nav
+      position: absolute
+      top: 50%
+      width: 34px
+      height: 34px
+      transform: translateY(-50%)
+      border: none
+      border-radius: 50%
+      &:hover
+        cursor: pointer
+      &_up
+        right: 52px
+        background: $active url("../img/stages/top.png") center no-repeat
+      &_down
+        right: 14px
+        background: $active url("../img/stages/bott.png") center no-repeat
+  &-title
+    width: 100%
+    font-size: 30px
+    margin-top: 55px
+    margin-bottom: 10px
+    text-align: left
+  &-block
+    padding-top: 27px
+    padding-bottom: 15px
+    font-size: 18px
+    border-top: 1px solid #e7e7e7
+    &__title
+      margin-bottom: 16px
+      &:hover
+        cursor: pointer
+    &__list
+      list-style: none
+      margin: 0
+      padding: 0
+      margin-bottom: 33px
+      &_wrapper
+        display: none
+      &_title
+        &:hover
+          cursor: pointer
+      &_item
+        position: relative
+        padding-left: 20px
+        margin: 7px 0
+        &::before
+          content: ''
+          position: absolute
+          width: 18px
+          height: 18px
+          top: 2px
+          left: 0
+          background: url("../img/hero-green/checked.png") center no-repeat
+          background-size: contain
+      &_hide
+        margin-left: 20px
+        max-height: 11px
+    &__item
+      &s
+        display: none
+      margin-bottom: 20px
+      display: flex
+      align-items: center
+      &_list
+        align-items: flex-start
+        .brief-block__list
+          margin-top: 15px
+          margin-bottom: 0
+      p
+        margin: 0
+      img
+        margin-right: 18px
+@media  (min-width: 768px)
+  .brief
+    &-text
+      font-size: 20px
+      text-align: left
+    .button
+      margin: 0
+      display: flex
+      max-height: 52px
+      padding: 16px 32px
+    &-select
+      &_w
+        flex-direction: row
+        align-items: center
+        max-width: 100%
+        justify-content: center
+      &_wrapper
+        width: 360px
+        margin: 0
+        margin-right: 24px
+    &-block
+      font-size: 20px
+@media (min-width: 1024px)
+  .brief
+    padding-top: 2.6vw
+    padding-bottom: 0.52vw
+    .container
+      max-width: 62.5vw
+    .button
+      padding-top: 0
+      padding-bottom: 0
+    &-select
+      padding-left: 1.46vw
+      padding-top: 0.8vw
+      padding-bottom: 0.8vw
+      font-size: 1vw
+      option
+        font-size: 1vw
+      &_wrapper
+        width: 18.75vw
+        margin-right: 1.25vw
+      &_nav_up, &_nav_down
+        width: 1.7vw
+        height: 1.7vw
+      &_nav_up
+        display: none
+    &-close
+      top: 2.5vw
+      right: 2.5vw
+    &-text
+      margin: 1.5625vw 0
+      font-size: 1.04vw
+    &-title
+      margin-top: 2.865vw
+      font-size: 1.5625vw
+    &-block
+      padding-top: 1.4vw
+      font-size: 1.04vw
+      padding-bottom: 0.78125vw
+      &__list
+        flex-basis: 100%
+        margin-bottom: 1.71875vw
+        &_item
+          padding-left: 1.2vw
+          margin: 0.364vw 0
+          &::before
+            width: 1vw
+            height: 1vw
+        &_hide
+          max-height: 0.57vw
+          max-width: 1.03vw
+          margin-left: 1.04vw
+      &__items
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        align-items: flex-start
+        display: none
+      &__item
+        flex-basis: 28%
+        margin-bottom: 1.04vw
+        margin-right: 2.97vw
+        img
+          margin-right: 1vw
+          width: 2.55vw
+          height: 2.55vw
+        &_list
+          flex-basis: 100%
+    
