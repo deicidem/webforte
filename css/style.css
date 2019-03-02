@@ -3929,6 +3929,10 @@ section {
           justify-content: space-between;
 }
 
+.article-nav img:hover {
+  cursor: pointer;
+}
+
 .article-nav__hide {
   display: none;
 }
@@ -4190,12 +4194,23 @@ section {
 }
 
 .subscribe-button {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   border: 1px solid #adadad;
   background-color: #fff;
   padding: 18px 45px;
   font-size: 18px;
   font-weight: 700;
   border-radius: 50px;
+}
+
+.subscribe-button:hover {
+  cursor: pointer;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  background: none;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 
 @media (min-width: 768px) {

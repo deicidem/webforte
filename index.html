@@ -77,8 +77,8 @@
           </div>
           <form action="#" class="hero-form">
             <div class="hero-form__inputs">
-              <input type="text" class="hero-form__input" placeholder="*Имя">
-              <input type="text" class="hero-form__input" placeholder="*E-mail">
+              <input type="text" class="hero-form__input" placeholder="*Имя" required>
+              <input type="email" class="hero-form__input" placeholder="*E-mail" required>
             </div>
             <button class="button hero-form__button">Заказать</button>
           </form>
@@ -113,8 +113,8 @@
             им после окончания акции</div>
           <form action="#" class="hero-form">
             <div class="hero-form__inputs">
-              <input type="text" class="hero-form__input" placeholder="*Имя"><input type="text" class="hero-form__input"
-                placeholder="*E-mail">
+              <input type="text" class="hero-form__input" placeholder="*Имя" required>
+              <input type="email" class="hero-form__input"  placeholder="*E-mail" required>
             </div>
             <button class="button hero-form__button">Получить </button>
           </form>
@@ -153,9 +153,9 @@
           <span>свяжись для получения </span>
           бесплатной консультации:</h2>
         <form action="#" class="popup-form__form">
-          <input type="text" class="popup-form__input" placeholder="* Имя">
-          <input type="text" class="popup-form__input" placeholder="* Email">
-          <textarea name="" id="" class="popup-form__input popup-form__textarea" placeholder="* Опиши проблему "></textarea>
+          <input type="text" class="popup-form__input" placeholder="* Имя" required>
+          <input type="email" class="popup-form__input" placeholder="* Email" required>
+          <textarea name="problem"  class="popup-form__input popup-form__textarea" placeholder="* Опиши проблему " required></textarea>
           <button class="button">Отправить</button>
         </form>
         <a href="#" class="popup-form__small">Нажимая на «Отправить» <span>Вы даете согласие на обработку персональных
@@ -338,7 +338,7 @@
                     <div class="stages-popup__select_nav stages-popup__select_nav_down"></div>
                   </div>
 
-                  <input type="submit" value="Скачать" class="button">
+                  <button class="button">Скачать </button>
               </div>
               <div class="stages-popup__nav">
                 <button class="stages-popup__link stages-popup__link_next">Следующая</button>
@@ -418,7 +418,7 @@
                 <form action="">
                   <div class="stages-popup__hero_inputs">
                     <input type="text" class="stages-popup__hero_input" placeholder="* Имя " required>
-                    <input type="text" class="stages-popup__hero_input" placeholder="* E-mail " required>
+                    <input type="email" class="stages-popup__hero_input" placeholder="* E-mail " required>
                   </div>
                   <button class="button">Получить</button>
                 </form>
@@ -648,9 +648,9 @@
 
           <h2 class="section-title">Проверь статус<span> промокода ! </span></h2>
           <div class="bonuses-search">
-            <input type="text" class="bonuses-search__input" placeholder="Введи  код  12 знаков">
+            <input type="text" class="bonuses-search__input" placeholder="Введи  код  12 знаков" required>
             <button class="bonuses-search__button">
-              <img src="img/m-glass.png" alt="">
+              <img src="img/m-glass.png" alt="Поиск">
             </button>
           </div>
           <div class="bonuses-subtitle"><strong>Результат:</strong> Действителен до 01.04.2019</div>
@@ -677,8 +677,9 @@
               им после окончания акции</div>
             <form action="#" class="hero-form">
               <div class="hero-form__inputs">
-                <input type="text" class="hero-form__input" placeholder="*Имя"><input type="text" class="hero-form__input"
-                  placeholder="*E-mail">
+                <input type="text" class="hero-form__input" placeholder="*Имя" required>
+                <input type="email" class="hero-form__input"
+                  placeholder="*E-mail" required>
               </div>
               <button class="button hero-form__button">Получить </button>
             </form>
@@ -706,7 +707,7 @@
 
     <!-- Brief -->
     <section class="brief" id="brief">
-      <img src="img/cancel.png" alt="" class="brief-close">
+      <img src="img/cancel.png" alt="Закрыть" class="brief-close">
       <div class="container">
         <div class="brief_wrapper">
           <p class="brief-text">Для скачивания Брифа воспользуйтесь формой или скачайте ниже через Услуги.</p>
@@ -723,7 +724,7 @@
               <div class="brief-select_nav brief-select_nav_down"></div>
 
             </div>
-            <input type="submit" value="Скачать" class="button">
+            <button class="button">Скачать </button>
           </div>
           <p class="brief-text">Если хотите заказать услугу, но не нашли соответствующий Бриф, свяжитесь через форму
             сообщений по теме Другое. </p>
@@ -732,13 +733,13 @@
           <div class="brief-services">
             <!-- Block -->
             <div class="brief-block">
-              <div class="brief-block__title"> <strong>Создание сайтов</strong> <img src="img/arrow-top.png" alt=""
+              <div class="brief-block__title"> <strong>Создание сайтов</strong> <img src="img/arrow-top.png" alt="Свернуть"
                   class="brief-block__list_hide"></div>
 
 
               <div class="brief-block__items">
                 <ul class="brief-block__list">
-                  <div class="brief-block__list_title"><span>Базовый пакет :</span> <img src="img/arrow-top.png" alt=""
+                  <div class="brief-block__list_title"><span>Базовый пакет :</span> <img src="img/arrow-top.png" alt="Свернуть"
                       class="brief-block__list_hide"></div>
                   <div class="brief-block__list_wrapper">
                     <li class="brief-block__list_item">Составление ТЗ</li>
@@ -753,35 +754,35 @@
                   </div>
                 </ul>
                 <div class="brief-block__item">
-                  <img src="img/brief-icon.png" alt="">
+                  <img src="img/brief-icon.png" alt="Пункт услуг">
                   <p>Лендинг</p>
                 </div>
                 <div class="brief-block__item">
-                  <img src="img/brief-icon.png" alt="">
+                  <img src="img/brief-icon.png" alt="Пункт услуг">
                   <p>Промо-сайт</p>
                 </div>
                 <div class="brief-block__item">
-                  <img src="img/brief-icon.png" alt="">
+                  <img src="img/brief-icon.png" alt="Пункт услуг">
                   <p>Сайт-визитка</p>
                 </div>
                 <div class="brief-block__item">
-                  <img src="img/brief-icon.png" alt="">
+                  <img src="img/brief-icon.png" alt="Пункт услуг">
                   <p>Многостраничный сайт</p>
                 </div>
                 <div class="brief-block__item">
-                  <img src="img/brief-icon.png" alt="">
+                  <img src="img/brief-icon.png" alt="Пункт услуг">
                   <p>Адаптация сайта</p>
                 </div>
                 <div class="brief-block__item">
-                  <img src="img/brief-icon.png" alt="">
+                  <img src="img/brief-icon.png" alt="Пункт услуг">
                   <p>Аудит сайта</p>
                 </div>
                 <div class="brief-block__item">
-                  <img src="img/brief-icon.png" alt="">
+                  <img src="img/brief-icon.png" alt="Пункт услуг">
                   <p>Написание скриптов</p>
                 </div>
                 <div class="brief-block__item">
-                  <img src="img/brief-icon.png" alt="">
+                  <img src="img/brief-icon.png" alt="Пункт услуг">
                   <p>Консультирование</p>
                 </div>
               </div>
@@ -789,19 +790,19 @@
             <!-- Block -->
             <!-- Block -->
             <div class="brief-block">
-              <div class="brief-block__title"> <strong>Дизайн</strong> <img src="img/arrow-top.png" alt="" class="brief-block__list_hide">
+              <div class="brief-block__title"> <strong>Дизайн</strong> <img src="img/arrow-top.png" alt="Свернуть" class="brief-block__list_hide">
               </div>
               <div class="brief-block__items">
                 <div class="brief-block__item">
-                  <img src="img/brief-icon.png" alt="">
+                  <img src="img/brief-icon.png" alt="Пункт услуг">
                   <p>Редизайн</p>
                 </div>
                 <div class="brief-block__item">
-                  <img src="img/brief-icon.png" alt="">
+                  <img src="img/brief-icon.png" alt="Пункт услуг">
                   <p>Создание логотипа</p>
                 </div>
                 <div class="brief-block__item">
-                  <img src="img/brief-icon.png" alt="">
+                  <img src="img/brief-icon.png" alt="Пункт услуг">
                   <p>Интернет баннеры</p>
                 </div>
               </div>
@@ -809,19 +810,19 @@
             <!-- Block -->
             <!-- Block -->
             <div class="brief-block">
-              <div class="brief-block__title"> <strong>Поддержка</strong> <img src="img/arrow-top.png" alt="" class="brief-block__list_hide">
+              <div class="brief-block__title"> <strong>Поддержка</strong> <img src="img/arrow-top.png" alt="Свернуть" class="brief-block__list_hide">
               </div>
               <div class="brief-block__items">
                 <div class="brief-block__item">
-                  <img src="img/brief-icon.png" alt="">
+                  <img src="img/brief-icon.png" alt="Пункт услуг">
                   <p>Техническая</p>
                 </div>
                 <div class="brief-block__item">
-                  <img src="img/brief-icon.png" alt="">
+                  <img src="img/brief-icon.png" alt="Пункт услуг">
                   <p>Дизайнерская</p>
                 </div>
                 <div class="brief-block__item">
-                  <img src="img/brief-icon.png" alt="">
+                  <img src="img/brief-icon.png" alt="Пункт услуг">
                   <p>Контентная</p>
                 </div>
               </div>
@@ -830,14 +831,14 @@
 
             <!-- Block -->
             <div class="brief-block">
-              <div class="brief-block__title"> <strong>Продвижение (SEO)</strong> <img src="img/arrow-top.png" alt=""
+              <div class="brief-block__title"> <strong>Продвижение (SEO)</strong> <img src="img/arrow-top.png" alt="Свернуть"
                   class="brief-block__list_hide">
               </div>
               <div class="brief-block__items">
                 <div class="brief-block__item brief-block__item_list">
-                  <img src="img/brief-icon.png" alt="">
+                  <img src="img/brief-icon.png" alt="Пункт услуг">
                   <ul class="brief-block__list">
-                    <div class="brief-block__list_title"><span>Базовый пакет :</span> <img src="img/arrow-top.png" alt=""
+                    <div class="brief-block__list_title"><span>Базовый пакет :</span> <img src="img/arrow-top.png" alt="Свернуть"
                         class="brief-block__list_hide"></div>
                     <div class="brief-block__list_wrapper">
                       <li class="brief-block__list_item">Подбор семантического ядра</li>
@@ -848,7 +849,7 @@
                   </ul>
                 </div>
                 <div class="brief-block__item">
-                  <img src="img/brief-icon.png" alt="">
+                  <img src="img/brief-icon.png" alt="Пункт услуг">
                   <p>Контекстная реклама </p>
                 </div>
               </div>
@@ -1082,7 +1083,7 @@
             <a href="#" class="subscribe-link">Нажимая на «Подписаться» Вы даете согласие на обработку персональных данных</a>
         </div>
         <div class="subscribe-form">
-          <input type="text" class="subscribe-input" placeholder="E-mail">
+          <input type="email" class="subscribe-input" placeholder="E-mail" required>
           <button class="subscribe-button">Подписаться</button>
         </div>
       </div>
