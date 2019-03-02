@@ -1,6 +1,8 @@
 .article
-  margin-bottom: 42pxd
+  margin-bottom: 42px
   display: none
+  flex-direction: column
+  justify-content: space-between
   &s
     display: none
     background: #ffffff
@@ -11,6 +13,10 @@
     top: 0
     left: 0
     z-index: 652
+    justify-content: space-between
+    flex-direction: column
+    padding: 0
+  &_wrapper
     padding-top: 54px
     padding-bottom: 37px
   &-title
@@ -36,18 +42,27 @@
     h4
       font-weight: 700
   &-nav
-    position: absolute
+    z-index: 1002
+    position: fixed
     width: 90%
     left: 50%
     top: 20px
     transform: translateX(-50%)
     display: flex
     justify-content: space-between
+    &__item
+      transition: all 0.5s 
+      position: absolute
+    &__hide
+      &_active
+        transform: scale(1, -1)
     img
       &:hover
         cursor: pointer
+    &__close
+      margin: 0
     &__hide
-      display: none
+      transition: all 0.5s
   &-info
     display: flex
     justify-content: flex-start
@@ -98,7 +113,7 @@
         font-size: 20px
 @media (min-width: 768px)
   .article
-    &s
+    &_wrapper
       padding-top: 60px
       padding-bottom: 48px
       .container
@@ -138,7 +153,7 @@
 @media (min-width: 1024px)
   .article
     margin-bottom: 2.1875vw
-    &s
+    &_wrapper
       padding-top: 3.125vw
       padding-bottom: 2.5vw
       .container
