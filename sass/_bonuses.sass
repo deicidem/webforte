@@ -1,15 +1,18 @@
 .bonuses
   display: none
-  position: absolute
-  bottom: 0
-  z-index: 6
+  position: fixed
+  top: 0
+  z-index: 612
+  overflow: auto
   width: 100%
+  height: 100%
   background-color: #fff
   border-top: 1px solid #98b9d0
   &-hide
     transition: all 0.5s
+    transform: scale(1, -1)
     &_active
-      transform: scale(1, -1)
+      transform: scale(1, 1) !important
     &:hover
       cursor: pointer
   &-close

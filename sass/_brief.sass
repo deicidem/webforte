@@ -1,14 +1,15 @@
 .brief
   display: none
   border-top: 1px solid #98b9d0
-  position: relative
+  position: fixed
+  top: 0
   padding-top: 50px
   padding-bottom: 10px
   width: 100%
-  position: absolute
-  bottom: 0
+  height: 100%
+  overflow: auto
   background: #fff
-  z-index: 6
+  z-index: 652
   &-close
     position: absolute
     top: 20px
@@ -56,6 +57,7 @@
       &:hover
         cursor: pointer
       &_up
+        display: none
         right: 52px
         background: $active url("../img/stages/top.png") center no-repeat
       &_down
@@ -100,6 +102,8 @@
           background: url("../img/hero-green/checked.png") center no-repeat
           background-size: contain
       &_hide
+        transition: all 0.5s
+        transform: scale(1, -1)
         margin-left: 20px
         max-height: 11px
     &__item

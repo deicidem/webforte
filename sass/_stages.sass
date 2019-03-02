@@ -2,14 +2,21 @@
   &-popup
     display: flex
     flex-direction: column
-    padding: 30px 40px 40px
+    padding: 30px 12px 40px
     display: none
     &__close
       &:hover
         cursor: pointer
     &__links
+      transition: all 0.5s ease-in-out
+      z-index: 5
+      top: 80px
+      left: 0
+      width: 100%
+      position: sticky
       display: flex
-      justify-content: flex-end
+      // justify-content: flex-end
+      justify-content: space-between
       align-items: center
       
     &__descr
@@ -20,6 +27,7 @@
       display: none
     &__hide
       display: none
+      
     &__title
       font-size: 18px
       font-weight: 700
@@ -28,7 +36,8 @@
       &_center
         text-align: center
     &__top
-      display: none
+      &_active
+        transform: scale(1, -1)
     &__select
       appearance: none
       border: 1px solid #000000
@@ -55,6 +64,7 @@
         &:hover
           cursor: pointer
         &_up
+          display: none
           right: 52px
           background: $active url("../img/stages/top.png") center no-repeat
         &_down
@@ -153,7 +163,7 @@
       width: 92%
       left: 50%
       transform: translateX(-50%) 
-      top: 70%
+      top: 30%
   &-wrapper
     position: relative
     overflow: initial
@@ -198,6 +208,10 @@
       top: 0
       left: 50%
       transform: translateX(-50%)
+@media (min-width: 380px)
+  .stages
+    &-popup
+      padding: 30px 40px 40px
 @media (min-width: 768px)
   .stages
     &-popup
@@ -284,13 +298,10 @@
         &_nav_up, &_nav_down
           width: 1.7vw
           height: 1.7vw
-        &_nav_up
-          display: none
       &__title
         margin-bottom: 0
         font-size: 1.04vw
       &__links
-        justify-content: space-between
         align-items: flex-end
         margin-bottom: 3.4vw
         img
