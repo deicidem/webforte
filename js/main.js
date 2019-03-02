@@ -5,7 +5,7 @@ $('document').ready(() => {
     $('.header-menu__nav').toggleClass('header-menu__nav_active');
     setFixed();
   });
-
+  $('.subscribe').css('bottom', $('.cookie').outerHeight());
   function setFixed() {
     if (document.body.style.overflow == "hidden") {
       menuActive = false;
@@ -272,6 +272,7 @@ $('document').ready(() => {
   }
   $('.cookie-button, .cookie-close').on('click', () => {
     $('.cookie').fadeOut();
+    $('.subscribe').css('bottom', 0);
   });
 
   $('.about-button, .article-button').on('click', () => {
@@ -378,7 +379,7 @@ $('document').ready(() => {
       }
     });
   });
-
+  
   {
     let up = $('.brief-select_nav_up');
     let down = $('.brief-select_nav_down');
