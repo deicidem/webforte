@@ -1,3 +1,7 @@
+select {
+  background-color: #fff;
+}
+
 * {
   outline: none;
   -webkit-box-sizing: border-box;
@@ -1043,8 +1047,7 @@ section {
   }
   .header-main__hero .hero-form__input {
     margin-left: 0;
-    -ms-flex-preferred-size: 46%;
-        flex-basis: 46%;
+    max-width: 46%;
   }
   .circle {
     width: 459px;
@@ -1076,6 +1079,9 @@ section {
 @media (min-width: 1024px) {
   .header {
     position: relative;
+  }
+  .header-main__hero_blue .hero-subtitle {
+    margin-left: 3vw;
   }
   .header-main__hero_blue .hero-title span {
     display: block;
@@ -1128,7 +1134,7 @@ section {
   .header-main__hero .hero-list li {
     font-size: 1.07vw;
     padding-right: 0;
-    margin-right: 7vw;
+    margin-right: 6vw;
     margin-bottom: 0.36vw;
     padding-left: 1.8vw;
   }
@@ -1179,9 +1185,10 @@ section {
     border-top-right-radius: 10px;
     margin-top: 0;
     position: absolute;
+    margin-left: -0.7vw;
     bottom: 0;
     z-index: 5;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.4);
     padding: 0.52vw 0.78vw;
   }
   .header-social .container {
@@ -1200,6 +1207,21 @@ section {
     display: -ms-flexbox;
     display: flex;
     margin-right: 5px;
+    position: relative;
+    z-index: 1;
+  }
+  .header-social_item::before {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    width: 98%;
+    height: 98%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    top: 50%;
+    -webkit-transform: translate(-48%, -50%);
+            transform: translate(-48%, -50%);
+    left: 49%;
   }
   .header-social_wrapper {
     -webkit-box-pack: start;
@@ -1244,7 +1266,7 @@ section {
     margin-bottom: 1.4vw;
   }
   .header-main__hero_blue .hero-subtitle {
-    margin-left: 4.1vw;
+    margin-left: 2.5vw;
   }
   .header-main__hero_green {
     margin-bottom: 2vw;
@@ -1353,6 +1375,7 @@ section {
     -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     border: 1px solid #98b9d0;
+    border-bottom: none;
     padding-top: 6%;
     padding-bottom: 4%;
     max-width: 1200px;
@@ -1438,6 +1461,9 @@ section {
     margin-left: auto;
     margin-right: auto;
     max-width: 50%;
+  }
+  .about-subtitle span {
+    display: block;
   }
 }
 
@@ -1997,6 +2023,7 @@ section {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     border: 1px solid #98b9d0;
+    border-top: none;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     padding-bottom: 17%;
     padding-top: 5%;
