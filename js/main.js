@@ -290,6 +290,7 @@ $('document').ready(() => {
     down.on('click', () => {
       optionIndex++;
       up.show();
+      options.removeAttr('selected');
       options.eq(optionIndex).attr('selected', 'selected');
       if (optionIndex == options.length - 1) {
         down.hide();
