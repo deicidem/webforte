@@ -24,8 +24,9 @@
       cursor: pointer
   &-hide
     transition: all 0.5s
+    transform: scale(1, -1)
     &_active
-      transform: scale(1, -1)
+      transform: scale(1, 1)
   &_wrapper
     margin: 0 auto
     padding-bottom: 67px
@@ -107,6 +108,7 @@
 @media (min-width: 1024px)
   .contacts
     font-size: 1.05vw
+  
     &_wrapper
       padding-bottom: 3.5vw
       padding-top: 2.1875vw

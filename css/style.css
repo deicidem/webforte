@@ -1111,7 +1111,7 @@ section {
   }
   .header-main__hero .hero-gift {
     width: 14vw;
-    right: -1.3vw;
+    right: -1.7vw;
     top: -2vw;
   }
   .header-main__hero .hero-men {
@@ -1134,7 +1134,7 @@ section {
   .header-main__hero .hero-list li {
     font-size: 1.07vw;
     padding-right: 0;
-    margin-right: 6vw;
+    margin-right: 4.5vw;
     margin-bottom: 0.36vw;
     padding-left: 1.8vw;
   }
@@ -1260,13 +1260,13 @@ section {
   }
   .header-main__hero {
     padding: 1.82vw 1.98vw 1.2vw;
-    width: 68%;
+    width: 69%;
   }
   .header-main__hero_blue {
     margin-bottom: 1.4vw;
   }
   .header-main__hero_blue .hero-subtitle {
-    margin-left: 2.5vw;
+    margin-left: 1.8vw;
   }
   .header-main__hero_green {
     margin-bottom: 2vw;
@@ -1281,6 +1281,12 @@ section {
     top: -25.5vw;
     right: 7.7vw;
     z-index: 0;
+  }
+}
+
+@media (min-width: 1300px) {
+  .header-main__hero_blue .hero-subtitle {
+    margin-left: 2.7vw;
   }
 }
 
@@ -1460,7 +1466,7 @@ section {
   .about-subtitle {
     margin-left: auto;
     margin-right: auto;
-    max-width: 50%;
+    max-width: 52%;
   }
   .about-subtitle span {
     display: block;
@@ -1633,6 +1639,11 @@ section {
   cursor: pointer;
 }
 
+.stages-popup__top {
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
+}
+
 .stages-popup__top:hover {
   cursor: pointer;
 }
@@ -1685,8 +1696,8 @@ section {
 }
 
 .stages-popup__top_active {
-  -webkit-transform: scale(1, -1);
-          transform: scale(1, -1);
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
 }
 
 .stages-popup__select {
@@ -2987,6 +2998,14 @@ section {
   .cookie-button {
     padding: 0.2vw 0.625vw 0.26vw;
   }
+  .cookie-popup {
+    -webkit-transform: translateX(-0.88542vw);
+            transform: translateX(-0.88542vw);
+  }
+  .cookie-popup .container {
+    -webkit-transform: translateX(calc(0.88541667vw / 2));
+            transform: translateX(calc(0.88541667vw / 2));
+  }
 }
 
 .overlay {
@@ -3433,6 +3452,8 @@ section {
   position: fixed;
   top: 20px;
   left: 30px;
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
 }
 
 .brief-hide:hover {
@@ -3440,8 +3461,8 @@ section {
 }
 
 .brief-hide_active {
-  -webkit-transform: scale(1, -1);
-          transform: scale(1, -1);
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
 }
 
 .brief-close {
@@ -3828,11 +3849,13 @@ section {
 .contacts-hide {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
 }
 
 .contacts-hide_active {
-  -webkit-transform: scale(1, -1);
-          transform: scale(1, -1);
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
 }
 
 .contacts_wrapper {
@@ -4023,7 +4046,7 @@ section {
   display: none;
   background: #ffffff;
   position: fixed;
-  overflow: auto;
+  overflow-y: scroll;
   width: 100%;
   height: 100%;
   top: 0;
@@ -4102,9 +4125,16 @@ section {
   position: absolute;
 }
 
-.article-nav__hide_active {
+.article-nav__hide {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   -webkit-transform: scale(1, -1);
           transform: scale(1, -1);
+}
+
+.article-nav__hide_active {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
 }
 
 .article-nav img:hover {
@@ -4113,11 +4143,6 @@ section {
 
 .article-nav__close {
   margin: 0;
-}
-
-.article-nav__hide {
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
 }
 
 .article-info {
@@ -4267,21 +4292,21 @@ section {
     padding-bottom: 2.5vw;
   }
   .article_wrapper .container {
-    max-width: 62.5vw;
+    max-width: 56.25vw;
   }
   .article-title {
     font-size: 1.82vw;
     margin-bottom: 3.38vw;
   }
   .article-list {
-    font-size: 1vw;
+    font-size: 1.05vw;
     margin-bottom: 2.08vw;
   }
   .article-nav__hide {
     display: block;
   }
   .article-text {
-    font-size: 0.83vw;
+    font-size: 1vw;
   }
   .article-text p {
     margin: 1vw 0;
@@ -4329,7 +4354,8 @@ section {
 
 .subscribe {
   display: none;
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   bottom: 0;
   width: 100%;
   z-index: 1000;
@@ -4437,7 +4463,7 @@ section {
     padding: 1.04vw 0;
   }
   .subscribe .container {
-    max-width: 62.5vw;
+    max-width: 56.25vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

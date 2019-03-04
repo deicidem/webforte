@@ -374,7 +374,7 @@
           left: auto
         &-gift
           width: 14vw
-          right: -1.3vw
+          right: -1.7vw
           top: -2vw
         &-men
           top: auto
@@ -393,7 +393,7 @@
           li
             font-size: 1.07vw
             padding-right: 0
-            margin-right: 6vw
+            margin-right: 4.5vw
             margin-bottom: 0.36vw
             padding-left: 1.8vw
             &::before
@@ -460,7 +460,6 @@
           top: 50%
           transform: translate(-48%,-50%)
           left: 49%
-          
       &_wrapper
         justify-content: flex-start
     &-title
@@ -491,27 +490,32 @@
       padding-bottom: 0
       &__hero
         padding: 1.82vw 1.98vw 1.2vw
-        width: 68%
+        width: 69%
         &_blue
           margin-bottom: 1.4vw
           .hero-subtitle
-            margin-left: 2.5vw
+            margin-left: 1.8vw
         &_green
           margin-bottom: 2vw
           margin-left: auto
           .hero-list
             margin-bottom: 1vw
-    
-
   .circle
     width: 30vw
     height: 30vw
     top: -25.5vw
     right: 7.7vw
     z-index: 0
+@media (min-width: 1300px)
+  .header-main
+    &__hero
+      &_blue
+        .hero-subtitle
+          margin-left: 2.7vw
 @media (min-width: 1500px)
   .header-main
     margin-top: 100px
+  
 @media (min-width: 1800px)
   .header-title
     width: 100%    
