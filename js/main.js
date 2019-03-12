@@ -345,14 +345,12 @@ $('document').ready(() => {
     });
     if ($(window).width() <= 1024) {
       if (str == undefined) {
-        console.log(1);
 
         phone.show();
         current.hide();
       } else if (current.html() == str) {
         return;
       } else {
-        console.log(2);
 
         phone.hide();
         current.show();
@@ -490,7 +488,7 @@ $('document').ready(() => {
     });
   });
 
-  function subSroll () {
+  function subSroll() {
     var didScroll;
     var lastScrollTop = 0;
     var delta = 5;
@@ -509,17 +507,16 @@ $('document').ready(() => {
 
     function hasScrolled() {
       var st = $('.articles').scrollTop();
-      console.log($('.articles').offset().top + $('.articles').height() >= $('.articles .footer').offset().top);
-      console.log($('.articles').offset().top);
-      console.log($('.subscribe').offset().top);
-      
-      
-      if ($('.articles').offset().top + $('.articles').height() >= $('.articles .footer').offset().top) {
+
+
+
+      if (($('.articles').offset().top + $('.articles').height() >= $('.articles .footer').offset().top) && ($(window).width() > 768)) {
         $('.subscribe').show();
+        return;
+      } else if ($(window).width() <= 768) {
         return;
       }
       if (Math.abs(lastScrollTop - st) <= delta) return;
-      console.log(1);
 
       if (st > lastScrollTop && st > navbarHeight) {
         // Scroll Down
@@ -530,12 +527,11 @@ $('document').ready(() => {
           $('.subscribe').fadeIn();
         }
       }
-      
+
       lastScrollTop = st;
     }
-  };
-  subSroll();
-   {
+  }
+  subSroll(); {
     let pos;
     $('.article-nav__hide').on('click', () => {
       if ($('.article-nav__hide').hasClass('article-nav__hide_active')) {

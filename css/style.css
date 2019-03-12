@@ -270,6 +270,7 @@ section {
 }
 
 .header-menu__nav {
+  z-index: 500;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   position: fixed;
@@ -330,6 +331,7 @@ section {
 }
 
 .header-menu__nav_active {
+  z-index: 500;
   width: 100%;
 }
 
@@ -346,11 +348,20 @@ section {
 }
 
 .header-menu__phone {
+  display: block;
   color: #000;
   text-decoration: none;
   font-size: 16px;
   font-weight: 800;
   margin-right: 60px;
+}
+
+.header-menu__current, .header-menu__phone {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .header-menu__button {
@@ -452,6 +463,12 @@ section {
   }
   .header-menu__logo img {
     max-height: 60.02px;
+  }
+  .header-menu__current, .header-menu__phone {
+    position: static;
+    left: auto;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
   }
   .header-menu__current {
     font-size: 25px;
@@ -1060,7 +1077,7 @@ section {
 @media (min-width: 992px) {
   .header {
     background: url("../img/header/background.jpg") center no-repeat;
-    background-size: cover;
+    background-size: 100% 101%;
   }
   .header-title {
     font-size: 94px;
