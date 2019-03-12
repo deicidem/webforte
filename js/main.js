@@ -514,7 +514,7 @@ $('document').ready(() => {
         $('.subscribe').show();
         return;
       } else if ($(window).width() <= 768) {
-        return;
+        $('.subscribe').remove();
       }
       if (Math.abs(lastScrollTop - st) <= delta) return;
 

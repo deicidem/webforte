@@ -433,6 +433,13 @@ section {
   .header-menu__phone {
     font-size: 18px;
   }
+  .header-menu__current, .header-menu__phone {
+    margin-right: 50px;
+    position: static;
+    left: auto;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
   .header-menu__button {
     width: 60px;
     height: 60px;
@@ -463,12 +470,6 @@ section {
   }
   .header-menu__logo img {
     max-height: 60.02px;
-  }
-  .header-menu__current, .header-menu__phone {
-    position: static;
-    left: auto;
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
   }
   .header-menu__current {
     font-size: 25px;
@@ -627,7 +628,7 @@ section {
 
 .header-main {
   margin-top: 60px;
-  padding-top: 12px;
+  padding-top: 8px;
   padding-bottom: 28px;
 }
 
@@ -981,6 +982,12 @@ section {
   }
 }
 
+@media (min-width: 460px) {
+  .header-main {
+    padding-top: 12px;
+  }
+}
+
 @media (min-width: 490px) {
   .header-main__hero .hero-subtitle span {
     display: inline;
@@ -1007,6 +1014,7 @@ section {
     font-size: 89px;
   }
   .header-main {
+    padding-top: 4px;
     margin-top: 84px;
   }
   .header-main__hero_blue {
@@ -1650,6 +1658,8 @@ section {
           flex-direction: column;
   padding: 30px 12px 40px;
   display: none;
+  -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
 }
 
 .stages-popup__close:hover {
@@ -2192,6 +2202,7 @@ section {
   .stages-wrapper {
     padding: 0;
     background: url("../img/stages/bg.png") center no-repeat;
+    background-size: 138vw;
   }
   .stages-blocks {
     padding-left: 3vw;
@@ -3588,6 +3599,16 @@ section {
 }
 
 .brief-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding-top: 27px;
   padding-bottom: 15px;
   font-size: 18px;
@@ -3657,6 +3678,10 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .brief-block__items_w {
@@ -4499,17 +4524,21 @@ section {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -ms-flex-preferred-size: 62%;
+        flex-basis: 62%;
   }
   .subscribe-text {
     font-size: 1vw;
-    margin-bottom: 0.5vw;
-    line-height: 0;
+    margin-bottom: 0;
   }
   .subscribe-link {
     margin-bottom: 0;
     font-size: 0.677vw;
   }
   .subscribe-input {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+    width: 80%;
     font-size: 1vw;
     margin-right: 1.05vw;
     padding: 0.7vw 0 0.8vw;
