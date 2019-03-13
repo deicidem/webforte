@@ -23,8 +23,12 @@ body {
   position: relative;
 }
 
+.scroll-auto {
+  scroll-behavior: auto;
+}
+
 .fixed {
-  position: relative;
+  position: fixed;
   overflow: hidden;
 }
 

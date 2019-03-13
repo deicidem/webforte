@@ -102,12 +102,22 @@ $('document').ready(() => {
       $(`.${name}`).css('display', 'flex').hide().fadeIn();
     }
   }
+  let windowOffset;
   // Функция для фиксирования body
   function setFixed() {
     if ($('body').hasClass("fixed")) {
       menuActive = false;
       $("body").removeClass("fixed");
+      window.scrollTo(0, windowOffset);
+      $("html").removeClass("scroll-auto");
+      
+      
+
+      
     } else {
+      $("html").addClass("scroll-auto");
+      windowOffset = window.pageYOffset;
+      console.log(windowOffset);
       setTimeout(() => {
         menuActive = true;
         $("body").addClass("fixed");
