@@ -1085,7 +1085,7 @@ section {
 @media (min-width: 992px) {
   .header {
     background: url("../img/header/background.jpg") center no-repeat;
-    background-size: 100% 101%;
+    background-size: 100% 103%;
   }
   .header-title {
     font-size: 94px;
@@ -1682,8 +1682,7 @@ section {
   top: 80px;
   left: 0;
   width: 100%;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4546,9 +4545,7 @@ section {
     font-size: 0.677vw;
   }
   .subscribe-input {
-    -ms-flex-preferred-size: 45%;
-        flex-basis: 45%;
-    width: 80%;
+    max-width: 45%;
     font-size: 1vw;
     margin-right: 1.05vw;
     padding: 0.7vw 0 0.8vw;
