@@ -107,15 +107,13 @@ $('document').ready(() => {
   function setFixed() {
     if ($('body').hasClass("fixed")) {
       menuActive = false;
+      $("html").addClass("scroll-auto");
       $("body").removeClass("fixed");
       window.scrollTo(0, windowOffset);
       $("html").removeClass("scroll-auto");
       
-      
-
-      
     } else {
-      $("html").addClass("scroll-auto");
+      
       windowOffset = window.pageYOffset;
       console.log(windowOffset);
       setTimeout(() => {
