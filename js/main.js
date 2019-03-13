@@ -75,6 +75,7 @@ $('document').ready(() => {
         $('.stages-popup__links').css('top', $('.header-menu').height() + 30);
         $('.header-menu').removeClass('header-menu_hidden');
         $('.header-menu__button').removeClass('header-menu__button_hidden');
+        $('.stages-popup__links').css('top', $('.header-menu').height() + 30);
         
       }
     }
