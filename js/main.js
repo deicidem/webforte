@@ -104,13 +104,13 @@ $('document').ready(() => {
   }
   // Функция для фиксирования body
   function setFixed() {
-    if (document.body.style.overflow == "hidden") {
+    if ($('body').hasClass("fixed")) {
       menuActive = false;
-      $("html,body").css("overflow", "auto");
+      $("body").removeClass("fixed");
     } else {
       setTimeout(() => {
         menuActive = true;
-        $("html,body").css("overflow", "hidden");
+        $("body").addClass("fixed");
       }, 500);
     }
   }
