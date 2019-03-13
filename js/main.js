@@ -1,4 +1,6 @@
 $('document').ready(() => {
+  var elements = $('.stages-popup__links');
+  Stickyfill.add(elements);
   $('.brief, .bonuses, .articles, .contacts').css('display', 'flex').hide();
   let footer = $('.footer').clone();
   $(footer).removeAttr('id');
