@@ -1,4 +1,5 @@
 $('document').ready(() => {
+  let windowOffset;
   var elements = $('.stages-popup__links');
   Stickyfill.add(elements);
   $('.brief, .bonuses, .articles, .contacts').css('display', 'flex').hide();
@@ -18,10 +19,16 @@ $('document').ready(() => {
   });
 
   $('.header-menu__nav a').on('click', () => {
-    menuActive = false;
+    if ($('.header-menu__nav').hasClass('header-menu__nav_active')) {
+      menuActive = false;
+    $("html").addClass("scroll-auto");
+    $("body").removeClass("fixed");
+    window.scrollTo(0, windowOffset);
     $('.header-menu__button').removeClass('cross');
     $('.header-menu__nav').removeClass('header-menu__nav_active');
-    $("html,body").css("overflow", "auto");
+    $("html").removeClass("scroll-auto");
+    }
+    
   });
   $('.subscribe').css('bottom', $('.cookie').outerHeight());
 
@@ -102,7 +109,7 @@ $('document').ready(() => {
       $(`.${name}`).css('display', 'flex').hide().fadeIn();
     }
   }
-  let windowOffset;
+  
   // Функция для фиксирования body
   function setFixed() {
     if ($('body').hasClass("fixed")) {
