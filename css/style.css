@@ -2945,7 +2945,7 @@ section {
   .footer-block__item {
     font-size: 0.85vw;
   }
-  .footer-block__item a.footer-block__item::after {
+  .footer-block a.footer-block__item::after {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     content: '';
@@ -2958,7 +2958,7 @@ section {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }
-  .footer-block__item a.footer-block__item:hover:after {
+  .footer-block a.footer-block__item:hover:after {
     z-index: 1;
     width: 100%;
   }
