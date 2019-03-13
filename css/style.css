@@ -2071,6 +2071,7 @@ section {
     padding: 1.5625vw 3.125vw 2.08vw;
   }
   .stages-popups {
+    top: 100%;
     max-width: 58vw;
   }
   .stages-popup__form {
@@ -2339,8 +2340,8 @@ section {
     padding: 0 60px;
   }
   .works-slider img {
-    -webkit-box-shadow: 0 0.78125vw 1.04vw rgba(0, 0, 0, 0.25);
-            box-shadow: 0 0.78125vw 1.04vw rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0 0.7vw 0.8vw rgba(0, 0, 0, 0.25);
+            box-shadow: 0 0.7vw 0.8vw rgba(0, 0, 0, 0.25);
   }
   .works-slide {
     padding-bottom: 1.5vw;
