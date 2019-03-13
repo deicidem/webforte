@@ -327,6 +327,11 @@ $('document').ready(() => {
   }
   let phone = $('.header-menu__phone');
   let current = $('.header-menu__current');
+  if ( $(window).width() >= 1024 ) {
+    $('.header-menu__nav_item[href="#stages"]').remove();
+    $('.header-menu__nav_item[href="#reviews"]').remove();
+    
+  }
   $(window).scroll(function () {
 
 
