@@ -12,11 +12,12 @@
   overflow: hidden
   padding: 0
   &-links
+    z-index: 10000
     top: 40px
     left: 50%
     transform: translateX(-50%)
     position: fixed
-    width: 90%
+    width: 92%
     display: flex
     justify-content: space-between
     align-items: center
@@ -116,7 +117,12 @@
 @media (min-width: 1024px)
   .contacts
     font-size: 1.05vw
-  
+    &-links
+      top: 2.5vw
+      left: 0
+      transform: translateX(0%)
+      width: 100%
+      padding: 0 3vw 0 2.5vw
     &_wrapper
       padding-bottom: 3.5vw
       padding-top: 2.1875vw

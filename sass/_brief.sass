@@ -10,8 +10,10 @@
   z-index: 652
   flex-direction: column
   justify-content: space-between
-  overflow-y: scroll
+  overflow: hidden
+  
   &-hide
+    z-index: 1000
     transition: all 0.5s
     position: fixed
     top: 20px
@@ -22,6 +24,7 @@
     &_active
       transform: scale(1, 1) translate3d(0,0,0)
   &-close
+    z-index: 1000
     transform: translateZ(1px)
     position: fixed
     top: 20px
@@ -39,6 +42,14 @@
     display: flex
     flex-direction: column
     align-items: center
+    &_wrapper
+      width: 100%
+      -webkit-overflow-scrolling: touch
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      overflow-y: scroll
   &-services
     width: 100%
   &-select
@@ -193,7 +204,7 @@
       left: 2.5vw
     &-close
       top: 2.5vw
-      right: 2.5vw
+      right: 3vw
     &-text
       margin: 1.5625vw 0
       font-size: 1.04vw

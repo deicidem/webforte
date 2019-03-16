@@ -6,7 +6,7 @@ $('document').ready(() => {
   let footer = $('.footer').clone();
   $(footer).removeAttr('id');
   let menuActive = false;
-  $(footer).appendTo('.article_wrapper_wrapper, .bonuses, .brief, .contacts_wrapper_wrapper');
+  $(footer).appendTo('.article_wrapper_wrapper, .bonuses_wrapper_wrapper, .brief_wrapper_wrapper, .contacts_wrapper_wrapper');
   let margin = $('.header-menu').outerHeight() + $(window).width() / 100 * 1.4 - ($('.header-title_left').offset().top - $('.header-title').offset().top);
   if ($(window).width() >= 1024) {
     $('.header-main').css('margin-top', margin);

@@ -3231,6 +3231,7 @@ section {
 }
 
 .bonuses {
+  padding-top: 0;
   position: fixed;
   top: 0;
   z-index: 612;
@@ -3253,7 +3254,7 @@ section {
 }
 
 .bonuses-hide {
-  z-index: 1002;
+  z-index: 10020;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   -webkit-transform: scale(1, -1);
@@ -3270,7 +3271,7 @@ section {
 }
 
 .bonuses-close {
-  z-index: 1002;
+  z-index: 10002;
   position: fixed;
   top: 20px;
   right: 20px;
@@ -3280,7 +3281,8 @@ section {
   cursor: pointer;
 }
 
-.bonuses-wrapper {
+.bonuses_wrapper {
+  padding-top: 50px;
   padding-bottom: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3292,6 +3294,23 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.bonuses_wrapper_wrapper {
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow-y: scroll;
 }
 
 .bonuses .section-title {
@@ -3386,9 +3405,6 @@ section {
 }
 
 @media (min-width: 768px) {
-  .bonuses-wrapper {
-    padding-bottom: 60px;
-  }
   .bonuses .section-title {
     font-size: 30px;
   }
@@ -3408,8 +3424,8 @@ section {
 
 @media (min-width: 1024px) {
   .bonuses-close {
-    top: 1.93vw;
-    right: 2.65625vw;
+    top: 2.5vw;
+    right: 3vw;
   }
   .bonuses .section-title {
     font-size: 1.5625vw;
@@ -3418,10 +3434,11 @@ section {
   .bonuses-hide {
     max-height: 0.573vw;
   }
-  .bonuses-wrapper {
+  .bonuses_wrapper {
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 4%;
+    padding-top: 2.6vw;
+    padding-bottom: 0.52vw;
     max-width: 45vw;
   }
   .bonuses-search {
@@ -3476,10 +3493,11 @@ section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  overflow-y: scroll;
+  overflow: hidden;
 }
 
 .brief-hide {
+  z-index: 1000;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   position: fixed;
@@ -3499,6 +3517,7 @@ section {
 }
 
 .brief-close {
+  z-index: 1000;
   -webkit-transform: translateZ(1px);
           transform: translateZ(1px);
   position: fixed;
@@ -3530,6 +3549,23 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.brief_wrapper_wrapper {
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow-y: scroll;
 }
 
 .brief-services {
@@ -3787,7 +3823,7 @@ section {
   }
   .brief-close {
     top: 2.5vw;
-    right: 2.5vw;
+    right: 3vw;
   }
   .brief-text {
     margin: 1.5625vw 0;
@@ -3883,12 +3919,13 @@ section {
 }
 
 .contacts-links {
+  z-index: 10000;
   top: 40px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: fixed;
-  width: 90%;
+  width: 92%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4072,6 +4109,14 @@ section {
   .contacts {
     font-size: 1.05vw;
   }
+  .contacts-links {
+    top: 2.5vw;
+    left: 0;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    width: 100%;
+    padding: 0 3vw 0 2.5vw;
+  }
   .contacts_wrapper {
     padding-bottom: 3.5vw;
     padding-top: 2.1875vw;
@@ -4195,9 +4240,9 @@ section {
 }
 
 .article-nav {
-  z-index: 1002;
+  z-index: 10020;
   position: fixed;
-  width: 90%;
+  width: 92%;
   left: 50%;
   top: 20px;
   -webkit-transform: translateX(-50%) translate3d(0, 0, 0);
@@ -4397,6 +4442,14 @@ section {
   .article-list {
     font-size: 1.05vw;
     margin-bottom: 2.08vw;
+  }
+  .article-nav {
+    top: 2.5vw;
+    left: 0;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    width: 100%;
+    padding: 0 3vw 0 2.5vw;
   }
   .article-nav__hide {
     display: block;
