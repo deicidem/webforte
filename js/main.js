@@ -127,11 +127,14 @@ $('document').ready(() => {
       $('.cookie').css('margin-left', 0 - scrollbarWidth());
       $('.popup').hide();
       $(`.${name}`).css('display', 'flex').hide().show();
+      $(`.${name}_wrapper_wrapper`).scrollTop(0);
     } else {
       $('.cookie').css('margin-left', 0 - scrollbarWidth());
       $('.to-top').css('z-index', 0);
-      setFixed();
       $(`.${name}`).css('display', 'flex').hide().show();
+      $(`.${name}_wrapper_wrapper`).scrollTop(0);
+      setFixed();
+      
     }
   }
   // Функция для фиксирования body
@@ -437,9 +440,7 @@ $('document').ready(() => {
   });
 
   $('.footer-brief-link').on('click', () => {
-
     open('brief');
-
   });
 
   $('.brief-close').on('click', () => {
