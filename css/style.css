@@ -6,8 +6,6 @@ select {
   outline: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
 }
 
 *:focus, *:active {
@@ -21,10 +19,6 @@ body {
 
 .main {
   position: relative;
-}
-
-.scroll-auto {
-  scroll-behavior: auto;
 }
 
 .fixed {
