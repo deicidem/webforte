@@ -132,7 +132,7 @@ $('document').ready(() => {
       $('.to-top').css('z-index', 0);
       $(`.${name}`).show();
       $(`.${name}_wrapper_wrapper`).scrollTop(0);
-      // setFixed();
+      setFixed();
       
     }
   }
@@ -146,19 +146,12 @@ $('document').ready(() => {
       $("html").toggleClass("scroll-auto");
 
     } else {
-      if ($(window).width() <= 1024) {
-          windowOffset = window.pageYOffset;
-          $("html").toggleClass("scroll-auto");
-          menuActive = true;
-          $("body").toggleClass("fixed");
-      } else {
         setTimeout(() => {
           windowOffset = window.pageYOffset;
           $("html").toggleClass("scroll-auto");
           menuActive = true;
           $("body").toggleClass("fixed");
         }, 500);
-      }
     }
   }
   // Слайдер
