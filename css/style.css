@@ -3485,7 +3485,6 @@ section {
       -ms-flex-pack: justify;
           justify-content: space-between;
   overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
 }
 
 .brief-hide {
@@ -4110,6 +4109,7 @@ section {
 }
 
 .articles {
+  -webkit-overflow-scrolling: touch;
   display: none;
   background: #ffffff;
   position: fixed;
