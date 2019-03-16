@@ -6,6 +6,8 @@ select {
   outline: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
 *:focus, *:active {
@@ -19,6 +21,10 @@ body {
 
 .main {
   position: relative;
+}
+
+.scroll-auto {
+  scroll-behavior: auto;
 }
 
 .fixed {
@@ -3480,7 +3486,6 @@ section {
 }
 
 .brief-hide {
-  z-index: 1002;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   position: fixed;
@@ -3502,7 +3507,6 @@ section {
 .brief-close {
   -webkit-transform: translateZ(1px);
           transform: translateZ(1px);
-  z-index: 1002;
   position: fixed;
   top: 20px;
   right: 30px;
