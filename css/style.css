@@ -2084,7 +2084,7 @@ section {
     padding: 1.5625vw 3.125vw 2.08vw;
   }
   .stages-popups {
-    top: 100%;
+    top: 60%;
     max-width: 58vw;
   }
   .stages-popup__form {

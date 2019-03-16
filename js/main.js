@@ -290,35 +290,37 @@ $('document').ready(() => {
 
   // Select
   {
-    let up = $('.stages-popup__select_nav_up');
-    let down = $('.stages-popup__select_nav_down');
-    let options = $('.stages-popup__select option');
-    let optionIndex = 0;
-    up.on('click', () => {
-      optionIndex--;
-      down.show();
-      options.removeAttr('selected');
-      options.eq(optionIndex).attr('selected', 'selected');
-      if (optionIndex == 0) {
-        up.hide();
-      } else {
-        up.show();
-      }
-    });
+    
 
-    down.on('click', () => {
-      optionIndex++;
-      up.show();
-      options.removeAttr('selected');
-      options.eq(optionIndex).attr('selected', 'selected');
-      if (optionIndex == options.length - 1) {
-        down.hide();
-      } else {
+      $('.stages-popup__select_nav').on('click', function(e) {
+        var direction = $(this).data('direction');
+        var $select = $('#stages-popup__select');
+        var $currentOption = $select.find(':selected');
+        var $nextOption = direction == 'down' ?
+          $currentOption.next() : $currentOption.prev();
+        
+        if ($nextOption.length) {
+          $select.val($nextOption.attr('value'));
+        }    
+      });
+      let up = $('.stages-popup__select_nav_up');
+      let down = $('.stages-popup__select_nav_down');
+      let options = $('.stages-popup__select option');
+      let optionIndex = 0;
+      
+      up.on('click', () => {      
+        optionIndex--;
         down.show();
-      }
-
-
-    });
+        optionIndex == 0 ? up.hide() : up.show();
+      });
+  
+      down.on('click', () => {
+        optionIndex++;
+        up.show();
+        optionIndex == options.length - 1 ? down.hide() : down.show();
+      });
+    
+    
   }
   $('.cookie-button, .cookie-close').on('click', () => {
     $('.cookie').hide();
@@ -445,7 +447,6 @@ $('document').ready(() => {
   {
 
     $('.brief-select_nav').on('click', function(e) {
-      let down = $('.brief-select_nav_down');
       var direction = $(this).data('direction');
       var $select = $('#brief-select');
       var $currentOption = $select.find(':selected');
