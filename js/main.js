@@ -132,7 +132,7 @@ $('document').ready(() => {
       $('.to-top').css('z-index', 0);
       $(`.${name}`).show();
       $(`.${name}_wrapper_wrapper`).scrollTop(0);
-      setFixed();
+      // setFixed();
       
     }
   }
