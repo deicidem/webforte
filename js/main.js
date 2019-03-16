@@ -107,9 +107,8 @@ $('document').ready(() => {
     } else {
       $('.cookie').addClass('cookie-popup');
       $('.to-top').css('z-index', 0);
-      $(`.${name}`).css('display', 'flex').hide().fadeIn();
       setFixed();
-      
+      $(`.${name}`).css('display', 'flex').hide().show();
     }
   }
   // Функция для фиксирования body
@@ -122,12 +121,19 @@ $('document').ready(() => {
       $("html").toggleClass("scroll-auto");
 
     } else {
-    setTimeout(() => {
-        windowOffset = window.pageYOffset;
-        $("html").toggleClass("scroll-auto");
-        menuActive = true;
-        $("body").toggleClass("fixed");
-      }, 500);
+      if ($(window).width() <= 1024) {
+          windowOffset = window.pageYOffset;
+          $("html").toggleClass("scroll-auto");
+          menuActive = true;
+          $("body").toggleClass("fixed");
+      } else {
+        setTimeout(() => {
+          windowOffset = window.pageYOffset;
+          $("html").toggleClass("scroll-auto");
+          menuActive = true;
+          $("body").toggleClass("fixed");
+        }, 500);
+      }
     }
   }
   // Слайдер
