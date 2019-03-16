@@ -443,22 +443,33 @@ $('document').ready(() => {
   });
 
   {
+
+    $('.brief-select_nav').on('click', function(e) {
+      let down = $('.brief-select_nav_down');
+      var direction = $(this).data('direction');
+      var $select = $('#brief-select');
+      var $currentOption = $select.find(':selected');
+      var $nextOption = direction == 'down' ?
+        $currentOption.next() : $currentOption.prev();
+      
+      if ($nextOption.length) {
+        $select.val($nextOption.attr('value'));
+      }    
+    });
     let up = $('.brief-select_nav_up');
     let down = $('.brief-select_nav_down');
     let options = $('.brief-select option');
     let optionIndex = 0;
-    up.on('click', () => {
+    
+    up.on('click', () => {      
       optionIndex--;
       down.show();
-      options.removeAttr('selected');
-      options.eq(optionIndex).attr('selected', 'selected');
       optionIndex == 0 ? up.hide() : up.show();
     });
 
     down.on('click', () => {
       optionIndex++;
       up.show();
-      options.eq(optionIndex).attr('selected', 'selected');
       optionIndex == options.length - 1 ? down.hide() : down.show();
     });
   }
