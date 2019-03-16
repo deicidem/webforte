@@ -4176,8 +4176,8 @@ section {
   width: 90%;
   left: 50%;
   top: 20px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transform: translateX(-50%) translate3d(0, 0, 0);
+          transform: translateX(-50%) translate3d(0, 0, 0);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
