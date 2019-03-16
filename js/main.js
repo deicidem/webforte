@@ -107,8 +107,9 @@ $('document').ready(() => {
     } else {
       $('.cookie').addClass('cookie-popup');
       $('.to-top').css('z-index', 0);
-      setFixed();
       $(`.${name}`).css('display', 'flex').hide().fadeIn();
+      setFixed();
+      
     }
   }
   // Функция для фиксирования body
