@@ -3492,8 +3492,8 @@ section {
   position: fixed;
   top: 20px;
   left: 30px;
-  -webkit-transform: scale(1, -1);
-          transform: scale(1, -1);
+  -webkit-transform: scale(1, -1) translateZ(1px);
+          transform: scale(1, -1) translateZ(1px);
 }
 
 .brief-hide:hover {
@@ -3501,11 +3501,13 @@ section {
 }
 
 .brief-hide_active {
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
+  -webkit-transform: scale(1, 1) translateZ(1px);
+          transform: scale(1, 1) translateZ(1px);
 }
 
 .brief-close {
+  -webkit-transform: translateZ(1px);
+          transform: translateZ(1px);
   z-index: 1002;
   position: fixed;
   top: 20px;
