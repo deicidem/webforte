@@ -4192,6 +4192,11 @@ section {
   position: absolute;
 }
 
+.article-nav__items {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
 .article-nav__hide {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
