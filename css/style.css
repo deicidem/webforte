@@ -4109,7 +4109,6 @@ section {
 }
 
 .articles {
-  -webkit-overflow-scrolling: touch;
   display: none;
   background: #ffffff;
   position: fixed;
@@ -4130,6 +4129,7 @@ section {
 }
 
 .article_wrapper {
+  -webkit-overflow-scrolling: touch;
   padding-top: 54px;
   padding-bottom: 37px;
 }
