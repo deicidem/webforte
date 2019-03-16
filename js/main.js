@@ -2,7 +2,6 @@ $('document').ready(() => {
   let windowOffset;
   var elements = $('.stages-popup__links');
   Stickyfill.add(elements);
-  $('.brief, .bonuses, .articles, .contacts').css('display', 'flex').hide();
   let footer = $('.footer').clone();
   $(footer).removeAttr('id');
   let menuActive = false;
@@ -126,12 +125,12 @@ $('document').ready(() => {
     if (isActive) {
       $('.cookie').css('margin-left', 0 - scrollbarWidth());
       $('.popup').hide();
-      $(`.${name}`).css('display', 'flex').hide().show();
+      $(`.${name}`).show();
       $(`.${name}_wrapper_wrapper`).scrollTop(0);
     } else {
       $('.cookie').css('margin-left', 0 - scrollbarWidth());
       $('.to-top').css('z-index', 0);
-      $(`.${name}`).css('display', 'flex').hide().show();
+      $(`.${name}`).show();
       $(`.${name}_wrapper_wrapper`).scrollTop(0);
       setFixed();
       
