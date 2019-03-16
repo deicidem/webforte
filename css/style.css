@@ -3877,7 +3877,7 @@ section {
   bottom: 0;
   left: 0;
   background-color: #ffffff;
-  overflow: auto;
+  overflow: hidden;
   padding: 0;
   font-size: 17px;
 }
@@ -3920,6 +3920,23 @@ section {
   margin: 0 auto;
   padding-bottom: 67px;
   padding-top: 42px;
+}
+
+.contacts_wrapper_wrapper {
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow-y: scroll;
 }
 
 .contacts-title {
@@ -4121,7 +4138,7 @@ section {
 }
 
 .article_wrapper {
-  padding-top: 520px;
+  padding-top: 54px;
   padding-bottom: 37px;
 }
 

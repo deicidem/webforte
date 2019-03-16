@@ -9,7 +9,7 @@
   bottom: 0
   left: 0
   background-color: #ffffff
-  overflow: auto
+  overflow: hidden
   padding: 0
   &-links
     top: 40px
@@ -31,6 +31,14 @@
     margin: 0 auto
     padding-bottom: 67px
     padding-top: 42px
+    &_wrapper
+      width: 100%
+      -webkit-overflow-scrolling: touch
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      overflow-y: scroll
   font-size: 17px
   &-title
     display: flex
