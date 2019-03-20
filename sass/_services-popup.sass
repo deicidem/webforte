@@ -1,0 +1,443 @@
+.services
+  position: relative
+  overflow: initial
+  &-overlay
+    display: none
+    z-index: 99
+    position: fixed
+    width: 100%
+    background-color: #fff
+    opacity: 0.85
+    top: 0
+    height: 100%
+  &-popups__wrapper
+    opacity: 0
+    .works-prev
+      background: url('../img/services/arrow-left.png') center no-repeat
+      transform: translate(0%, 50%)
+      left: 18%
+    .works-next
+      background: url('../img/services/arrow-right.png') center no-repeat
+      transform: translate(0%, 50%)
+      right: 18%
+    z-index: 100
+    position: absolute
+    width: 100%
+    top: 1%
+  &-popup
+    position: relative
+    // display: none
+    &__close
+      position: absolute
+      right: 4%
+      top: -30px
+      &:hover
+        cursor: pointer
+    &__logo
+      position: absolute
+      bottom: 10px
+      right: 36px
+    &__discount
+      position: absolute
+      top: 185px
+      right: 10px
+      width: 82px
+    &__block
+      margin-left: auto
+      margin-right: auto
+      width: 93%
+      position: relative
+      padding: 50px 30px 60px
+      background-color: #f9f9f9
+      color: #000
+      box-shadow: 0 0 46px rgba(0, 0, 0, 0.15)
+      border: 1px solid #205ebd
+      border-radius: 15px
+      margin-bottom: 25px
+    &__title
+      text-transform: uppercase
+      font-size: 33px
+      font-weight: 900
+      color: #f74d00
+      margin-top: 0
+      margin-bottom: 50px
+    &__hr
+      background-color: #d8d8d8
+      height: 1px
+      width: 100%
+    &__prices
+      padding-top: 40px
+      padding-bottom: 40px
+      font-size: 26px
+      line-height: 40px
+      &__text
+        font-weight: 700
+      &__block
+        margin-bottom: 10px
+      &__img
+        margin-top: 20px
+        display: flex
+        justify-content: center
+        img
+          vertical-align: bottom
+    &__text
+      text-align: center
+      margin-top: 45px
+      margin-bottom: 49px
+      font-size: 18px
+      line-height: 27px
+      br:last-child
+        display: none
+    &__list
+      padding: 0
+      margin: 0
+      list-style: none
+      text-align: left
+      line-height: 27px
+      font-size: 16px
+      &__title
+        text-align: left
+        font-size: 16px
+        font-weight: 700
+        line-height: 27px
+        margin-bottom: 10px
+      &_alt
+        padding: 10px 30px
+        border: 1px solid #205ebd
+        border-radius: 15px
+        margin-bottom: 50px
+        li
+          position: relative
+          &::before
+            content: ''
+            position: absolute
+            width: 18px
+            height: 18px
+            top: 4px
+            left: -23px
+            background: url("../img/hero-green/checked.png") center no-repeat 
+    &__form
+      position: relative
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      .button
+        margin: 20px 0 40px
+    &__input
+      box-sizing: content-box
+      background-color: #fff
+      font-size: 17px
+      border: 1px solid #205ebd
+      border-radius: 50px
+      width: 100%
+      padding: 18px 0 18px 28px
+      appearance: none
+      margin-bottom: 20px
+    &__option
+      display: inline-block
+      padding: 10px 28px
+      // box-sizing: content-box
+      position: relative
+      &::after
+        transition: all 0.3s ease-in-out
+        content: ''
+        position: absolute
+        bottom: 3px
+        height: 2px
+        background-color: rgba(#205ebd, .8)
+        left: 50%
+        width: 0
+        transform: translateX(-50%)
+      &:hover:after
+        width: 80%
+      &:hover
+        cursor: pointer
+      &:first-child 
+        padding-top: 20px
+      &:last-child 
+        padding-bottom: 20px
+        &::after
+          bottom: 15px
+      &s
+        // box-sizing: content-box
+        overflow: hidden
+        z-index: 100
+        transform: translateX(-29px) translateY(-40px)
+        border-radius: 27px
+        width: 101%
+        background-color: #fff
+        border: 1px solid #205ebd
+        // border-top: 1px solid #000
+        display: none
+        position: absolute
+    &__arrow
+      color: #205ebd
+      top: 50%
+      transform: translateY(-45%)
+      right: 20px
+      position: absolute
+      &:hover
+        cursor: pointer
+    &__select
+      text-align: left
+      position: relative
+    &__selected
+      font-size: 17px
+      &:hover
+        cursor: pointer
+    &__small
+      color: #000000
+      font-size: 9px
+
+
+    &__support
+      .services-popup
+        &__title
+          font-size: 24px
+        &__block
+          border: 1px solid #92278f
+        &__prices
+          &__title
+            line-height: 30px
+            margin-bottom: 27px
+        &__text
+          margin-top: 30px
+          margin-bottom: 0
+        &__input
+          border: 1px solid #92278f
+        &__arrow
+          color: #92278f
+        &__options
+          border: 1px solid #92278f
+        &__option::after
+          background-color: rgba(#92278f, .8)
+
+
+    &__seo
+      .services-popup
+        &__block
+          border: 1px solid #01985d
+        &__input
+          border: 1px solid #01985d
+        &__list_alt
+          border: 1px solid #01985d
+        &__arrow
+          color: #01985d
+        &__options
+          border: 1px solid #01985d
+        &__option::after
+          background-color: rgba(#01985d, .8)
+      
+@media (min-width: 460px)
+  .services
+    &-popup
+      &__discount
+        right: 19px
+      &__list
+        font-size: 18px
+        &__title
+          font-size: 18px
+        &_alt
+          padding: 10px 40px
+      &__text
+        br:last-child
+          display: block
+      &__support
+        .services-popup
+          &__title
+            font-size: 35px
+@media (min-width: 768px)
+  .services
+    &-popup
+      &__logo
+        bottom: 9px
+        right: 61px
+        img
+          width: 42px
+      &__block
+        padding: 50px 60px 60px
+      &__title
+        margin-bottom: 49px
+        br
+          display: none
+          font-size: 35px
+      &__prices
+        font-size: 28px
+        padding-top: 36px
+        padding-bottom: 42px
+        &__img
+          margin-top: 50px
+        br
+          display: none
+      &__discount
+        top: 147px
+        right: 20px
+        width: 105px
+      &__text
+        font-size: 20px
+        br:first-child
+          display: none
+      &__list
+        font-size: 20px
+        &__title
+          font-size: 20px
+      &__form
+        .button
+          margin-bottom: 27px
+      &__small
+        font-size: 11px
+      &__support
+        .services-popup
+          &__block
+            padding: 50px 50px 60px
+          &__prices
+            &__block
+              max-width: 270px
+              margin: 0 auto
+          &__text
+            br
+              display: block
+@media (min-width: 1024px)
+  .services
+    &-popup
+      &__close
+        right: 21.875vw
+      &__block
+        width: 100%
+        max-width: 56.25vw
+        padding: 3vw 3.65vw 1.5625vw
+        padding-top: 3vw
+        padding-bottom: 1.5625vw
+      &__title
+        font-size: 1.875vw
+        margin-bottom: 2.45vw
+      &__prices
+        display: flex
+        align-items: center
+        font-size: 1.46vw
+        padding-top: 2.08vw
+        padding-bottom: 1.875vw
+        line-height: 2.08vw
+        &_wrapper
+          width: 80%
+        &__block
+          margin-bottom: 0.5vw
+          display: flex
+        &__title
+          text-align: left
+          width: 30%
+        &__text
+          text-align: left
+        &__img
+          display: block
+          margin: 0
+          max-width: 9.32vw
+      &__text
+        margin-bottom: 0
+        margin: 2.34375vw 0
+        line-height: 1.4vw
+        font-size: 1.065vw
+        text-align: left
+        br:last-child
+          display: none
+      &__lists
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+      &__list
+        margin: 0
+        font-size: 1.065vw
+        line-height: 1.4vw
+        &_alt
+          padding: 0.6vw 2.08vw
+        li
+          &::before
+            width: 0.9vw
+            height: 0.9vw
+            background-size: contain
+            top: 0.208vw
+            left: -1.2vw
+        &__title
+          font-size: 1.065vw
+          margin-bottom: 1.4vw
+          &_alt
+            margin-bottom: 0.8vw
+      &__form
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: space-between
+        .button
+          margin: 2.08vw auto 1.3vw
+      &__input
+        font-size: 0.9375vw
+        padding: 0.9375vw 0 0.9375vw 1.458vw
+        padding: 
+        max-width: 26%
+        margin: 0
+      &__select
+        max-width: 35%
+      &__small
+        font-size: 0.587vw
+      &__option
+        padding: 0.52vw 1.458vw
+        &:first-child
+          padding-top: 1.04vw
+        &:last-child
+          padding-bottom: 1.04vw
+        &s
+          border-radius: 1.40625vw
+          transform: translateX(-1.51041667vw) translateY(-2.08333333333vw)
+      &__selected
+        font-size: 0.9375vw
+      &__discount
+        top: 6.3vw
+        right: 12.8645vw
+        width: 5.46875vw
+      &__logo
+        top: 2.604vw
+        right: auto
+        left: 3.85416vw
+        width: 2.08vw
+
+      &__support
+        .services-popup
+          &__block
+            padding: 3vw 3.5vw 1.5625vw
+          &__title
+            font-size: 1.823vw
+            br
+              display: block
+          &__prices
+            display: block
+            &__title, &__text, &__block
+              width: auto
+              max-width: 100%
+              margin: 0
+            &__text
+              width: 50%
+              flex-basis: fill
+              display: flex
+              justify-content: space-between
+              align-items: center
+            &__block
+              display: flex
+              align-items: center
+              justify-content: space-between
+      &__seo
+        .services-popup
+          &__list
+            &s
+              justify-content: flex-start
+            &_alt
+              margin-right: 3.125vw
+            &__title_alt
+              br
+                display: none
+            
+            
+            
+
+      
+        
+      
