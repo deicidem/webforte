@@ -3066,7 +3066,7 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  top: 48%;
+  top: 49%;
   left: 50%;
   -webkit-transform: translateY(-50%) translateX(-50%);
           transform: translateY(-50%) translateX(-50%);
@@ -3079,7 +3079,7 @@ section {
 }
 
 .overlay .popup-form__title {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 900;
   margin: 0;
   margin-bottom: 20px;
@@ -3108,7 +3108,7 @@ section {
 }
 
 .overlay .popup-form__close {
-  top: -30px;
+  top: -20px;
   right: 0;
 }
 
@@ -3133,13 +3133,13 @@ section {
 .overlay .popup-form__textarea {
   overflow: hidden;
   border-radius: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .overlay .popup-form button {
   padding: 10px 21px;
   font-size: 17px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 .overlay .popup-form__small {
@@ -3162,7 +3162,7 @@ section {
   font-size: 14px;
   color: #000;
   position: absolute;
-  bottom: -30px;
+  bottom: -20px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   text-decoration: underline;
