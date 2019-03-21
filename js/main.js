@@ -681,10 +681,11 @@ $('document').ready(() => {
       });
     });
   }
+
+
   const services = $('.services-popup');
   enableSelectBoxes();
   $('.services-popups').slick({
-    infinite: false,
     nextArrow: '<button type="button" class="works-next"></button>',
     prevArrow: '<button type="button" class="works-prev"></button>',
     lazyLoad: 'ondemand',
@@ -694,18 +695,18 @@ $('document').ready(() => {
         arrows: false,
       }
     }]
-
   });
   setTimeout(() => {
-    $('.services-popups__wrapper').hide(0, function(){
+    $('.services-popups__wrapper').hide(0, function () {
       $(this).css('opacity', 1);
     });
-  }, 350);
+  }, 1000);
   $('.services-popup__close').on('click', () => {
     toTopObj = 0;
     $('.services-popups__wrapper, .services-overlay').fadeOut();
   });
   $('.services-block').each(function (index) {
+
     $(this).find('.services-block__hover, .services-block__button').on('click', () => {
       $(window).scrollTop($('#services').offset().top - 50);
       $('.services-popups').slick('slickGoTo', index);
@@ -714,6 +715,9 @@ $('document').ready(() => {
       $('.services-popups__wrapper, .services-overlay').fadeIn();
       toTopObj = $('#services').offset().top - 50;
     });
+
+
+
   });
   $('.services-popups').on('beforeChange', function (event, slick, direction) {
 
@@ -725,6 +729,47 @@ $('document').ready(() => {
     top = services.eq($('.services-popups').slick('slickCurrentSlide')).find('.services-popup__block').eq(0).height() / 2;
     $(this).find('.slick-arrow').fadeIn();
     $(this).find('.slick-arrow').css('top', top);
-
   });
+
+  $('.services-popup__logo').on('click', ()=>{
+    toTopObj = 0;
+    $('.services-popups__wrapper, .services-overlay').fadeOut();
+    $(window).scrollTop(0);
+  });
+
+  $('.services-popup').each(function (index) {
+    let that = this;
+
+    $(that).find('.services-popup__hide').on('click', function () {
+      if ($(this).html() == 'Показать текст') {
+        $(this).html('Скрыть текст');
+      } else {
+        $(this).html('Показать текст');
+      }
+      $(that).find('.services-popup__main').slideToggle(500);
+      setTimeout(() => {
+        let top;
+        top = $(that).find('.services-popup__block').eq(0).height() / 2;
+        $('.services-popups').find('.slick-arrow').css('top', top);
+      }, 500);
+    });
+  });
+
+
+  let servTop = $('.services-popup__top'),
+      servBot = $('.services-popup__bot');
+  
+  servBot.on('click', ()=>{
+      $('#block').scrollTop($('#block').scrollTop()+300);
+  });
+
+  servTop.on('mouseenter', ()=>{
+    let interval = setInterval(()=>{
+      $('#block').scrollTop($('#block').scrollTop()-10);
+    }, 50);
+    servTop.on('mouseleave', ()=>{
+      clearInterval(interval);
+    });
+  });
+
 });

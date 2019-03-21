@@ -1545,6 +1545,10 @@ section {
   margin-bottom: 90px;
 }
 
+.services-block__hover:hover {
+  cursor: pointer;
+}
+
 .services-block__hover:hover .services-block__img {
   background-color: rgba(255, 255, 255, 0.5);
 }
@@ -4707,6 +4711,7 @@ section {
 }
 
 .services-popup__logo {
+  cursor: pointer;
   position: absolute;
   bottom: 10px;
   right: 36px;
@@ -4720,6 +4725,7 @@ section {
 }
 
 .services-popup__block {
+  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
   width: 93%;
@@ -4731,7 +4737,6 @@ section {
           box-shadow: 0 0 46px rgba(0, 0, 0, 0.15);
   border: 1px solid #205ebd;
   border-radius: 15px;
-  margin-bottom: 25px;
 }
 
 .services-popup__title {
@@ -5094,7 +5099,32 @@ section {
   .services-popup__close {
     right: 21.875vw;
   }
+  .services-popup__top {
+    z-index: 5000000;
+    position: absolute;
+    top: 0px;
+    background: #000;
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    cursor: pointer;
+  }
+  .services-popup__bot {
+    position: absolute;
+    bottom: -20px;
+    background: #000;
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    cursor: pointer;
+  }
   .services-popup__block {
+    max-height: 400px;
+    overflow: auto;
     width: 100%;
     max-width: 56.25vw;
     padding: 3vw 3.65vw 1.5625vw;
@@ -5158,6 +5188,16 @@ section {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .services-popup__hide {
+    display: inline-block;
+    margin-top: 1.45vw;
+    font-size: 0.83vw;
+    color: #a2a2a2;
+    border-bottom: 0.104vw dashed  #a2a2a2;
+  }
+  .services-popup__hide:hover {
+    cursor: pointer;
   }
   .services-popup__list {
     margin: 0;
