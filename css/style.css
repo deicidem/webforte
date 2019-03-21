@@ -3066,7 +3066,7 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  top: 50%;
+  top: 48%;
   left: 50%;
   -webkit-transform: translateY(-50%) translateX(-50%);
           transform: translateY(-50%) translateX(-50%);
@@ -3079,7 +3079,7 @@ section {
 }
 
 .overlay .popup-form__title {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 900;
   margin: 0;
   margin-bottom: 20px;
@@ -3137,11 +3137,13 @@ section {
 }
 
 .overlay .popup-form button {
+  padding: 10px 21px;
+  font-size: 17px;
   margin-bottom: 25px;
 }
 
 .overlay .popup-form__small {
-  font-size: 12px;
+  font-size: 11px;
   color: #000;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -4734,7 +4736,7 @@ section {
 
 .services-popup__title {
   text-transform: uppercase;
-  font-size: 33px;
+  font-size: 25px;
   font-weight: 900;
   color: #f74d00;
   margin-top: 0;
@@ -4770,6 +4772,9 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .services-popup__prices__img img {
@@ -4946,10 +4951,6 @@ section {
   font-size: 9px;
 }
 
-.services-popup__support .services-popup__title {
-  font-size: 24px;
-}
-
 .services-popup__support .services-popup__block {
   border: 1px solid #92278f;
 }
@@ -5020,7 +5021,7 @@ section {
   .services-popup__text br:last-child {
     display: block;
   }
-  .services-popup__support .services-popup__title {
+  .services-popup__title {
     font-size: 35px;
   }
 }
