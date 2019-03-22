@@ -45,7 +45,6 @@
       width: 82px
     
     &__block
-      margin-top: 30px
       margin-left: auto
       margin-right: auto
       width: 93%
@@ -56,6 +55,7 @@
       box-shadow: 0 0 46px rgba(0, 0, 0, 0.15)
       border: 1px solid #205ebd
       border-radius: 15px
+      margin-bottom: 2px
     &__title
       text-transform: uppercase
       font-size: 25px
@@ -303,32 +303,64 @@
       &__close
         right: 21.875vw
       &__top
-        z-index: 5000000
+        z-index: 500
         position: absolute
-        top: 0px
-        background: #000
+        top: -30px
         width: 20px
         height: 20px
         left: 50%
         transform: translateX(-50%)
         cursor: pointer
+        &::before, &::after
+          left: 0
+          transform: rotate(90deg)
+          content: ''
+          position: absolute  
+          top: 0
+          height: 100%
+          width: 100%
+          background: url('../img/services/arrow-left.png') center no-repeat
+          background-size: contain
+        &::after
+          top: 7px
       &__bot
+        z-index: 500
         position: absolute
-        bottom: -20px
-        background: #000
+        top: 21vw
         width: 20px
         height: 20px
         left: 50%
         transform: translateX(-50%)
         cursor: pointer
-      &__block
-        max-height: 400px
-        overflow: auto
+        &::before, &::after
+          left: 0
+          transform: rotate(90deg)
+          content: ''
+          position: absolute  
+          top: 0
+          height: 100%
+          width: 100%
+          background: url('../img/services/arrow-right.png') center no-repeat
+          background-size: contain
+        &::after
+          top: 7px
+      &__block_wrapper
+        left: 0
+        position: absolute
+        top: 0
         width: 100%
         max-width: 56.25vw
         padding: 3vw 3.65vw 1.5625vw
-        padding-top: 3vw
-        padding-bottom: 1.5625vw
+      &__block
+        position: relative
+        
+        overflow: hidden
+        width: 100%
+        max-width: 56.25vw
+        padding: 3vw 3.65vw 1.5625vw
+        margin-bottom: 2vw
+        &:first-child
+          height: 21vw
       &__title
         font-size: 1.875vw
         margin-bottom: 2.45vw

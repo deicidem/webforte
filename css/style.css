@@ -4725,7 +4725,6 @@ section {
 }
 
 .services-popup__block {
-  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
   width: 93%;
@@ -4737,6 +4736,7 @@ section {
           box-shadow: 0 0 46px rgba(0, 0, 0, 0.15);
   border: 1px solid #205ebd;
   border-radius: 15px;
+  margin-bottom: 2px;
 }
 
 .services-popup__title {
@@ -5100,21 +5100,35 @@ section {
     right: 21.875vw;
   }
   .services-popup__top {
-    z-index: 5000000;
+    z-index: 500;
     position: absolute;
-    top: 0px;
-    background: #000;
+    top: -30px;
     width: 20px;
     height: 20px;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     cursor: pointer;
+  }
+  .services-popup__top::before, .services-popup__top::after {
+    left: 0;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: url("../img/services/arrow-left.png") center no-repeat;
+    background-size: contain;
+  }
+  .services-popup__top::after {
+    top: 7px;
   }
   .services-popup__bot {
+    z-index: 500;
     position: absolute;
-    bottom: -20px;
-    background: #000;
+    top: 21vw;
     width: 20px;
     height: 20px;
     left: 50%;
@@ -5122,14 +5136,39 @@ section {
             transform: translateX(-50%);
     cursor: pointer;
   }
-  .services-popup__block {
-    max-height: 400px;
-    overflow: auto;
+  .services-popup__bot::before, .services-popup__bot::after {
+    left: 0;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: url("../img/services/arrow-right.png") center no-repeat;
+    background-size: contain;
+  }
+  .services-popup__bot::after {
+    top: 7px;
+  }
+  .services-popup__block_wrapper {
+    left: 0;
+    position: absolute;
+    top: 0;
     width: 100%;
     max-width: 56.25vw;
     padding: 3vw 3.65vw 1.5625vw;
-    padding-top: 3vw;
-    padding-bottom: 1.5625vw;
+  }
+  .services-popup__block {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 56.25vw;
+    padding: 3vw 3.65vw 1.5625vw;
+    margin-bottom: 2vw;
+  }
+  .services-popup__block:first-child {
+    height: 21vw;
   }
   .services-popup__title {
     font-size: 1.875vw;

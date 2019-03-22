@@ -719,19 +719,24 @@ $('document').ready(() => {
 
 
   });
+  let pos = 0;
   $('.services-popups').on('beforeChange', function (event, slick, direction) {
 
     $(this).find('.slick-arrow').hide();
-
+    setTimeout(()=>{
+      $('.services-popup__block_wrapper').animate({top: 0}, 0);
+    }, 100);
   });
   $('.services-popups').on('afterChange', function (event, slick, direction) {
     let top;
     top = services.eq($('.services-popups').slick('slickCurrentSlide')).find('.services-popup__block').eq(0).height() / 2;
     $(this).find('.slick-arrow').fadeIn();
     $(this).find('.slick-arrow').css('top', top);
+    
+    pos = 0;
   });
 
-  $('.services-popup__logo').on('click', ()=>{
+  $('.services-popup__logo').on('click', () => {
     toTopObj = 0;
     $('.services-popups__wrapper, .services-overlay').fadeOut();
     $(window).scrollTop(0);
@@ -747,6 +752,8 @@ $('document').ready(() => {
         $(this).html('Показать текст');
       }
       $(that).find('.services-popup__main').slideToggle(500);
+      services.eq($('.services-popups').slick('slickCurrentSlide')).find('.services-popup__block_wrapper').animate({top: 0}, 500);
+      pos = 0;
       setTimeout(() => {
         let top;
         top = $(that).find('.services-popup__block').eq(0).height() / 2;
@@ -757,19 +764,38 @@ $('document').ready(() => {
 
 
   let servTop = $('.services-popup__top'),
-      servBot = $('.services-popup__bot');
-  
-  servBot.on('click', ()=>{
-      $('#block').scrollTop($('#block').scrollTop()+300);
-  });
+    servBot = $('.services-popup__bot');
 
-  servTop.on('mouseenter', ()=>{
-    let interval = setInterval(()=>{
-      $('#block').scrollTop($('#block').scrollTop()-10);
-    }, 50);
-    servTop.on('mouseleave', ()=>{
+  servTop.on('mouseenter', () => {
+    console.log(pos);
+    
+    let interval = setInterval(() => {
+      pos += 5;
+      services.eq($('.services-popups').slick('slickCurrentSlide')).find('.services-popup__block').eq(0).find('.services-popup__block_wrapper').css("top", pos);
+      if (pos >= 0) {
+        clearInterval(interval);
+      }
+    }, 10);
+    if (pos >= 0) {
+      clearInterval(interval);
+    }
+    servTop.on('mouseleave', () => {
       clearInterval(interval);
     });
   });
-
+  servBot.on('mouseenter', () => {
+    let interval = setInterval(() => {
+      pos -= 5;
+      services.eq($('.services-popups').slick('slickCurrentSlide')).find('.services-popup__block_wrapper').css("top", pos);
+      if (pos <= -services.eq($('.services-popups').slick('slickCurrentSlide')).find('.services-popup__block_wrapper').height() + services.eq($('.services-popups').slick('slickCurrentSlide')).find('.services-popup__block').eq(0).height()) {
+        clearInterval(interval);
+      }
+    }, 10);
+    if (pos <= -services.eq($('.services-popups').slick('slickCurrentSlide')).find('.services-popup__block_wrapper').height() + services.eq($('.services-popups').slick('slickCurrentSlide')).find('.services-popup__block').eq(0).height()) {
+      clearInterval(interval);
+    }
+    servBot.on('mouseleave', () => {
+      clearInterval(interval);
+    });
+  });
 });
