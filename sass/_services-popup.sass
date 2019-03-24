@@ -11,7 +11,12 @@
     top: 0
     height: 100%
   &-popups__wrapper
+    -webkit-overflow-scrolling: touch
+    padding-top: 60px
     opacity: 0
+    position: fixed
+    overflow: hidden
+    height: 100%
     .works-prev
       background: url('../img/services/arrow-left.png') center no-repeat
       transform: translate(0%, 50%)
@@ -21,16 +26,15 @@
       transform: translate(0%, 50%)
       right: 18%
     z-index: 100
-    position: absolute
     width: 100%
-    top: 1%
+    top: 0
   &-popup
     position: relative
     // display: none
     &__close
       position: absolute
       right: 4%
-      top: -30px
+      top: 30px
       &:hover
         cursor: pointer
     &__logo
@@ -38,6 +42,8 @@
       position: absolute
       bottom: 10px
       right: 36px
+    &__wrapper
+      padding-top: 3.125vw
     &__discount
       position: absolute
       top: 185px
@@ -303,6 +309,7 @@
       &__close
         right: 21.875vw
       &__top
+        display: none
         z-index: 500
         position: absolute
         top: -30px
@@ -324,6 +331,7 @@
         &::after
           top: 7px
       &__bot
+        display: none
         z-index: 500
         position: absolute
         top: 21vw
@@ -344,23 +352,12 @@
           background-size: contain
         &::after
           top: 7px
-      &__block_wrapper
-        left: 0
-        position: absolute
-        top: 0
-        width: 100%
-        max-width: 56.25vw
-        padding: 3vw 3.65vw 1.5625vw
       &__block
         position: relative
-        
-        overflow: hidden
         width: 100%
         max-width: 56.25vw
         padding: 3vw 3.65vw 1.5625vw
         margin-bottom: 2vw
-        &:first-child
-          height: 21vw
       &__title
         font-size: 1.875vw
         margin-bottom: 2.45vw
