@@ -4728,6 +4728,10 @@ section {
   padding-top: 3.125vw;
 }
 
+.services-popup__hide {
+  display: none;
+}
+
 .services-popup__discount {
   position: absolute;
   top: 185px;
@@ -5229,14 +5233,14 @@ section {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .services-popup__hide {
+  .services-popup__hideg {
     display: inline-block;
     margin-top: 1.45vw;
     font-size: 0.83vw;
     color: #a2a2a2;
     border-bottom: 0.104vw dashed  #a2a2a2;
   }
-  .services-popup__hide:hover {
+  .services-popup__hideg:hover {
     cursor: pointer;
   }
   .services-popup__list {
