@@ -57,10 +57,6 @@ body {
   background: #fff url("../img/header/to-top.png") center 52% no-repeat;
 }
 
-.to-top:hover {
-  cursor: pointer;
-}
-
 img {
   max-width: 100%;
   max-height: 100%;
@@ -198,6 +194,9 @@ section {
     height: 2.6vw;
     bottom: 1vw;
     right: 1vw;
+  }
+  .to-top:hover {
+    cursor: pointer;
   }
   .button {
     display: -webkit-box;
@@ -1683,8 +1682,7 @@ section {
 }
 
 .stages-popup:hover {
-  cursor: -webkit-grab;
-  cursor: grab;
+  cursor: move;
 }
 
 .stages-popup__close:hover {
@@ -5233,14 +5231,14 @@ section {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .services-popup__hideg {
+  .services-popup__hide {
     display: inline-block;
     margin-top: 1.45vw;
     font-size: 0.83vw;
     color: #a2a2a2;
     border-bottom: 0.104vw dashed  #a2a2a2;
   }
-  .services-popup__hideg:hover {
+  .services-popup__hide:hover {
     cursor: pointer;
   }
   .services-popup__list {
