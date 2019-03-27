@@ -53,10 +53,10 @@ $('document').ready(() => {
       setTimeout(() => {
         $("html").toggleClass("scroll-auto");
       }, 500);
+      $('.to-top').css('z-index', 1001);
     }
   });
   $('.subscribe').css('bottom', $('.cookie').outerHeight());
-  let toTopObj = 0;
   $(function () {
     $(window).scroll(function () {
       if ($(this).scrollTop() != 0) {
@@ -152,7 +152,7 @@ $('document').ready(() => {
         $("html").toggleClass("scroll-auto");
         menuActive = true;
         $("body").toggleClass("fixed");
-      }, 500);
+      }, 100);
     }
   }
   // Слайдер
