@@ -59,6 +59,7 @@
         ul
           box-shadow: 0px 0px 20px 1px rgba(#000, 0.5)
     &__current
+      white-space: nowrap
       font-weight: 600
       display: none
       font-size: 16px
@@ -238,6 +239,27 @@
         display: none
       &__phone
         font-size: 20px
+@media (min-width: 991px)
+  .header
+    &-menu
+      &__nav
+        ul
+          li
+            a
+              &::after
+                &::after
+                transition: all 0.3s ease-in-out
+                content: ''
+                position: absolute
+                bottom: -5px
+                height: 2px
+                background-color: rgba(#2b2a2c, .8)
+                left: 50%
+                width: 0
+                transform: translateX(-50%)
+              &:hover:after
+                z-index: 1
+                width: 100%
 @media (min-width: 1024px)
   .header
     &-menu
@@ -251,19 +273,6 @@
             display: flex
             a
               font-size: 1.07vw
-              &::after
-                transition: all 0.3s ease-in-out
-                content: ''
-                position: absolute
-                bottom: -5px
-                height: 2px
-                background-color: rgba(#2b2a2c, .8)
-                left: 50%
-                width: 0
-                transform: translateX(-50%)
-              &:hover:after
-                z-index: 1
-                width: 100%
       &__phone
         white-space: nowrap
         font-size: 1.1vw

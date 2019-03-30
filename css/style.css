@@ -14,7 +14,7 @@ select {
 }
 
 body {
-  font-family: "Montserrat", helvetica,  sans-serif;
+  font-family: "Montserrat",  sans-serif;
   overflow: auto;
 }
 
@@ -337,6 +337,7 @@ section {
 }
 
 .header-menu__current {
+  white-space: nowrap;
   font-weight: 600;
   display: none;
   font-size: 16px;
@@ -589,20 +590,7 @@ section {
   }
 }
 
-@media (min-width: 1024px) {
-  .header-menu .container {
-    max-width: 1200px;
-    width: 62.5%;
-    padding: 0;
-  }
-  .header-menu__nav ul li {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .header-menu__nav ul li a {
-    font-size: 1.07vw;
-  }
+@media (min-width: 991px) {
   .header-menu__nav ul li a::after {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
@@ -619,6 +607,22 @@ section {
   .header-menu__nav ul li a:hover:after {
     z-index: 1;
     width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header-menu .container {
+    max-width: 1200px;
+    width: 62.5%;
+    padding: 0;
+  }
+  .header-menu__nav ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header-menu__nav ul li a {
+    font-size: 1.07vw;
   }
   .header-menu__phone {
     white-space: nowrap;
@@ -2220,7 +2224,7 @@ section {
   .stages-wrapper {
     padding: 0;
     background: url("../img/stages/bg.png") center no-repeat;
-    background-size: 138vw;
+    background-size: 137vw;
   }
   .stages-blocks {
     padding-left: 3vw;
@@ -3443,7 +3447,7 @@ section {
     margin-left: auto;
     margin-right: auto;
     padding-top: 2.6vw;
-    padding-bottom: 0.52vw;
+    padding-bottom: 2.6vw;
     max-width: 45vw;
   }
   .bonuses-search {
