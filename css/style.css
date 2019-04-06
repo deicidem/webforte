@@ -78,6 +78,7 @@ img {
 }
 
 .button {
+  text-decoration: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 19px 33px;
@@ -2165,8 +2166,16 @@ section {
     margin: 0 3.125vw;
   }
   .stages-popup__select_nav_up, .stages-popup__select_nav_down {
+    background-size: 0.6vw;
     width: 1.7vw;
     height: 1.7vw;
+  }
+  .stages-popup__select_nav_up {
+    display: none;
+    right: 2.7vw;
+  }
+  .stages-popup__select_nav_down {
+    right: 0.73vw;
   }
   .stages-popup__title {
     margin-bottom: 0;
@@ -3058,6 +3067,65 @@ section {
   z-index: 1000;
 }
 
+.overlay .popup-select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid #205ebd;
+  border-radius: 50px;
+  padding-left: 28px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  width: 100%;
+}
+
+.overlay .popup-select_w {
+  width: 100%;
+  max-width: 360px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.overlay .popup-select_wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.overlay .popup-select_nav {
+  position: absolute;
+  top: 50%;
+  width: 34px;
+  height: 34px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border: none;
+  border-radius: 50%;
+}
+
+.overlay .popup-select_nav:hover {
+  cursor: pointer;
+}
+
+.overlay .popup-select_nav_up {
+  display: none;
+  right: 52px;
+  background: #f68b1f url("../img/stages/top.png") center no-repeat;
+}
+
+.overlay .popup-select_nav_down {
+  right: 14px;
+  background: #f68b1f url("../img/stages/bott.png") center no-repeat;
+}
+
 .overlay .popup-form {
   width: 92%;
   max-width: 622px;
@@ -3085,6 +3153,31 @@ section {
   border-radius: 20px;
   border: 1px solid #205ebd;
   text-align: center;
+}
+
+.overlay .popup-form__download {
+  display: none;
+  width: 92%;
+  max-width: 622px;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+  top: 49%;
+  left: 50%;
+  position: absolute;
+}
+
+.overlay .popup-form__download .services-popup__block {
+  width: 100%;
+}
+
+.overlay .popup-form__download .services-popup__small {
+  font-size: 11px;
+  text-align: center;
+  display: block;
+}
+
+.overlay .popup-form__download .button {
+  margin: 0 auto 15px !important;
 }
 
 .overlay .popup-form__title {
@@ -3128,6 +3221,7 @@ section {
 }
 
 .overlay .popup-form__input {
+  max-width: 360px;
   width: 100%;
   padding-left: 23px;
   padding-top: 12px;
@@ -3192,6 +3286,23 @@ section {
 }
 
 @media (min-width: 768px) {
+  .overlay .popup-select_w {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .overlay .popup-select_wrapper {
+    width: 360px;
+    margin: 0;
+  }
   .overlay .popup-form {
     padding: 46px 47px 22px;
   }
@@ -3214,9 +3325,38 @@ section {
 }
 
 @media (min-width: 1024px) {
+  .overlay .popup-select {
+    padding-left: 1.46vw;
+    padding-top: 0.8vw;
+    padding-bottom: 0.8vw;
+    font-size: 1vw;
+  }
+  .overlay .popup-select option {
+    font-size: 1vw;
+  }
+  .overlay .popup-select_w {
+    max-width: 100%;
+  }
+  .overlay .popup-select_nav_up, .overlay .popup-select_nav_down {
+    background-size: 0.6vw;
+    width: 1.7vw;
+    height: 1.7vw;
+  }
+  .overlay .popup-select_nav_up {
+    display: none;
+    right: 2.7vw;
+  }
+  .overlay .popup-select_nav_down {
+    right: 0.73vw;
+  }
   .overlay .popup-form {
     max-width: 32.4vw;
     padding: 2.4vw 2.4vw 1.1vw;
+  }
+  .overlay .popup-form .button {
+    font-size: 1.1vw;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   .overlay .popup-form__title {
     font-size: 1.4vw;
@@ -3229,6 +3369,11 @@ section {
     height: 12.6vw;
   }
   .overlay .popup-form__input {
+    padding-left: 1.46vw;
+    padding-top: 0.8vw;
+    padding-bottom: 0.8vw;
+    -ms-flex-preferred-size: 33%;
+        flex-basis: 33%;
     font-size: 1vw;
   }
   .overlay .popup-form__small {
@@ -3236,6 +3381,15 @@ section {
   }
   .overlay .popup-form__back {
     font-size: 0.78vw;
+  }
+  .overlay .popup-form__download .services-popup__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .overlay .popup-form__download .services-popup__small {
+    font-size: 0.587vw;
   }
 }
 
@@ -3820,11 +3974,16 @@ section {
     margin-right: 1.25vw;
   }
   .brief-select_nav_up, .brief-select_nav_down {
+    background-size: 0.6vw;
     width: 1.7vw;
     height: 1.7vw;
   }
   .brief-select_nav_up {
     display: none;
+    right: 2.7vw;
+  }
+  .brief-select_nav_down {
+    right: 0.73vw;
   }
   .brief-hide {
     top: 2.5vw;
@@ -4464,7 +4623,7 @@ section {
     display: block;
   }
   .article-text {
-    font-size: 1vw;
+    font-size: 1.1vw;
   }
   .article-text p {
     margin: 1vw 0;
