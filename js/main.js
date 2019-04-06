@@ -610,9 +610,7 @@ $('document').ready(() => {
     let that = this;
     $(this).find('.article-list').find('a').each(function(index){
       $(this).click(function(event){
-        event.preventDefault();
-        console.log(offsets[index]);
-        
+        event.preventDefault();        
         $('.article_wrapper_wrapper').scrollTop(offsets[index]);
       });
     });

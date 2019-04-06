@@ -4391,6 +4391,7 @@ section {
 }
 
 .article-list a {
+  line-height: 24px;
   color: #000;
   font-weight: 700;
 }
