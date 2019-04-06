@@ -334,17 +334,15 @@ $('document').ready(() => {
   // Select
   {
 
-
     $('.stages-popup__select_nav').on('click', function (e) {
-      var direction = $(this).data('direction');
-      var $select = $('#stages-popup__select');
-      var $currentOption = $select.find(':selected');
-      var $nextOption = direction == 'down' ?
+      let direction = $(this).data('direction');
+      let $select = $('#stages-popup__select');
+      let $currentOption = $select.find(':selected');
+      let $nextOption = direction == 'down' ?
         $currentOption.next() : $currentOption.prev();
 
       if ($nextOption.length) {
         $select.val($nextOption.attr('value'));
-        changeLink('stages-popup__select');
       }
     });
     let up = $('.stages-popup__select_nav_up');
@@ -368,7 +366,7 @@ $('document').ready(() => {
       if (optionIndex == options.length - 1) {
         down.hide();
       } else {
-        down.hide();
+        down.show();
       }
     });
 
