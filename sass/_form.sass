@@ -1,0 +1,255 @@
+.form
+  width: 100%
+  box-shadow: 0 0 46px rgba(0, 0, 0, 0.3)
+  border: 1px solid #205ebd
+  background-color: #f9f9f9
+  padding: 48px 28px 30px
+  border-radius: 15px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  &-popup
+    display: none
+    position: fixed
+    top: 0
+    padding: 0
+    width: 100%
+    height: 100%
+    overflow: auto
+    background: #fff
+    z-index: 652
+    overflow: hidden
+    &_wrapper
+      max-width: 100%
+      padding-top: 55px
+      padding-bottom: 55px
+      display: flex
+      flex-direction: column
+      align-items: center
+      &_wrapper
+        width: 100%
+        -webkit-overflow-scrolling: touch
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        overflow-y: scroll
+    &__text
+      margin-top: 0
+      font-size: 18px
+      margin-bottom: 35px
+      line-height: 27px
+    &-close
+      z-index: 1000
+      position: fixed
+      top: 20px
+      right: 20px
+      &:hover
+        cursor: pointer
+  &-input
+    box-sizing: border-box
+    padding: 17px 30px
+    border: 1px solid #205ebd
+    border-radius: 50px
+    background-color: #fff
+    font-size: 17px
+    width: 100%
+    appearance: none
+    margin-bottom: 20px
+    &s
+      width: 100%
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      margin-bottom: 8px
+  &-option
+    display: inline-block
+    padding: 10px 0
+    // box-sizing: content-box
+    position: relative
+    
+    &::after
+      transition: all 0.3s ease-in-out
+      content: ''
+      position: absolute
+      bottom: 3px
+      height: 2px
+      background-color: rgba(#205ebd, .8)
+      left: 50%
+      width: 0
+      transform: translateX(-50%)
+    &:hover:after
+      width: 100%
+    &:hover
+      cursor: pointer
+    &:first-child 
+      padding-top: 20px
+    &:last-child 
+      padding-bottom: 20px
+      &::after
+        bottom: 15px
+    &s
+      // box-sizing: content-box
+      padding: 0 40px
+      overflow: hidden
+      z-index: 100
+      transform: translateX(-32px) translateY(-38px)
+      border-radius: 27px
+      width: 101%
+      background-color: #fff
+      border: 1px solid #205ebd
+      // border-top: 1px solid #000
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      position: absolute
+      &__label
+        font-size: 20px
+        margin: 0
+        padding: 10px 0
+  &-services &-options
+      transform: translateX(-32px) translateY(-250px)     
+  &-arrow
+    color: #205ebd
+    top: 50%
+    transform: translateY(-45%)
+    right: 20px
+    position: absolute
+    &:hover
+      cursor: pointer
+  &-select
+    text-align: left
+    position: relative
+    &_disabled
+      filter: saturate(0)
+      &::after
+        z-index: 10
+        content: ''
+        position: absolute
+        width: 100.3%
+        height: 103%
+        border-radius: 50px
+        top: 50%
+        left: 50%
+        transform: translateX(-50%) translateY(-50%)
+        background: rgba(#fff, 0.7)
+  &-selected
+    font-size: 17px
+    &:hover
+      cursor: pointer
+  &-textarea
+    height: 210px
+    border-radius: 20px
+    margin-bottom: 20px
+  &-upload
+    
+    text-align: center
+    margin-bottom: 20px
+    span
+      cursor: pointer
+      img
+        margin-right: 5px
+      font-size: 15px
+      display: flex
+      align-items: center
+      justify-content: center
+    input[type="file"]
+      display: none
+  .button
+    margin-bottom: 27px
+  &-small
+    font-size: 9px
+    text-align: center
+    color: #000
+@media (min-width: 768px) 
+  .form
+    padding: 70px 50px 40px
+    &-popup
+      &_wrapper
+        padding-top: 68px
+      &__text
+        font-size: 20px
+        margin-bottom: 50px
+    &-input
+      font-size: 18px
+      margin-bottom: 30px
+    &-small
+      font-size: 11px
+    &-upload
+      width: 100%
+      text-align: left
+      span
+        font-size: 17px
+        margin-left: 35px
+        justify-content: flex-start
+    &-selected
+      font-size: 18px
+@media (min-width: 1024px)
+  .form
+    box-shadow: 0 0 2.4vw rgba(0, 0, 0, 0.3)
+    border-radius: 0.78125vw
+    max-width: 57.3vw
+    padding: 3.125vw 3.125vw 1.5625vw
+    
+    &-input
+      padding: 0.88vw 1.5625vw
+      border-radius: 2.6vw
+      font-size: 1vw
+      flex-basis: 48%
+      margin-bottom: 1.5625vw
+      &s
+        flex-direction: row
+        flex-wrap: wrap
+    &-select
+      &ed
+        font-size: 1vw
+    &-upload
+      margin-bottom: 1.04vw
+      span
+        font-size: 1vw
+        margin-left: 1.82vw
+        img
+          width: 1.09375vw
+          height: 0.98958333vw
+    &-small
+      font-size: 0.625vw
+    &-textarea
+      padding-top: 1.5625vw
+      border-radius: 1vw
+      margin-bottom: 1vw
+      flex-basis: 11vw
+    &-option 
+      padding: 0.52vw 0
+      &:first-child
+        padding-top: 1.04vw
+      &:last-child
+        padding-bottom: 1.04vw
+        &::after
+          bottom: 0.8vw
+      &::after
+        bottom: 0.1vw
+        height: 0.1vw
+      &:hover:after
+        width: 100%
+      &s
+        padding: 0.52vw 1.458vw
+        border-radius: 1.40625vw
+        transform: translateX(-1.6vw) translateY(-2.08333333333vw)
+        &__label
+          font-size: 1.1vw
+    &-services &-options
+      transform: translateX(-1.6vw) translateY(-19vw)
+    &-popup
+      &_wrapper
+        padding-top: 4.375vw
+        max-width: 62.5vw
+        padding-bottom: 3.85vw
+      &__text
+        font-size: 1vw
+        margin-bottom: 2.6vw
+      &-close
+        top: 2.5vw
+        right: 3vw
+    
+        

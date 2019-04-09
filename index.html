@@ -598,30 +598,30 @@
 
               </div>
               <div class="stages-popup__select_w">
-                  <div class="stages-popup__form">
-                      <h4 class="stages-popup__title stages-popup__title_center">
-                        БРИФ
-                      </h4>
-      
-                      <div class="stages-popup__select_wrapper">
-                        <select class="stages-popup__select" id="stages-popup__select" disabled>
-                          <!-- 
+                <div class="stages-popup__form">
+                  <h4 class="stages-popup__title stages-popup__title_center">
+                    БРИФ
+                  </h4>
+
+                  <div class="stages-popup__select_wrapper">
+                    <select class="stages-popup__select" id="stages-popup__select" disabled>
+                      <!-- 
                           ********************************
                           Value = ссылка на документ!! 
                           value="docs/doc.pdf"
                           ********************************
                         -->
-                          <option value="docs/Политика конфиденциальности.pdf">Выбрать услугу 1</option>
-                          <option value="2">Выбрать услугу 2</option>
-                          <option value="3">Выбрать услугу 3</option>
-                          <option value="4">Выбрать услугу 4</option>
-                        </select>
-                        <div class="stages-popup__select_nav stages-popup__select_nav_up" data-direction="up"></div>
-                        <div class="stages-popup__select_nav stages-popup__select_nav_down" data-direction="down"></div>
-                      </div>
-      
-                      <a href="#" download class="button">Скачать </a>
-                    </div>
+                      <option value="docs/Политика конфиденциальности.pdf">Выбрать услугу 1</option>
+                      <option value="2">Выбрать услугу 2</option>
+                      <option value="3">Выбрать услугу 3</option>
+                      <option value="4">Выбрать услугу 4</option>
+                    </select>
+                    <div class="stages-popup__select_nav stages-popup__select_nav_up" data-direction="up"></div>
+                    <div class="stages-popup__select_nav stages-popup__select_nav_down" data-direction="down"></div>
+                  </div>
+
+                  <a href="#" download class="button">Скачать </a>
+                </div>
               </div>
               <div class="stages-popup__nav">
                 <button class="stages-popup__link stages-popup__link_next">Следующая</button>
@@ -1529,6 +1529,78 @@
     </div>
     <!-- Contacts -->
 
+    <!-- Form -->
+    <div class="form-popup">
+      <div class="form-popup_wrapper_wrapper">
+        <div class="form-popup_wrapper container">
+          <img src="img/cancel.png" alt="Закрыть" class="form-popup-close">
+          <p class="form-popup__text">
+            Если тема вашего обращения отличается от предложенных или не предполагает заполнение текста, установите
+            Другое и сформулируйте свою.
+          </p>
+          <form action="#" class="form">
+            <div class="form-inputs">
+              <input type="text" class="form-input" placeholder="Имя *" required>
+              <input type="email" class="form-input" placeholder="E-mail *" required>
+              <div class="form-input form-select form-themes">
+                <span class="form-selected"></span>
+                <span class="form-arrow">▼</span>
+                <div class="form-options">
+                  <span class="form-option" value="Заказать услугу" data-text="Выберите услугу –  и на указанный адрес получите бриф для заполнения. При необходимости оставьте здесь комментарий.">Заказать услугу</span>
+                  <span class="form-option" value="Поддержка" data-text="Для клиентов. Сообщите номер договора на поддержку и кратко опишите проблему. ">Поддержка</span>
+                  <span class="form-option" value="Проконсультироваться б/п" data-text="Если возникла проблема с сайтом или рекламой товара, но не являетесь клиентом ВебФорте, кратко опишите ее ¬ мы постараемся оперативно решить ее. Услуга бесплатная.">Проконсультироваться б/п</span>
+                  <span class="form-option" value="Задать вопрос" data-text="Для связи со специалистом по заключению договоров  услугам, оплате и прочее. ">Задать вопрос</span>
+                  <span class="form-option" value="Бриф заполненный" data-text="Прикрепите заполненный бриф в форматах .doc, docx к письму. Для ускорения обработки постарайтесь название файла сформулировать корректно, а именно: название услуги, название вашей организации. Например: LandingBrifStroypanel.  Эту информацию можно указать в кратком сопроводительном письме к файлу.">Бриф заполненный</span>
+                  <span class="form-option" value="Другое (указать)" data-text="Если при обращении не нашли подходящую тему, сформулируйте свою. ">Другое (указать)</span>
+                </div>
+              </div>
+              <div class="form-input form-select form-services">
+                <span class="form-selected"></span>
+                <span class="form-arrow">▼</span>
+                <div class="form-options">
+                  <h4 class="form-options__label">Создание сайтов…</h4>
+                  <span class="form-option" value="Лендинг">Лендинг</span>
+                  <span class="form-option" value="Промо-сайт">Промо-сайт</span>
+                  <span class="form-option" value="Сайт-визитка">Сайт-визитка</span>
+                  <span class="form-option" value="Многостраничный сайт">Многостраничный сайт</span>
+                  <span class="form-option" value="Адаптация сайта">Адаптация сайта</span>
+                  <span class="form-option" value="Аудит сайта">Аудит сайта</span>
+                  <span class="form-option" value="Заказать скрипт">Заказать скрипт</span>
+                  <span class="form-option" value="Консультирование">Консультирование</span>
+
+                  <h4 class="form-options__label">Дизайн…</h4>
+                  <span class="form-option" value="Редизайн">Редизайн</span>
+                  <span class="form-option" value="Создание логотипа">Создание логотипа</span>
+                  <span class="form-option" value="Интернет баннеры">Интернет баннеры</span>
+
+                  <h4 class="form-options__label">Поддержка…</h4>
+                  <span class="form-option" value="Техническая">Техническая</span>
+                  <span class="form-option" value="Дизайнерская">Дизайнерская</span>
+                  <span class="form-option" value="Контентная">Контентная</span>
+
+                  <h4 class="form-options__label">Продвижение (SEO)…</h4>
+                  <span class="form-option" value="Базовый пакет">Базовый пакет</span>
+                  <span class="form-option" value="Контекстная реклама">Контекстная реклама</span>
+                </div>
+              </div>
+            </div>
+            <textarea class="form-input form-textarea" placeholder="Текст письма  (5000 знаков)" maxlength="5000"
+              name="message"></textarea>
+            <div class="form-upload">
+              <label>
+                <input type="file">
+                <span><img src="img/paperclip.png" alt="Загрузить"> Прикрепить файл</span>
+              </label>
+
+            </div>
+            <button class="button">Отправить</button>
+            <a href="docs/Согласие на обработку персональных данных.pdf" target="_blank" class="form-small">Нажимая на
+              «Отправить» Вы даете согласие на обработку персональных данных</a>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Form -->
   </main>
   <!-- Footer -->
   <footer class="footer" id="footer">
