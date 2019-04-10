@@ -2806,6 +2806,10 @@ section {
   }
 }
 
+#footer-contact:hover {
+  cursor: pointer;
+}
+
 .footer {
   background-color: #26282b;
   padding-top: 45px;
@@ -5727,6 +5731,10 @@ section {
   font-size: 20px;
   margin: 0;
   padding: 10px 0;
+}
+
+.form-options__input {
+  display: none;
 }
 
 .form-services .form-options {

@@ -1530,7 +1530,7 @@
     <!-- Contacts -->
 
     <!-- Form -->
-    <div class="form-popup">
+    <div class="form-popup popup">
       <div class="form-popup_wrapper_wrapper">
         <div class="form-popup_wrapper container">
           <img src="img/cancel.png" alt="Закрыть" class="form-popup-close">
@@ -1543,6 +1543,7 @@
               <input type="text" class="form-input" placeholder="Имя *" required>
               <input type="email" class="form-input" placeholder="E-mail *" required>
               <div class="form-input form-select form-themes">
+                <input type="text"  class="form-options__input" name="theme" required>
                 <span class="form-selected"></span>
                 <span class="form-arrow">▼</span>
                 <div class="form-options">
@@ -1554,7 +1555,8 @@
                   <span class="form-option" value="Другое (указать)" data-text="Если при обращении не нашли подходящую тему, сформулируйте свою. ">Другое (указать)</span>
                 </div>
               </div>
-              <div class="form-input form-select form-services">
+              <div class="form-input form-select form-services" name="service">
+                <input type="text"  class="form-options__input">
                 <span class="form-selected"></span>
                 <span class="form-arrow">▼</span>
                 <div class="form-options">
@@ -1584,7 +1586,7 @@
                 </div>
               </div>
             </div>
-            <textarea class="form-input form-textarea" placeholder="Текст письма  (5000 знаков)" maxlength="5000"
+            <textarea class="form-input form-textarea" placeholder="Текст письма  (2000 знаков)" maxlength="2000"
               name="message"></textarea>
             <div class="form-upload">
               <label>
@@ -1637,7 +1639,7 @@
             <a href="tel:79206543810" class="footer-block__item">+7 920 654 38 10</a>
           </li>
           <li>
-            <img src="img/footer/mail.png" alt="Написать">
+            <img src="img/footer/mail.png" alt="Написать" id="footer-contact">
             <a href="mailto:info@webforte.ru" class="footer-block__item">info@webforte.ru</a>
           </li>
           <div class="footer-social">

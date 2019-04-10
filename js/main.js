@@ -945,7 +945,7 @@ $('document').ready(() => {
   $('.form-select').each(function () {
     $(this).find('.form-options').hide();
     $(this).children('.form-selected').html($(this).children('.form-options').children('.form-option:first').html());
-    $(this).attr('value', $(this).children('.form-options').children('.form-option:first').attr('value'));
+    $(this).children('.form-options__input').attr('value', $(this).children('.form-options').children('.form-option:first').attr('value'));
 
     $(this).children('.form-selected, .form-arrow').click(function () {
       if ($(this).parent().children('.form-options').css('display') == 'none') {
@@ -964,9 +964,10 @@ $('document').ready(() => {
         container.hide();
       }
     });
+    let that = this;
     $(this).find('.form-option').click(function () {
       $(this).parent().hide();
-      $(this).closest('.form-select').attr('value', $(this).attr('value'));
+      $(that).find('.form-options__input').attr('value', $(this).attr('value'));
       $(this).parent().siblings('.form-selected').html($(this).html());
     });
   });
@@ -978,7 +979,7 @@ $('document').ready(() => {
   });
 
 
-  $(' #contact, #brief-contact').on('click', ()=>{
+  $(' #contact, #brief-contact, #footer-contact').on('click', ()=>{
     open('form-popup');
   });
   $('.form-popup-close').on('click', () => {
@@ -993,9 +994,11 @@ $('document').ready(() => {
     $('.form-textarea').attr('placeholder' , $(this).data('text'));
     if (val != 'Заказать услугу') {
       $('.form-services').addClass('form-select_disabled');
-      // $('.form-services .form-selected').html('Лендинг');
-      // $('.form-services').attr('value', 'Лендинг');
+      $('.form-services .form-selected').html('');
+      $('.form-services .form-options__input').attr('value', '');
     } else {
+      $('.form-services .form-selected').html('Лендинг');
+      $('.form-services .form-options__input').attr('value', 'Лендинг');
       $('.form-services').removeClass('form-select_disabled');
     }
   });
