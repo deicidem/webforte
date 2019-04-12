@@ -5956,6 +5956,7 @@ section {
 }
 
 .form-popup {
+  display: none;
   position: fixed;
   top: 0;
   padding: 0;
