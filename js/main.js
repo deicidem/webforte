@@ -6,10 +6,10 @@ $('document').ready(() => {
   $(footer).removeAttr('id');
   let menuActive = false;
   $(footer).appendTo('.article_wrapper_wrapper, .bonuses_wrapper_wrapper, .brief_wrapper_wrapper, .contacts_wrapper_wrapper, .form-popup_wrapper_wrapper');
-  let margin = $('.header-menu').outerHeight() + $(window).width() / 100 * 1.4 - ($('.header-title_left').offset().top - $('.header-title').offset().top);
   if ($(window).width() >= 1024) {
+    let margin = $('.header-menu').outerHeight() + $(window).width() / 100 * 1.4 - ($('.header-title_left').offset().top - $('.header-title').offset().top);
     $('.header-main').css('margin-top', margin);
-  }
+  } 
 
   // Ширина скроллбара
   function scrollbarWidth() {
@@ -451,8 +451,8 @@ $('document').ready(() => {
   let phone = $('.header-menu__phone');
   let current = $('.header-menu__current');
   if ($(window).width() >= 991) {
-    $('.header-menu__nav_item[href="#stages"]').remove();
-    $('.header-menu__nav_item[href="#reviews"]').remove();
+    $('.header-menu__nav_item[href="#stages"]').parent().hide();
+    $('.header-menu__nav_item[href="#reviews"]').parent().hide();
 
   }
   $(window).scroll(function () {
@@ -979,7 +979,7 @@ $('document').ready(() => {
   });
 
 
-  $(' #contact, #brief-contact, #footer-contact').on('click', ()=>{
+  $(' .contact').on('click', ()=>{
     open('form-popup');
   });
   $('.form-popup-close').on('click', () => {

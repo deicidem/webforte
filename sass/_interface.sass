@@ -3,15 +3,17 @@ $gradient-active: linear-gradient(to right, #f74c00 0%, #f68b1f 100%)
 $active: #f68b1f
 select
   background-color: #fff
-* 
+*
   outline: none
   box-sizing: border-box
   scroll-behavior: smooth
   // -webkit-overflow-scrolling: touch
   &:focus, &:active
     outline: none
-
-
+.desk_hidden 
+    display: block !important
+.mobile_hidden
+  display: none
 body
   font-family: "Montserrat",  sans-serif
   overflow: auto
@@ -124,6 +126,10 @@ section
   
 
 @media (min-width: 992px)
+  .desk_hidden 
+    display: none !important
+  .mobile_hidden
+    display: block
   .container, section .container 
     max-width: 960px
 @media (min-width: 1024px)
